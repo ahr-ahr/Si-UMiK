@@ -1,5 +1,8 @@
+/* --------------------------------------
+   Layout Utama
+--------------------------------------- */
 .tampilan-awal-web {
-  background-color: #ab0407d6;
+  background-color: #5e0103d6;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,20 +10,16 @@
 }
 
 .tampilan-awal-web .div {
-  background-color: #ab0407d6;
+  background-color: #790204d6;
   width: 1440px;
   height: 1024px;
   position: relative;
 }
 
-.tampilan-awal-web .overlap {
-  position: absolute;
-  width: 1440px;
-  height: 906px;
-  top: 118px;
-  left: 0;
-}
-
+/* --------------------------------------
+   Section Overlap
+--------------------------------------- */
+.tampilan-awal-web .overlap,
 .tampilan-awal-web .overlap-group {
   position: absolute;
   width: 1440px;
@@ -29,12 +28,19 @@
   left: 0;
 }
 
+.tampilan-awal-web .overlap {
+  top: 118px;
+}
+
+/* --------------------------------------
+   Gambar Desain
+--------------------------------------- */
 .tampilan-awal-web .desain-tanpa-judul {
   position: absolute;
   width: 443px;
   height: 813px;
   top: 0;
-  left: 997px;
+  left: 1015px;
 }
 
 .tampilan-awal-web .img {
@@ -42,9 +48,20 @@
   width: 439px;
   height: 813px;
   top: 11px;
-  left: -145px;
+  left: -115px;
 }
 
+.tampilan-awal-web .desain-tanpa-judul-2 {
+  position: absolute;
+  width: 960px;
+  height: 259px;
+  top: 647px;
+  left: 247px;
+}
+
+/* --------------------------------------
+   Teks Judul & Deskripsi
+--------------------------------------- */
 .tampilan-awal-web .text-wrapper {
   position: absolute;
   width: 671px;
@@ -56,7 +73,6 @@
   font-size: 36px;
   text-align: center;
   letter-spacing: 9px;
-  line-height: normal;
 }
 
 .tampilan-awal-web .text-wrapper-2 {
@@ -69,8 +85,6 @@
   color: #ffffff;
   font-size: 75px;
   text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .tampilan-awal-web .p {
@@ -83,18 +97,11 @@
   color: #ffffff;
   font-size: 20px;
   text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
-.tampilan-awal-web .desain-tanpa-judul-2 {
-  position: absolute;
-  width: 960px;
-  height: 259px;
-  top: 647px;
-  left: 247px;
-}
-
+/* --------------------------------------
+   Tombol
+--------------------------------------- */
 .tampilan-awal-web .overlap-2 {
   position: absolute;
   width: 271px;
@@ -104,8 +111,10 @@
 }
 
 .tampilan-awal-web .rectangle {
+  position: absolute;
   width: 271px;
-  top: 0;
+  height: 47px;
+  top: -3px;
   left: 0;
   border-radius: 32px;
   background: linear-gradient(
@@ -114,8 +123,6 @@
     rgba(245, 203, 134, 1) 52%,
     rgba(166, 143, 61, 1) 100%
   );
-  position: absolute;
-  height: 47px;
 }
 
 .tampilan-awal-web .text-wrapper-3 {
@@ -128,31 +135,50 @@
   color: #fdfcf7;
   font-size: 20px;
   text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
+/* --------------------------------------
+   Login & Navigasi
+--------------------------------------- */
 .tampilan-awal-web .div-wrapper {
   position: absolute;
   width: 93px;
   height: 47px;
-  top: 65px;
-  left: 1182px;
+  top: 60px;
+  left: 1130px;
   border-radius: 32px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 206, 72, 1) 0%,
+    rgba(245, 203, 134, 1) 52%,
+    rgba(166, 143, 61, 1) 100%
+  );
 }
 
 .tampilan-awal-web .text-wrapper-4 {
   position: absolute;
-  top: 8px;
+  top: 12px;
   left: 17px;
   font-family: "Doppio One", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
+.tampilan-awal-web .text-wrapper-10 {
+  position: absolute;
+  width: 89px;
+  top: 73px;
+  left: 1250px;
+  font-family: "Doppio One", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* --------------------------------------
+   Header: Logo + Search
+--------------------------------------- */
 .tampilan-awal-web .overlap-3 {
   position: absolute;
   width: 644px;
@@ -161,20 +187,36 @@
   left: 78px;
 }
 
-.tampilan-awal-web .rectangle-2 {
+.tampilan-awal-web .rectangle-2  input[type="search"] {
+  position: absolute;
   width: 430px;
+  height: 47px;
   top: 19px;
   left: 214px;
   background-color: #ecd6d6;
   border-radius: 20px;
+  border: none;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.tampilan-awal-web .gridicons-search {
   position: absolute;
-  height: 47px;
+  width: 24px;
+  height: 24px;
+  top: 32px;
+  left: 228px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .tampilan-awal-web .group {
+  position: absolute;
   width: 222px;
   height: 69px;
-  position: absolute;
   top: 0;
   left: 0;
 }
@@ -194,8 +236,6 @@
   font-weight: 400;
   color: #ffffff;
   font-size: 32px;
-  letter-spacing: 0;
-  line-height: normal;
   white-space: nowrap;
 }
 
@@ -208,14 +248,9 @@
   object-fit: cover;
 }
 
-.tampilan-awal-web .gridicons-search {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 32px;
-  left: 228px;
-}
-
+/* --------------------------------------
+   Navigasi Tambahan
+--------------------------------------- */
 .tampilan-awal-web .overlap-5 {
   position: absolute;
   width: 347px;
@@ -225,9 +260,9 @@
 }
 
 .tampilan-awal-web .group-2 {
+  position: absolute;
   width: 347px;
   height: 29px;
-  position: absolute;
   top: 0;
   left: 0;
 }
@@ -240,56 +275,39 @@
   left: 0;
 }
 
-.tampilan-awal-web .text-wrapper-6 {
+.tampilan-awal-web .text-wrapper-6,
+.tampilan-awal-web .text-wrapper-7,
+.tampilan-awal-web .text-wrapper-8,
+.tampilan-awal-web .text-wrapper-9 {
   position: absolute;
+  font-family: "Doppio One", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.tampilan-awal-web .text-wrapper-6 {
   width: 104px;
   top: 0;
   left: 0;
-  font-family: "Doppio One", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .tampilan-awal-web .text-wrapper-7 {
-  position: absolute;
   width: 102px;
   top: 0;
   left: 91px;
-  font-family: "Doppio One", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .tampilan-awal-web .text-wrapper-8 {
-  position: absolute;
   width: 64px;
   top: 0;
   left: 186px;
-  font-family: "Doppio One", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .tampilan-awal-web .text-wrapper-9 {
-  position: absolute;
   width: 89px;
   top: 0;
   left: 250px;
-  font-family: "Doppio One", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .tampilan-awal-web .weui-arrow-filled {
@@ -300,15 +318,57 @@
   left: 155px;
 }
 
-.tampilan-awal-web .text-wrapper-10 {
-  position: absolute;
-  width: 89px;
-  top: 73px;
-  left: 1295px;
-  font-family: "Doppio One", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
+/* --------------------------------------
+   Interaksi dan Hover Effect
+--------------------------------------- */
+.link-nav {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.link-nav:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.gridicons-search:hover {
+  transform: scale(1.1);
+}
+
+.overlap-2:hover .rectangle {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* --------------------------------------
+   Responsiveness
+--------------------------------------- */
+@media (max-width: 768px) {
+  .tampilan-awal-web .overlap-3 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    left: 0;
+  }
+
+  .tampilan-awal-web .group {
+    position: relative;
+    width: auto;
+    left: 0;
+    margin-bottom: 10px;
+  }
+
+  .tampilan-awal-web .rectangle-2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tampilan-awal-web .gridicons-search {
+    left: 85%;
+    top: 26px;
+  }
 }
