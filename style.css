@@ -187,7 +187,7 @@
   left: 78px;
 }
 
-.tampilan-awal-web .rectangle-2  input[type="search"] {
+.tampilan-awal-web .rectangle-2 input[type="search"] {
   position: absolute;
   width: 430px;
   height: 47px;
@@ -341,6 +341,62 @@
   transform: scale(1.03);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.section-about,
+.section-kontak {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.container-about,
+.container-kontak {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title-about,
+.title-kontak {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.desc-about,
+.desc-kontak {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.form-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-kontak,
+.textarea-kontak {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-kontak {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-kontak:hover {
+  background-color: #005bb5;
 }
 
 /* --------------------------------------
