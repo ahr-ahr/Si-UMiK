@@ -187,7 +187,7 @@
   width: 133px;
   height: 25px;
 }
-.forgot-password {
+.forgot-password a {
   color: rgba(171, 5, 8, 0.6);
   text-align: center;
   font-family: "Abel-Regular", sans-serif;
@@ -199,12 +199,12 @@
   width: 154px;
   height: 25px;
 }
-.radix-icons-box {
-  width: 31px;
+.remember-me1 input[type="checkbox"] {
+  width: 24px;
   height: 25px;
   position: absolute;
-  left: 784px;
-  top: 564px;
+  left: 770px;
+  top: 561px;
   overflow: visible;
 }
 .or-use-your-account {
@@ -536,3 +536,4 @@
   transform: rotate(-2.049deg) scale(-1, 1);
   object-fit: cover;
 }
+
