@@ -196,7 +196,7 @@
   background-color: #ecd6d6;
   border-radius: 20px;
   border: none;
-  padding-left: 16px;
+  padding-left: 38px;
   font-size: 14px;
   color: #333;
   outline: none;
@@ -207,7 +207,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 32px;
+  top: 30px;
   left: 228px;
   cursor: pointer;
   transition: 0.3s ease;
