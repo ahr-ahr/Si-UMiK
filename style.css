@@ -145,7 +145,7 @@
   width: 93px;
   height: 47px;
   top: 60px;
-  left: 1130px;
+  left: 1115px;
   border-radius: 32px;
   background: linear-gradient(
     180deg,
@@ -187,7 +187,7 @@
   left: 78px;
 }
 
-.tampilan-awal-web .rectangle-2  input[type="search"] {
+.tampilan-awal-web .rectangle-2 input[type="search"] {
   position: absolute;
   width: 430px;
   height: 47px;
@@ -248,6 +248,32 @@
   object-fit: cover;
 }
 
+.search-result-box {
+  background-color: #790204;
+  border-radius: 8px;
+  padding: 10px 0;
+  margin-top: 80px;
+  margin-left: 210px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 1000;
+  width: 200px;
+  display: none; /* default disembunyikan */
+}
+
+.search-result-box a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-family: "Doppio One", Helvetica;
+  font-size: 14px;
+}
+
+.search-result-box a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* --------------------------------------
    Navigasi Tambahan
 --------------------------------------- */
@@ -294,7 +320,7 @@
 
 .tampilan-awal-web .text-wrapper-7 {
   width: 102px;
-  top: 0;
+  top: -13px;
   left: 91px;
 }
 
@@ -314,8 +340,68 @@
   position: absolute;
   width: 15px;
   height: 10px;
-  top: 6px;
+  top: -10px;
   left: 155px;
+}
+
+/* DROPDOWN WRAPPER */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #790204;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  white-space: nowrap;
+}
+
+/* MUNCUL SAAT DIHOVER */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* GRID COLUMN */
+.dropdown-menu {
+  display: none;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/* KOLOM ISI */
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ITEM LINK */
+.dropdown-item {
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  font-family: "Doppio One", sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --------------------------------------
@@ -341,6 +427,62 @@
   transform: scale(1.03);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.section-about,
+.section-kontak {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.container-about,
+.container-kontak {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title-about,
+.title-kontak {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.desc-about,
+.desc-kontak {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.form-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-kontak,
+.textarea-kontak {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-kontak {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-kontak:hover {
+  background-color: #005bb5;
 }
 
 /* --------------------------------------

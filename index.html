@@ -26,7 +26,8 @@
               Usaha Mikro, Kecil, dan Menengah (UMKM) memainkan peran penting
               dalam perekonomian, namun tantangan untuk berkembang di era
               digital sangat besar. Salah satu solusi yang dapat membantu UMKM
-              bersaing adalah dengan website yang menjadi alat pemasaran efektif dan terjangkau.
+              bersaing adalah dengan website yang menjadi alat pemasaran efektif
+              dan terjangkau.
             </p>
             <img
               class="desain-tanpa-judul-2"
@@ -45,13 +46,14 @@
 
         <!-- Tombol Daftar -->
         <div class="div-wrapper">
-          <a href="#daftar" class="text-wrapper-4 link-nav">Daftar</a>
+          <a href="/auth/" class="text-wrapper-4 link-nav">Daftar</a>
         </div>
 
         <!-- Logo + Search -->
         <div class="overlap-3">
           <div class="rectangle-2">
-            <input type="search" class="input" placeholder="      Search" />
+            <input type="search" id="searchLayanan" class="input" placeholder="Cari layanan..." />
+            <div id="hasilSearch" class="search-result-box"></div>
           </div>
           <div class="group">
             <div class="overlap-4">
@@ -78,20 +80,97 @@
           <div class="group-2">
             <div class="overlap-group-2">
               <a href="#beranda" class="text-wrapper-6 link-nav">Beranda</a>
-              <a href="#layanan" class="text-wrapper-7 link-nav">Layanan</a>
-              <a href="#fitur" class="text-wrapper-8 link-nav">Fitur</a>
+
+              <!-- DROPDOWN MENU: LAYANAN -->
+              <div class="dropdown">
+                <div class="dropdown-toggle">
+                  <a href="#layanan" class="text-wrapper-7 link-nav">Layanan</a>
+                  <img
+                    class="weui-arrow-filled"
+                    src="https://c.animaapp.com/m9auohq3WGiKlV/img/weui-arrow-filled.svg"
+                  />
+                </div>
+                <div class="dropdown-menu grid-dropdown">
+                  <div class="dropdown-column">
+                    <a href="#produk" class="dropdown-item">Peizinan Dan Legalitas</a>
+                    <a href="#konsultasi" class="dropdown-item">Cara Membuat Produk</a>
+                    <a href="#pendampingan" class="dropdown-item">Bahan</a>
+                    <a href="#pelatihan" class="dropdown-item">Peralatan</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <a href="#pemasaran" class="dropdown-item">Promosi</a>
+                    <a href="#pengemasan" class="dropdown-item">Lokasi</a>
+                    <a href="#branding" class="dropdown-item">SDM</a>
+                    <a href="#fotografi" class="dropdown-item">Kemasan</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <a href="#webdev" class="dropdown-item">Distribusi</a>
+                    <a href="#desain-grafis" class="dropdown-item">Manajemen</a>
+                    <a href="#sosmed" class="dropdown-item">Pajak</a>
+                    <a href="#copywriting" class="dropdown-item">Pendanaan</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <a href="#about" class="text-wrapper-8 link-nav">About</a>
             </div>
             <a href="#kontak" class="text-wrapper-9 link-nav">Kontak</a>
           </div>
-          <img
-            class="weui-arrow-filled"
-            src="https://c.animaapp.com/m9auohq3WGiKlV/img/weui-arrow-filled.svg"
-          />
         </div>
 
         <!-- Masuk -->
-        <a href="#masuk" class="text-wrapper-10 link-nav">Masuk</a>
+        <a href="/auth/login.html" class="text-wrapper-10 link-nav">Masuk</a>
       </div>
     </div>
   </body>
+  <script>
+    const layanan = [
+      { nama: "Perizinan Dan Legalitas", link: "#produk" },
+      { nama: "Cara Membuat Produk", link: "#konsultasi" },
+      { nama: "Bahan", link: "#pendampingan" },
+      { nama: "Peralatan", link: "#pelatihan" },
+      { nama: "Promosi", link: "#pemasaran" },
+      { nama: "Lokasi Usaha", link: "#pengemasan" },
+      { nama: "SDM", link: "#branding" },
+      { nama: "Kemasan", link: "#fotografi" },
+      { nama: "Distribusi", link: "#webdev" },
+      { nama: "Manajemen", link: "#desain-grafis" },
+      { nama: "Pajak", link: "#sosmed" },
+      { nama: "Pendanaan", link: "#copywriting" },
+    ];
+  
+    const searchInput = document.getElementById("searchLayanan");
+    const hasilBox = document.getElementById("hasilSearch");
+  
+    searchInput.addEventListener("input", function () {
+      const keyword = this.value.toLowerCase();
+      hasilBox.innerHTML = "";
+  
+      if (keyword === "") {
+        hasilBox.style.display = "none";
+        return;
+      }
+  
+      const hasil = layanan.filter(item =>
+        item.nama.toLowerCase().includes(keyword)
+      );
+  
+      if (hasil.length > 0) {
+        hasil.forEach(item => {
+          const a = document.createElement("a");
+          a.href = item.link;
+          a.textContent = item.nama;
+          a.className = "dropdown-item";
+          hasilBox.appendChild(a);
+        });
+        hasilBox.style.display = "block";
+      } else {
+        hasilBox.innerHTML = "<div style='color:white; padding:10px;'>Tidak ditemukan</div>";
+        hasilBox.style.display = "block";
+      }
+    });
+  </script>
+  
+  
 </html>
