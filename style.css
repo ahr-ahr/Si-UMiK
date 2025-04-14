@@ -203,6 +203,13 @@
   box-sizing: border-box;
 }
 
+.tampilan-awal-web
+  .rectangle-2
+  input[type="search"]::-webkit-search-cancel-button {
+  position: absolute;
+  right: 10px;
+}
+
 .tampilan-awal-web .gridicons-search {
   position: absolute;
   width: 24px;

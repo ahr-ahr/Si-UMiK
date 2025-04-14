@@ -536,3 +536,8 @@
   transform: rotate(-2.049deg) scale(-1, 1);
   object-fit: cover;
 }
+
+.email-input, .password-input {
+  position: relative;
+  z-index: 10;
+}
