@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 1440px;
 }
 
 .tampilan-awal-web .div {
@@ -37,26 +37,26 @@
 --------------------------------------- */
 .tampilan-awal-web .desain-tanpa-judul {
   position: absolute;
-  width: 443px;
-  height: 813px;
-  top: 0;
-  left: 1015px;
+  width: 408px;
+  height: 631px;
+  top: -48px;
+  left: 1055px;
 }
 
 .tampilan-awal-web .img {
-  position: absolute;
-  width: 439px;
-  height: 813px;
-  top: 11px;
+  position: absolute;;
+  width: 408px;
+  height: 631px;
+  top: -37px;
   left: -115px;
 }
 
 .tampilan-awal-web .desain-tanpa-judul-2 {
   position: absolute;
-  width: 960px;
-  height: 259px;
-  top: 647px;
-  left: 227px;
+  width: 900px;
+  height: 264px;
+  top: 282px;
+  left: 220px;
 }
 
 /* --------------------------------------
@@ -65,8 +65,8 @@
 .tampilan-awal-web .text-wrapper {
   position: absolute;
   width: 671px;
-  top: 253px;
-  left: 373px;
+  top: 10px;
+  left: 360px;
   font-family: "Righteous", Helvetica;
   font-weight: 400;
   color: #ffffff;
@@ -78,8 +78,8 @@
 .tampilan-awal-web .text-wrapper-2 {
   position: absolute;
   width: 730px;
-  top: 293px;
-  left: 343px;
+  top: 49px;
+  left: 330px;
   font-family: "Righteous", Helvetica;
   font-weight: 400;
   color: #ffffff;
@@ -90,8 +90,8 @@
 .tampilan-awal-web .p {
   position: absolute;
   width: 627px;
-  top: 403px;
-  left: 406px;
+  top: 142px;
+  left: 380px;
   font-family: "Abel", Helvetica;
   font-weight: 400;
   color: #ffffff;
@@ -106,21 +106,21 @@
   position: absolute;
   width: 271px;
   height: 55px;
-  top: 555px;
-  left: 575px;
+  top: 450px;
+  left: 550px;
 }
 
 .tampilan-awal-web .rectangle {
   position: absolute;
   width: 271px;
   height: 47px;
-  top: -3px;
-  left: 0;
+  top: -201px;
+  left: -5px;
   border-radius: 32px;
   background: linear-gradient(
     180deg,
     rgba(255, 206, 72, 1) 0%,
-    rgba(245, 203, 134, 1) 52%,
+    rgb(151, 100, 19) 52%,
     rgba(166, 143, 61, 1) 100%
   );
 }
@@ -128,8 +128,8 @@
 .tampilan-awal-web .text-wrapper-3 {
   position: absolute;
   width: 266px;
-  top: 8px;
-  left: 3px;
+  top: -190px;
+  left: 0;
   font-family: "Doppio One", Helvetica;
   font-weight: 400;
   color: #fdfcf7;
@@ -144,13 +144,13 @@
   position: absolute;
   width: 93px;
   height: 47px;
-  top: 60px;
+  top: 35px;
   left: 1115px;
   border-radius: 32px;
   background: linear-gradient(
     180deg,
     rgba(255, 206, 72, 1) 0%,
-    rgba(245, 203, 134, 1) 52%,
+    rgb(151, 100, 19) 52%,
     rgba(166, 143, 61, 1) 100%
   );
 }
@@ -168,7 +168,7 @@
 .tampilan-awal-web .text-wrapper-10 {
   position: absolute;
   width: 89px;
-  top: 73px;
+  top: 48px;
   left: 1250px;
   font-family: "Doppio One", Helvetica;
   font-weight: 400;
@@ -191,7 +191,7 @@
   position: absolute;
   width: 430px;
   height: 47px;
-  top: 19px;
+  top: -13px;
   left: 214px;
   background-color: #ecd6d6;
   border-radius: 20px;
@@ -237,7 +237,7 @@
 .tampilan-awal-web .text-wrapper-5 {
   position: absolute;
   width: 155px;
-  top: 22px;
+  top: -4px;
   left: 65px;
   font-family: "Doppio One", Helvetica;
   font-weight: 400;
@@ -250,7 +250,7 @@
   position: absolute;
   width: 85px;
   height: 69px;
-  top: 0;
+  top: -27px;
   left: 0;
   object-fit: cover;
 }
@@ -304,7 +304,7 @@
   position: absolute;
   width: 250px;
   height: 29px;
-  top: 0;
+  top: -26px;
   left: 0;
 }
 
@@ -333,13 +333,13 @@
 
 .tampilan-awal-web .text-wrapper-8 {
   width: 64px;
-  top: 0;
+  top: -26px;
   left: 186px;
 }
 
 .tampilan-awal-web .text-wrapper-9 {
   width: 89px;
-  top: 0;
+  top: -26px;
   left: 250px;
 }
 
