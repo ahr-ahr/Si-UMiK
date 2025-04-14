@@ -99,7 +99,7 @@
   top: 823.55px;
   overflow: visible;
 }
-.rectangle-5 {
+.rectangle-5 input[type="email"]{
   background: #fefcf8;
   border-radius: 18px;
   width: 547.28px;
@@ -107,8 +107,10 @@
   position: absolute;
   left: 755px;
   top: 377px;
+  padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
+
 }
-.rectangle-4 {
+.rectangle-4 input[type="password"]{
   background: #fefcf8;
   border-radius: 18px;
   width: 547.28px;
@@ -116,6 +118,8 @@
   position: absolute;
   left: 756px;
   top: 473.31px;
+  padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
+
 }
 .mdi-email {
   width: 49.35px;
