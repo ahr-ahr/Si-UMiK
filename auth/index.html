@@ -237,11 +237,12 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <link href="./index.css" rel="stylesheet" />
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      
 
       <div class="register-container">
         <div class="register-register">
@@ -302,45 +303,28 @@
             alt="Vector68262"
             class="register-vector6"
           />
-          <img
-            src="public/external/rectangle378262-9ixb-200h.png"
-            alt="Rectangle378262"
-            class="register-rectangle37"
-          />
-          <img
-            src="public/external/rectangle428262-2csb-200h.png"
-            alt="Rectangle428262"
-            class="register-rectangle42"
-          />
-          <img
-            src="public/external/rectangle458262-bgb-200h.png"
-            alt="Rectangle458262"
-            class="register-rectangle45"
-          />
-          <img
-            src="public/external/rectangle488262-eh2f-200h.png"
-            alt="Rectangle488262"
-            class="register-rectangle48"
-          />
-          <span class="register-text15">No Telephon</span>
-          <img
-            src="public/external/rectangle468262-iu7-200h.png"
-            alt="Rectangle468262"
-            class="register-rectangle46"
-          />
-          <img
-            src="public/external/weuieyesoffoutlined8262-80fk.svg"
-            alt="weuieyesoffoutlined8262"
-            class="register-weuieyesoffoutlined1"
-          />
-          <img
-            src="public/external/rectangle478263-g3i4-200h.png"
-            alt="Rectangle478263"
-            class="register-rectangle47"
-          />
-          <span class="register-text16">Email</span>
-          <span class="register-text17">Nama depan</span>
-          <span class="register-text18">Password</span>
+          <div class="nama">
+          <div class="input-box">
+            <input type="text" class="input" placeholder="Nama Depan"/>
+          </div>
+          <div class="input-box">
+            <input type="text" class="input" placeholder="Nama Belakang"/>
+          </div>
+        </div>
+        <div class="input-box3">
+          <input type="text" class="input" placeholder="No Telepon"/>
+        </div>
+        <div class="password">
+        <div class="input-box4">
+          <input type="password" class="input" placeholder="Password"/>
+        </div>
+          <div class="input-box4">
+            <input type="password" class="input" placeholder="Confirmation Password"/>
+          </div>
+          </div>
+          <div class="input-box2">
+            <input type="email" class="input" placeholder="Email"/>
+          </div>
           <div class="register-group271">
             <img
               src="public/external/ellipse58263-yxtr-200h.png"
@@ -406,11 +390,6 @@
             class="register-weuiarrowfilled1"
           />
           <img
-            src="public/external/weuieyesoffoutlined8265-qa.svg"
-            alt="Weuieyesoffoutlined8265"
-            class="register-weuieyesoffoutlined2"
-          />
-          <img
             src="public/external/whatsappimage20241024at1122298265-4a8v-1100h.png"
             alt="WhatsAppImage20241024at1122298265"
             class="register-whats-app-image20241024at112229"
@@ -435,15 +414,13 @@
             alt="Weuiarrowfilled8265"
             class="register-weuiarrowfilled2"
           />
-          <span class="register-text19">Confirmation Password</span>
           <span class="register-text20">Remember me</span>
-          <span class="register-text21">Forgot password?</span>
-          <img
-            src="public/external/radixiconsbox8266-s2lk.svg"
-            alt="radixiconsbox8266"
-            class="register-radixiconsbox"
-          />
-          <span class="register-text22">Nama belakang</span>
+          <div class="register-text21">
+            <a href="forgot-password.html">Forgot password?></a>
+          </div>
+          <div class="remember-me-container">
+            <input type="checkbox" id="remember" name="remember" />
+            </div>
           <div class="register-group28">
             <img
               src="public/external/ellipse528266-z8lq-200h.png"
@@ -518,8 +495,10 @@
             alt="phphonefill8268"
             class="register-phphonefill"
           />
-          <div class="register-group1"></div>
-          <span class="register-text24">Register</span>
+          <div class="register-button-container">
+            <button class="register-button" onclick="handleRegister()">Register</button>
+          </div>
+          
           <span class="register-text25">profil</span>
           <div class="register-group21"></div>
         </div>
