@@ -7,8 +7,9 @@
 html,
 body {
   margin: 0px;
+  padding: 0px;
+  overflow: hidden;
   height: 100%;
-  overflow-x: hidden;
 }
 /* a blue color as a generic focus style */
 button:focus-visible {
