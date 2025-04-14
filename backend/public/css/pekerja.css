@@ -1,0 +1,705 @@
+/* Reset default browser styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3d1d1;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    padding: 10px 20px;
+    top: 0;
+    z-index: 10;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Back Button Styling */
+.container .back a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.container .back a i {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.container .back a i:hover {
+    color: #0056b3;
+}
+
+/* Layanan Title Styling */
+.container h3.layanan {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+/* Icon Styling */
+.container .icon {
+    display: flex;
+    gap: 15px;
+}
+
+.container .icon a {
+    color: #333;
+    font-size: 1.5em;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.container .icon a:hover {
+    color: #007bff;
+}
+
+/* Cart Icon with Badge Styling */
+#cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#cart-count {
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.8em;
+    padding: 2px 6px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Search Box Styling */
+.search-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Responsif untuk pencarian, menjaga ukuran tetap konsisten */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px 15px;
+    position: relative;
+    height: 45px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 8px 15px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    max-width: 300px;
+}
+
+.search-input:focus {
+    background-color: transparent;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    border: 1px solid #007bff;
+}
+
+.search-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+.search-btn i {
+    font-size: 1.2em;
+}
+
+/* Product Grid Styling */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Product Container */
+.product {
+    background-color: #b23a3a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Product */
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+/* Stock Info */
+.product .stock {
+    font-weight: 400;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Action Buttons */
+.product .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Button Styles */
+.add-to-cart, .buy-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.add-to-cart:hover {
+    background-color: #e0a800;
+}
+
+.buy-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Styles */
+/* Responsif untuk layar dengan lebar 768px atau lebih kecil (seperti tablet iPad) */
+@media (max-width: 768px) {
+    /* Tombol Keranjang dan Beli - Disusun sejajar dalam satu baris */
+    .button-container {
+        display: flex; /* Menggunakan flexbox untuk menyusun tombol sejajar */
+        flex-direction: row; /* Susun tombol dalam satu baris */
+        justify-content: space-between; /* Memberikan jarak antar tombol */
+        gap: 15px; /* Memberikan jarak antar tombol */
+        width: 100%; /* Tombol akan mengambil lebar penuh */
+    }
+
+    .add-to-cart, .buy-button {
+        width: 48%; /* Memberikan lebar hampir setengah untuk setiap tombol */
+        padding: 15px 0; /* Penyesuaian padding untuk tombol */
+        font-size: 16px; /* Ukuran font tombol menyesuaikan */
+        text-align: center; /* Menyelarakan teks tombol */
+    }
+}
+
+/* Responsif untuk layar dengan lebar 480px atau lebih kecil */
+@media (max-width: 480px) {
+    /* Tombol Keranjang dan Beli - Disusun sejajar dalam satu baris */
+    .button-container {
+        display: flex; /* Menggunakan flexbox untuk menyusun tombol sejajar */
+        flex-direction: row; /* Susun tombol dalam satu baris */
+        justify-content: space-between; /* Memberikan jarak antar tombol */
+        gap: 10px; /* Memberikan jarak antar tombol */
+        width: 100%; /* Tombol akan mengambil lebar penuh */
+    }
+
+    .add-to-cart, .buy-button {
+        width: 48%; /* Memberikan lebar hampir setengah untuk setiap tombol */
+        padding: 12px 0; /* Penyesuaian padding untuk tombol */
+        font-size: 14px; /* Ukuran font tombol menyesuaikan */
+        text-align: center; /* Menyelarakan teks tombol */
+    }
+}
+
+/* Responsif untuk layar dengan lebar 480px atau lebih kecil */
+@media (max-width: 480px) {
+    /* Produk - tampilkan dua kolom dengan jarak antar kolom yang lebih kecil */
+    .products {
+        grid-template-columns: 1fr 1fr; /* Dua kolom pada layar kecil */
+        gap: 15px; /* Memberikan jarak antar produk */
+    }
+
+    /* Setiap produk agar tidak terlalu besar, sesuaikan tinggi dan lebar */
+    .product {
+        max-width: 100%; /* Produk akan memenuhi lebar kontainer */
+        box-sizing: border-box; /* Menghindari elemen melebihi kontainer */
+    }
+
+    /* Tombol - Letakkan dalam dua baris dengan desain lebih baik */
+    .button-container {
+        display: flex; /* Menggunakan flexbox untuk menyusun tombol sejajar */
+        flex-direction: row; /* Susun tombol dalam satu baris */
+        justify-content: space-between; /* Memberikan jarak antar tombol */
+        gap: 10px; /* Memberikan jarak antar tombol */
+        width: 100%; /* Tombol akan mengambil lebar penuh */
+    }
+
+    .add-to-cart, .buy-button {
+        width: 48%; /* Memberikan lebar hampir setengah untuk setiap tombol */
+        padding: 12px 0; /* Penyesuaian padding untuk tombol */
+        font-size: 14px; /* Ukuran font tombol menyesuaikan */
+        text-align: center; /* Menyelarakan teks tombol */
+    }
+
+    /* Modal Profil */
+    .profile-modal {
+        width: 90%; /* Modal akan lebih lebar pada layar kecil */
+        max-width: 400px; /* Maksimal lebar modal */
+        margin: 0 auto; /* Centering modal */
+    }
+
+    .profile-modal .profile-photo img {
+        width: 50px; /* Ukuran gambar profil lebih kecil */
+        height: 50px;
+    }
+
+    .profile-modal h2 {
+        font-size: 20px; /* Ukuran font judul lebih kecil */
+        text-align: center; /* Menyelaraskan judul modal */
+    }
+
+    .profile-modal p {
+        font-size: 14px; /* Ukuran font lebih kecil untuk isi modal */
+        text-align: center; /* Menyelaraskan teks isi modal */
+        margin: 10px 0;
+    }
+
+    /* Layout Form Login/Daftar */
+    .form-container {
+        padding: 15px; /* Mengurangi padding form agar lebih kompak */
+    }
+
+    .form-container input,
+    .form-container button {
+        width: 100%; /* Input dan tombol mengisi lebar penuh */
+        padding: 12px; /* Padding lebih nyaman pada elemen form */
+        margin-bottom: 10px; /* Memberikan jarak antar elemen */
+    }
+
+    .form-container button {
+        font-size: 16px; /* Ukuran font tombol form lebih besar */
+        background-color: #ff7f50; /* Tombol dengan warna mencolok */
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Elemen header dan navigasi */
+    .header {
+        padding: 10px 20px; /* Mengurangi padding header */
+        text-align: center; /* Menyelaraskan teks header */
+    }
+
+    .header .logo {
+        width: 80px; /* Logo lebih kecil pada layar kecil */
+        height: auto;
+    }
+
+    /* Pengaturan footer */
+    .footer {
+        text-align: center; /* Menyelaraskan teks footer */
+        font-size: 12px; /* Ukuran teks footer lebih kecil */
+        padding: 10px 0; /* Mengurangi padding footer */
+    }
+}
+
+/* General Cart Modal Styles */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Cart Content */
+.cart-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    max-height: 90vh;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+
+/* Cart Title */
+.cart-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Cart Items List */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Cart Item Styling */
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.875rem;
+}
+
+#cart-items li img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+#cart-items li span {
+    flex-grow: 1;
+    font-size: 0.75rem;
+    color: #333;
+}
+
+#cart-items li button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 4px;
+    transition: color 0.3s;
+}
+
+#cart-items li button:hover {
+    color: #f44336;
+}
+
+#cart-items li .increase,
+#cart-items li .decrease {
+    padding: 4px 8px;
+    margin: 0 4px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#cart-items li .increase:hover,
+#cart-items li .decrease:hover {
+    background-color: #ddd;
+}
+
+/* Empty Cart Message */
+#cart-items li.empty-cart {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #999;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+/* Cart Total Price */
+#cart-items .total-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    padding: 8px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+/* Cart Summary Section */
+.cart-summary {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For smaller screens (mobile phones) */
+@media (max-width: 480px) {
+    /* Modal */
+    .cart-modal {
+        width: 100%; /* Make modal width 100% */
+        right: 0; /* Align modal to the right edge */
+    }
+
+    /* Cart Content */
+    .cart-content {
+        width: 80%;
+        padding: 10px;
+        margin-left: 90px;
+        margin-top: 60px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    /* Close Button */
+    .close-btn {
+        top: 10px;
+        right: 10px; /* Adjust close button position */
+    }
+
+    /* Cart Title */
+    .cart-content h2 {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    /* Cart Items */
+    #cart-items li {
+        font-size: 0.75rem;
+        padding: 8px 6px; /* Adjust padding for smaller screens */
+    }
+
+    #cart-items li img {
+        width: 30px; /* Smaller images */
+        height: 30px;
+    }
+
+    /* Cart Summary */
+    .cart-summary {
+        font-size: 0.875rem; /* Adjust font size */
+    }
+
+    /* Checkout Button */
+    .checkout-btn {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    /* Cart Total Price */
+    #cart-items .total-price {
+        font-size: 0.875rem; /* Adjust font size */
+    }
+}
+
+
+/* Profile Modal */
+.profile-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 230px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-modal .modal-content {
+    margin-top: 60px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-modal .modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.profile-modal .close-btn {
+    font-size: 35px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border: none;
+    background: transparent;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-modal .close-btn:hover {
+    transform: scale(1.2);
+    color: #f00;
+}
+
+.profile-modal .profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-modal .profile-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #f5f5f5;
+    transition: transform 0.3s ease;
+}
+
+.profile-modal .profile-photo img:hover {
+    transform: scale(1.1);
+}
+
+.profile-modal h2 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.profile-modal .modal-body {
+    margin-top: 20px;
+}
+
+.modal-item {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    color: #555;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-item:hover {
+    background-color: #f5f5f5;
+}
+
+.modal-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .profile-modal {
+        width: 90%;
+    }
+
+    .profile-modal .profile-photo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-modal h2 {
+        font-size: 18px;
+    }
+}

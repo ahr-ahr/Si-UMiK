@@ -1,0 +1,347 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: serif;
+    background-color: pink;
+}
+.container img{
+    display: flex;
+
+}
+.layanan{
+    color: red;
+    font-size: 30px;
+    font-family: cursive;
+    position: absolute;
+    left: 150px;
+    top: -20px;
+}
+
+.icon{
+    position: absolute;
+    left: 900px;
+    top: 20px;
+    font-size: 30px;
+    display: flex;
+    letter-spacing: 40px;
+}
+
+  /* Search Container */
+  .search-container {
+    position: relative;
+    left: 400px;
+    top: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Search Box */
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .search-box:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Input */
+  .search-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 50px 0 0 50px;
+    color: #333;
+  }
+
+  /* Button */
+  .search-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0 50px 50px 0;
+  }
+
+  .search-button:hover {
+    background-color: #ab0b0b;
+  }
+
+  .search-button svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+  }
+  .products{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 50px;
+    top: 90px;
+}
+.product1{
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    border-color: red;
+    background-color: red;
+}
+.product1 img{
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    left: 28px;
+ }
+.product1 h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 5px;
+}
+.product1 p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 5px;
+    top: 140px;
+}
+.product1 .stock{
+    color: black;
+    border-radius: 1px;
+    background-color: white;
+    font-family: monospace;
+    position: absolute;
+    top: 170px;
+    left: 5px;
+}
+.product1 .add-to-cart{
+    font-size: 15px;
+    border-radius: 8px;
+    width: 170px;
+    height: 30px;
+    background-color: yellow;
+    position: absolute;
+    top: 210px;
+    left: 15px;
+}
+.product2{
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    border-color: red;
+    background-color: red;
+}
+.product2 img{
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    left: 235px;
+ }
+.product2 h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 215px;
+}
+.product2 p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 215px;
+    top: 140px;
+}
+.product2 .stock{
+    color: black;
+    border-radius: 1px;
+    background-color: white;
+    font-family: monospace;
+    position: absolute;
+    top: 170px;
+    left: 215px;
+}
+.product2 .add-to-cart{
+    font-size: 15px;
+    border-radius: 8px;
+    height: 30px;
+    width: 170px;
+    background-color: yellow;
+    position: absolute;
+    top: 210px;
+    left: 225px;
+}
+.product3{
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    border-color: red;
+    background-color: red;
+}
+.product3 img{
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    left: 445px;
+ }
+.product3 h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 425px;
+}
+.product3 p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 425px;
+    top: 140px;
+}
+.product3 .stock{
+    color: black;
+    border-radius: 1px;
+    background-color: white;
+    font-family: monospace;
+    position: absolute;
+    left: 425px;
+    top: 170px;
+}
+.product3 .add-to-cart{
+    font-size: 15px;
+    border-radius: 8px;
+    height: 30px;
+    width: 170px;
+    background-color: yellow;
+    position: absolute;
+    top: 210px;
+    left: 435px;
+}
+.product4{
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    border-color: red;
+    background-color: red;
+}
+.product4 img{
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    left: 655px;
+ }
+.product4 h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 635px;
+}
+.product4 p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 635px;
+    top: 140px;
+}
+.product4 .stock{
+    color: black;
+    border-radius: 1px;
+    background-color: white;
+    position: absolute;
+    font-family: monospace;
+    left: 635px;
+    top: 170px;
+}
+.product4 .add-to-cart{
+    font-size: 15px;
+    border-radius: 8px;
+    height: 30px;
+    width: 170px;
+    background-color: yellow;
+    position: absolute;
+    top: 210px;
+    left: 645px;
+}
+.product5{
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    border-color: red;
+    background-color: red;
+}
+.product5 img{
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    left: 865px;
+ }
+.product5 h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 845px;
+}
+.product5 p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 845px;
+    top: 140px;
+}
+.product5 .stock{
+    color: black;
+    border-radius: 1px;
+    background-color: white;
+    font-family: monospace;
+    position: absolute;
+    left: 845px;
+    top: 170px;
+}
+.product5 .add-to-cart{
+    font-size: 15px;
+    border-radius: 8px;
+    height: 30px;
+    width: 170px;
+    background-color: yellow;
+    position: absolute;
+    top: 210px;
+    left: 855px;
+}
+.products1{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 260px;
+}
+.products2{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 260px;
+}
+
+.back{
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}

@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #ffe5e5;
+}
+.header input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+.nav {
+    display: flex;
+    gap: 15px;
+}
+.nav button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    color: #444;
+}
+.nav button.active {
+    background-color: red;
+    color: white;
+    border: none;
+}
+.search-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Listing Section */
+.listing {
+    display: flex;
+    padding: 20px 0;
+    background-color: white;
+}
+.images {
+    flex: 2;
+}
+.images img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.thumbnails {
+    display: flex;
+    gap: 10px;
+}
+.thumbnails img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+.details {
+    flex: 1;
+    padding-left: 20px;
+}
+.details h1 {
+    font-size: 24px;
+    color: red;
+}
+.details h2 {
+    font-size: 20px;
+    color: black;
+}
+.details p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Property Details Section with KPR Side-by-Side */
+.property-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 20px 0;
+}
+.property-details {
+    flex: 2;
+}
+.property-details ul {
+    list-style: none;
+    padding: 0;
+}
+.property-details li {
+    font-size: 16px;
+    padding: 5px 0;
+}
+.kpr-simulation {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.kpr-simulation table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.kpr-simulation th, .kpr-simulation td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.kpr-simulation th {
+    background-color: #f0f0f0;
+}
+.kpr-simulation td {
+    font-size: 16px;
+}
+.kpr-simulation input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.kpr-simulation p {
+    font-size: 16px;
+    color: #333;
+}
+.kpr-simulation p strong {
+    font-size: 20px;
+    color: red;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+.agent-info {
+    display: flex;
+    align-items: center;
+}
+.agent-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.agent-info p {
+    font-size: 14px;
+    color: #444;
+}
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whatsapp-btn:hover {
+    background-color: #1EB853;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+    .listing {
+        flex-direction: column;
+    }
+    .details {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    .nav button {
+        padding: 5px 10px;
+    }
+    .search-btn {
+        padding: 8px 15px;
+    }
+    .images img {
+        max-height: 250px;
+    }
+    .property-container {
+        flex-direction: column;
+    }
+    .property-details, .kpr-simulation {
+        padding: 10px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../img/bg3.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    position: absolute;
+    left: 680px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: red;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: red;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    border-color: #0066ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 255, 0.5);
+}
+
+.btn-login {
+    font-family: monospace;
+    width: 100%;
+    padding: 10px;
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #cc0000;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ff0000;
+}
+
+.register-link a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+.checklist-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.checklist-group input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.checklist-group label {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.checklist-group a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.checklist-group a:hover {
+    text-decoration: underline;
+}
+.lupa{
+    position: absolute;
+    left: 260px;
+    top: 270px;
+}
