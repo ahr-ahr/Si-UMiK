@@ -537,7 +537,3 @@
   object-fit: cover;
 }
 
-.email-input, .password-input {
-  position: relative;
-  z-index: 10;
-}
