@@ -1,0 +1,165 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8e8e8;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.back{
+    font-size: 30px;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+
+.layanan{
+    color: rgb(88, 0, 0);
+    font-size: 40px;
+    font-family: cursive;
+    position: absolute;
+    left: 200px;
+    top: -35px;
+}
+
+.icon{
+    position: absolute;
+    left: 1100px;
+    top: 20px;
+    color: red;
+    font-size: 30px;
+    display: flex;
+    letter-spacing: 30px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.header i {
+    font-size: 24px;
+    color: #d9534f;
+    margin-right: 10px;
+}
+.header h1 {
+    font-size: 24px;
+    color: #d9534f;
+    margin: 0;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #d9534f;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0;
+}
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profile .info {
+    display: flex;
+    flex-direction: column;
+}
+.profile .info h2 {
+    font-size: 18px;
+    color: #d9534f;
+    margin: 0;
+}
+.profile .info p {
+    font-size: 14px;
+    color: #d9534f;
+    margin: 0;
+}
+.details {
+    background-color: #fff;
+    border: 1px solid #d9534f;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0;
+}
+.details p {
+    font-size: 14px;
+    color: #0e0606;
+    margin: 5px 0;
+}
+
+.money{
+    font-size: 14px;
+    color: #c90606;
+    margin: 5px 0;
+    position: relative;
+    left: 510px;
+    top: -42px;
+}
+
+.payment-method, .options {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.option {
+    align-items: center;
+    padding: 6px 0;
+    justify-content: space-between;
+
+}
+
+.payment-method .options .option img {
+    width: 100px;
+}
+
+.payment-method .options .option input {
+    margin-right: 10px;
+}
+
+.payment-method {
+    background-color: #fff;
+    border: 1px solid #d9534f;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+    margin: 5px 0;
+    color: #0e0606;
+    border-radius: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #fff;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+button:hover {
+    background-color: #d9534f;
+    color: #fff;
+    cursor: pointer;
+}
+
+hr {
+    border-color: #d9534f;
+    font-size: 20px;
+}
+
+.klik {
+    margin-left: 450px;
+}

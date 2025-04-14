@@ -1,0 +1,61 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+    color: red;
+}
+.background{
+    background-image: url('../img/bg4.jpg');
+    object-fit: cover;
+    width: 1270px;
+    height: 590px;
+}
+.profil{
+    position: absolute;
+    left: 850px;
+    top: 30px;
+}
+.img{
+    font-size: 50px;
+    position: relative;
+    left: 15px;
+}
+.namad{
+    position: absolute;
+    left: 700px;
+    top: 200px;
+}
+.namab{
+    position: absolute;
+    left: 680px;
+    top: 250px;
+}
+.lahir p{
+    position: relative;
+    left: -8px;
+}
+.lahir{
+
+    display: flex;
+    position: absolute;
+    left: 692px;
+    top: 300px;
+}
+.klamin {
+    display: flex;
+    position: absolute;
+    left: 680px;
+    top: 350px;
+}
+.laki{
+   margin-left: 20px;
+}
+.perempuan{
+    margin-left: 50px;
+}
+.btn{
+    position: relative;
+    left: 800px;
+    width: 150px;
+    top: 400px;
+}

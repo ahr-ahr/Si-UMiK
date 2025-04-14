@@ -1,0 +1,78 @@
+
+	body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+.img{
+    background-image: url('../img/bg4.jpg');
+    object-fit: cover;
+    width: 1200px;
+    height: 560px;
+}
+.login{
+   display: flex;
+   justify-content: end;
+
+}
+.login h2{
+    font-family: cursive;
+    color: red;
+    position: relative;
+    left: -190px;
+    top: 20px;
+}
+.login p{
+    font-family: inherit;
+    color: red;
+    position: relative;
+    top: 70px;
+    left: -300px;
+}
+
+.mb-3{
+    color: red;
+    width: 400px;
+    position: relative;
+    left: 650px;
+    top: 50px;
+}
+.btn{
+    position: relative;
+    left: 750px;
+    top: 70px;
+    background-color: red;
+    color: white;
+    width: 200px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.btn:hover{
+    background-color: rgb(223, 18, 18);
+}
+.akun{
+    position: relative;
+    left: 110px;
+    top: 30px;
+}
+.google{
+    border: 1px;
+    border-radius: 10px;
+    width: 90px;
+    height: 60px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    font-size: 40px;
+}
+.facebok{
+    border: 1px;
+    border-radius: 10px;
+    width: 90px;
+    height: 60px;
+    position: relative;
+    left: 120px;
+    top: 30px;
+    font-size: 40px;
+}

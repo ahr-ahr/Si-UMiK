@@ -1,0 +1,150 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.nav a:hover {
+    color: #80bdff;
+}
+
+.nav i {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.back h3 {
+    display: inline;
+    margin-left: 10px;
+}
+
+.container {
+    margin-left: 220px;
+    padding: 40px;
+    max-width: 600px;
+}
+
+/* Fade-in for form elements */
+.container div {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Transition for input focus */
+input.form-control {
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.8);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Rotate animation for icons on hover */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 0.5s ease-in-out;
+}
+
+.user {
+    margin-bottom: 20px;
+}
+
+.klamin {
+    margin-top: 20px;
+}
+
+.klamin .form-check {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Input hover effect */
+form input:hover {
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Icon rotation */
+.rotate {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}

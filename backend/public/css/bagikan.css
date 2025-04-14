@@ -1,0 +1,31 @@
+.share-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .back-button, .copy-link {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .share-text {
+    font-weight: bold;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .social-button img {
+    width: 24px;
+    height: 24px;
+  }

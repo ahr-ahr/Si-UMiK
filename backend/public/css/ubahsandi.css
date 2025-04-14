@@ -1,0 +1,45 @@
+
+	body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.img{
+    background-image: url('../img/bg1.jpg');
+    object-fit: cover;
+    width: 1270px;
+    height: 590px;
+}
+.login{
+   display: flex;
+   justify-content: end;
+
+}
+.login h2{
+    font-family: cursive;
+    color: red;
+    position: absolute;
+    left: 800px;
+    top: 80px;
+}
+
+.mb-3{
+    color: red;
+    width: 400px;
+    position: relative;
+    left: 750px;
+    top: 120px;
+}
+.btn{
+    position: absolute;
+    left: 850px;
+    top: 460px;
+    background-color: red;
+    color: white;
+    width: 200px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.btn:hover{
+    background-color: rgb(223, 18, 18);
+}
