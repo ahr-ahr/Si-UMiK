@@ -30,6 +30,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // User
     Route::get('/users/dashboard', [UserController::class, 'index']);
     Route::get('/users/{id}', [UserController::class, 'show']);
+    Route::get('/users/{id}/edit', [UserController::class, 'edit']);
+    Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
+
 
     // UMKM
     Route::get('/umkm/dashboard', [UmkmController::class, 'index']);
@@ -61,6 +64,3 @@ Route::get('/email/verify/{id}/{hash}', function ($id, $hash) {
 
     return redirect('/login')->withErrors(['email' => 'Link verifikasi tidak valid.']);
 })->middleware(['auth', 'signed'])->name('verification.verify');
-
-Route::get('/forgot_password', [AuthController::class, 'showForgotPasswordForm'])->name('password.request');
-Route::post('/forgot_password', [AuthController::class, 'sendResetLinkEmail'])->name('password.email');

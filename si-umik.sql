@@ -21,6 +21,7 @@ CREATE TABLE users (
     posisi_pekerjaan VARCHAR(100) DEFAULT NULL COMMENT 'Posisi pekerjaan (jika sudah bekerja)',
     bio TEXT DEFAULT NULL COMMENT 'Deskripsi singkat atau minat pengguna',
     keahlian TEXT DEFAULT NULL COMMENT 'Daftar keahlian pengguna',
+    cv VARCHAR(255) DEFAULT NULL COMMENT 'Link atau path ke file CV, khusus untuk role pencari_kerja',
     email_verified_at DATETIME DEFAULT NULL COMMENT 'Waktu verifikasi email',
     last_login DATETIME DEFAULT NULL COMMENT 'Terakhir login',
     token_verifikasi VARCHAR(255) DEFAULT NULL COMMENT 'Token untuk verifikasi/reset password',
