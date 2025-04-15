@@ -108,7 +108,8 @@
   left: 755px;
   top: 377px;
   font-size: 26px;
-  color: #007BFF; 
+  color: #007BFF; /* biru, bisa ganti ke warna lain seperti red, green, dll */
+
   padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
 
 }
@@ -121,7 +122,8 @@
   left: 756px;
   top: 473.31px;
   font-size: 26px;
-  color: #007BFF; 
+  color: #007BFF; /* biru, bisa ganti ke warna lain seperti red, green, dll */
+
   padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
 
 }
@@ -159,30 +161,7 @@
   top: 14.58%;
   overflow: visible;
 }
-.email {
-  color: rgba(171, 5, 8, 0.5);
-  text-align: center;
-  font-family: "Abel-Regular", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  position: absolute;
-  left: 826.65px;
-  top: 394.73px;
-  width: 102px;
-  height: 31px;
-}
-.password {
-  color: rgba(171, 5, 8, 0.5);
-  text-align: center;
-  font-family: "Abel-Regular", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  position: absolute;
-  left: 841.65px;
-  top: 490.73px;
-  width: 110px;
-  height: 25px;
-}
+
 .remember-me {
   color: rgba(171, 5, 8, 0.7);
   text-align: center;
