@@ -23,7 +23,6 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        // Cegah user lain mengedit data orang lain (kecuali admin)
         if (auth()->user()->id !== $user->id && auth()->user()->role !== 'admin') {
             abort(403);
         }
@@ -35,12 +34,10 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        // Cegah user lain mengedit data orang lain (kecuali admin)
         if (auth()->user()->id !== $user->id && auth()->user()->role !== 'admin') {
             abort(403);
         }
 
-        // Validasi input
         $validated = $request->validate([
             'fullname' => 'required|string|max:100',
             'no_telepon' => 'required|string|max:20',
