@@ -1,115 +1,73 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Aplikasi Chat Realtime</title>
-    <link rel="stylesheet" href={{ asset('css/chat.css')}}> <!-- Menghubungkan CSS eksternal -->
+    <title>Realtime Chat</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h1>Aplikasi Chat Realtime</h1>
+    <div id="chat-box">
+        <div id="messages">
+            @foreach($messages as $message)
+                <div>
+                    <strong>{{ $message->sender->name }}:</strong>
+                    {{ $message->message }}
+                </div>
+            @endforeach
         </div>
 
-        <div class="messages" id="messages">
-            <!-- Pesan akan muncul di sini -->
-        </div>
+        <!-- Input untuk memasukkan nama penerima -->
+        <input type="text" id="receiver_name" placeholder="Masukkan Nama Penerima" required>
 
-        <div class="input-message">
-            <input type="text" id="messageInput" placeholder="Ketik pesan..." autocomplete="off">
-            <button id="sendMessageBtn">
-                <span>📤</span>
-            </button>
-        </div>
+        <!-- Input untuk pesan -->
+        <input type="text" id="message" placeholder="Tulis pesan..." required>
+
+        <!-- Tombol kirim -->
+        <button onclick="sendMessage()">Kirim</button>
     </div>
 
-    <div id="messageNotification" class="notification">
-        Pesan baru diterima!
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pusher-js@7.0.3/dist/web/pusher.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/laravel-echo/1.10.0/echo.js"></script>
+    <!-- Tombol logout -->
+    <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
 
     <script>
-        // Inisialisasi Pusher dan Laravel Echo
-        window.Pusher = Pusher;
+        const socket = io("http://localhost:3001");
 
-        var echo = new Echo({
-            broadcaster: 'pusher',
-            key: 'your-pusher-key',  // Masukkan Pusher Key kamu di sini
-            cluster: 'your-pusher-cluster',  // Masukkan Cluster Pusher di sini
-            forceTLS: true
+        // Mendaftarkan pengguna ke server dengan nama pengguna
+        socket.emit('register', '{{ auth()->user()->name }}');
+
+        socket.on('receiveMessage', function (data) {
+            const messageElement = document.createElement("div");
+            messageElement.textContent = `${data.from}: ${data.message}`;
+            document.getElementById("messages").appendChild(messageElement);
         });
 
-        // Berlangganan ke channel 'chat'
-        echo.channel('chat')
-            .listen('MessageSent', (event) => {
-                console.log("Pesan diterima:", event.message);
+        // Fungsi untuk mengirim pesan
+        function sendMessage() {
+            const message = document.getElementById("message").value;
+            const receiver_name = document.getElementById("receiver_name").value;  // Ambil nama penerima
 
-                // Menambahkan pesan baru di UI
-                let messageDiv = document.createElement('div');
-                messageDiv.classList.add('message');
-                messageDiv.innerHTML = `
-                    <span class="user-name">${event.message.user_name}:</span>
-                    <span class="message-content">${event.message.message}</span>
-                `;
-                if (event.message.user_name === "Pengguna A") {
-                    messageDiv.classList.add('self');
-                }
-
-                document.getElementById('messages').appendChild(messageDiv);
-                scrollToBottom();
-                showNotification();
-            });
-
-        // Kirim pesan ke backend
-        function sendMessage(message) {
-            axios.post('/send-message', {
-                message: message,
-                user_name: 'Pengguna B'  // Ganti dengan nama pengguna B
-            })
-            .then(function (response) {
-                document.getElementById('messageInput').value = '';  // Clear input setelah pesan terkirim
-            })
-            .catch(function (error) {
-                console.error(error);
-            });
-        }
-
-        // Menangani klik pada tombol kirim
-        document.getElementById('sendMessageBtn').addEventListener('click', function() {
-            let message = document.getElementById('messageInput').value;
-            if (message.trim() !== "") {
-                sendMessage(message);
+            // Pastikan input tidak kosong
+            if (!message || !receiver_name) {
+                alert("Pesan dan Nama penerima harus diisi!");
+                return;
             }
-        });
 
-        // Menangani tekan tombol Enter untuk mengirim pesan
-        document.getElementById('messageInput').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                let message = document.getElementById('messageInput').value;
-                if (message.trim() !== "") {
-                    sendMessage(message);
-                }
-            }
-        });
-
-        // Scroll ke bawah ketika ada pesan baru
-        function scrollToBottom() {
-            let messagesDiv = document.getElementById('messages');
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        }
-
-        // Menampilkan notifikasi pesan baru
-        function showNotification() {
-            let notification = document.getElementById('messageNotification');
-            notification.style.display = 'block';
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 3000);
+            // Kirim pesan ke backend untuk disimpan di database
+            fetch('/send-message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                },
+                body: JSON.stringify({ receiver_name, message })
+            }).then(() => {
+                // Kirim pesan ke penerima via Socket.IO setelah disimpan di backend
+                socket.emit('sendMessage', { from: '{{ auth()->user()->name }}', to: receiver_name, message });
+            });
         }
     </script>
 </body>

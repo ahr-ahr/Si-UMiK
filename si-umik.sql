@@ -24,6 +24,7 @@ CREATE TABLE users (
     email_verified_at DATETIME DEFAULT NULL COMMENT 'Waktu verifikasi email',
     last_login DATETIME DEFAULT NULL COMMENT 'Terakhir login',
     token_verifikasi VARCHAR(255) DEFAULT NULL COMMENT 'Token untuk verifikasi/reset password',
+    remember_token VARCHAR(255) DEFAULT NULL COMMENT 'Token untuk fitur remember me (persistent login)',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu registrasi akun'
 );
 

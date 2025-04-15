@@ -1,42 +1,33 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href={{ asset('css/login.css') }}>
 </head>
 <body>
-    <div class="container">
-        <div class="form-container">
-            @if (session('success'))
-                <div>{{ session('success') }}</div>
-            @endif
-
-            @if ($errors->any())
-                <div>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
-            <form id="registerForm" class="form" action="{{ route('register') }}" method="POST">
-                @csrf
-                <h2>Register</h2>
-                <input type="text" name="username" id="regUsername" placeholder="Username" required>
-                <input type="email" name="email" id="regEmail" placeholder="Email" required>
-                <input type="password" name="password" id="regPassword" placeholder="Password" required>
-                <input type="password" name="password_confirmation" id="regPasswordConfirm" placeholder="Konfirmasi Password" required>
-                <input class="button" type="submit" value="Register">
-            </form>
-
-            <p>Sudah punya akun? <a href="{{ route('login') }}">Login di sini</a></p>
+    <h2>Register</h2>
+    <form method="POST" action="/register">
+        @csrf
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" required>
         </div>
-    </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" required>
+        </div>
+        <div>
+            <label for="password_confirmation">Confirm Password</label>
+            <input type="password" name="password_confirmation" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
 
-    <script src={{ asset('js/login.js') }}></script>
+    <p>Already have an account? <a href="/login">Login here</a></p>
 </body>
 </html>
