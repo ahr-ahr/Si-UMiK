@@ -26,6 +26,7 @@ CREATE TABLE users (
     token_verifikasi VARCHAR(255) DEFAULT NULL COMMENT 'Token untuk verifikasi/reset password',
     remember_token VARCHAR(255) DEFAULT NULL COMMENT 'Token untuk fitur remember me (persistent login)',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu registrasi akun'
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu update akun'
 );
 
 CREATE TABLE umkm (
