@@ -21,7 +21,6 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($users as $user)
                 <tr>
                     <td>{{ $user->id }}</td>
 
@@ -62,7 +61,6 @@
                         @endif
                     </td>
                 </tr>
-            @endforeach
         </tbody>
     </table>
 
