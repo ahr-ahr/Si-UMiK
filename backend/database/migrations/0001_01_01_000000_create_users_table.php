@@ -35,13 +35,7 @@ return new class extends Migration {
             $table->integer('last_activity')->index();
         });
 
-        Schema::create('messages', function (Blueprint $table) {
-            $table->id();
-            $table->foreign('sender_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('receiver_id')->references('id')->on('users')->onDelete('cascade');
-            $table->text('message');
-            $table->timestamps();
-        });
+        
     }
 
     /**
