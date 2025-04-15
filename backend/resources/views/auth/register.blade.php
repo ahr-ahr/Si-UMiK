@@ -35,9 +35,12 @@
             <option value="P" {{ old('jenis_kelamin') == 'P' ? 'selected' : '' }}>Perempuan</option>
         </select><br><br>
 
+<<<<<<< HEAD
 
         
 
+=======
+>>>>>>> 02cf5264a9bc3599c85e162ddda34cd541b37eac
         <label>Email:</label><br>
         <input type="email" name="email" value="{{ old('email') }}" required><br><br>
 

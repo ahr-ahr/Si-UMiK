@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Mail;
 use App\Models\User;
 
 class AuthController extends Controller
@@ -49,7 +51,7 @@ class AuthController extends Controller
             } elseif ($user->role === 'umkm') {
                 return redirect()->intended('/umkm/dashboard');
             } else {
-                return redirect()->intended('/user/dashboard');
+                return redirect()->intended('/users/dashboard');
             }
         }
 
@@ -120,4 +122,24 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
         return redirect('/login');
     }
+
+    public function showVerificationNotice()
+    {
+        return view('auth.verify');
+    }
+
+    public function sendVerificationLink(Request $request)
+    {
+        $user = Auth::user();
+
+        if ($user && !$user->hasVerifiedEmail()) {
+            // Mengirimkan ulang link verifikasi
+            $user->sendEmailVerificationNotification();
+
+            return back()->with('status', 'Link verifikasi telah dikirim ulang ke email Anda.');
+        }
+
+        return back()->withErrors(['email' => 'Akun Anda sudah terverifikasi.']);
+    }
+
 }
