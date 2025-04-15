@@ -34,8 +34,11 @@ return new class extends Migration {
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> 13177176c2652031d97de55e489b972820646eed
     }
 
     /**

@@ -43,7 +43,7 @@
         <label>Email:</label><br>
         <input type="email" name="email" value="{{ old('email') }}" required><br><br>
 
-        <label>Nomor Telepon:</label><br>
+        <label>No Telepon:</label><br>
         <input type="text" name="no_telepon" value="{{ old('no_telepon') }}" required><br><br>
 
         <label>Provinsi:</label><br>
@@ -63,6 +63,21 @@
 
         <label>Alamat:</label><br>
         <textarea name="alamat" required>{{ old('alamat') }}</textarea><br><br>
+
+        <label>Lulusan Sekolah Terakhir:</label><br>
+        <input type="text" name="lulusan_sekolah_terakhir" value="{{ old('lulusan_sekolah_terakhir') }}" required><br><br>
+
+        <label>Jurusan (Opsional):</label><br>
+        <input type="text" name="jurusan" value="{{ old('jurusan') }}"><br><br>
+
+        <label>Posisi Pekerjaan (Opsional):</label><br>
+        <input type="text" name="posisi_pekerjaan" value="{{ old('posisi_pekerjaan') }}"><br><br>
+
+        <label>Bio (Opsional):</label><br>
+        <textarea name="bio">{{ old('bio') }}</textarea><br><br>
+
+        <label>Keahlian (Opsional):</label><br>
+        <textarea name="keahlian">{{ old('keahlian') }}</textarea><br><br>
 
         <label>Password:</label><br>
         <input type="password" name="password" required><br><br>
