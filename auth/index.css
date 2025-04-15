@@ -16,6 +16,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-color: rgba(236, 214, 214, 1);
+
 }
 
 .register-peacockremovebgpreview1 {
@@ -762,7 +763,7 @@
 .register-button-container {
   position: absolute;
   top: 800px;
-  left: 1100px;
+  left: 960px;
   text-align: center;
   margin-top: 20px;
 }
@@ -779,29 +780,6 @@
 }
 
 .register-button:hover {
-  background-color: #0056b3;
-}
-
-.back-button-container {
-  position: absolute;
-  top: 800px;
-  left: 800px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.back-button {
-  padding: 25px 60px;
-  background-color: rgba(171, 4, 7, 0.8399999737739563);
-  border-radius: 8px;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.back-button:hover {
   background-color: #0056b3;
 }
 
