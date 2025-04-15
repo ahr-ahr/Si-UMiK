@@ -109,7 +109,6 @@
   top: 377px;
   font-size: 26px;
   color: #007BFF; /* biru, bisa ganti ke warna lain seperti red, green, dll */
-
   padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
 
 }
@@ -123,7 +122,6 @@
   top: 473.31px;
   font-size: 26px;
   color: #007BFF; /* biru, bisa ganti ke warna lain seperti red, green, dll */
-
   padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
 
 }
@@ -162,6 +160,9 @@
   overflow: visible;
 }
 
+
+
+
 .remember-me {
   color: rgba(171, 5, 8, 0.7);
   text-align: center;
@@ -186,7 +187,7 @@
   width: 154px;
   height: 25px;
 }
-.remember-me1 input[type="checkbox"] {
+.remember-me1 input[type="checkbox"]{
   width: 24px;
   height: 25px;
   position: absolute;
