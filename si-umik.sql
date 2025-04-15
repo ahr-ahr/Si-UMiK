@@ -79,7 +79,7 @@ CREATE INDEX idx_status_chat ON chat(status);
 CREATE INDEX idx_status_users ON users(status_akun);
 
 -- Indeks pada kolom created_at di tabel chat dan umkm
-CREATE INDEX idx_created_at_chat ON chat(created_at);
+CREATE INDEX idx_sent_at_chat ON chat(sent_at);
 CREATE INDEX idx_created_at_umkm ON umkm(created_at);
 
 -- Indeks pada kolom role di tabel users
