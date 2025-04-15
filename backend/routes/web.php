@@ -36,6 +36,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // User
     Route::get('/users/dashboard', [UserController::class, 'index']);
     Route::get('/users/{id}', [UserController::class, 'show']);
+    Route::get('/users/{id}/edit', [UserController::class, 'edit']);
+    Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
+
 
     // UMKM
     Route::get('/umkm/dashboard', [UmkmController::class, 'index']);

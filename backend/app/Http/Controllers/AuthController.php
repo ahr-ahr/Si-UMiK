@@ -146,14 +146,14 @@ class AuthController extends Controller
     }
 
 
- // Tampilkan form lupa password
+    // Tampilkan form lupa password
     public function showForgotPasswordForm(Request $request)
     {
         return view('auth.forgot_password'); // pastikan file ini ada
     }
 
- // Kirim email reset password
- public function sendResetLinkEmail(Request $request)
+    // Kirim email reset password
+    public function sendResetLinkEmail(Request $request)
     {
         $request->validate(['email' => 'required|email']);
 
@@ -166,33 +166,37 @@ class AuthController extends Controller
             : back()->withErrors(['email' => __($status)]);
     }
 
- // Tampilkan form reset password
- public function showResetForm($token)
+    // Tampilkan form reset password
+    public function showResetForm(Request $request, $token)
     {
-        return view('auth.reset-password', ['token' => $token]);
+        return view('auth.reset-password', [
+            'token' => $token,
+            'email' => $request->email,
+        ]);
     }
 
- // Simpan password baru
- public function resetPassword(Request $request)
- {
-     $request->validate([
-         'token' => 'required',
-         'email' => 'required|email',
-         'password' => 'required|confirmed|min:6',
-     ]);
 
-     $status = Password::reset(
-         $request->only('email', 'password', 'password_confirmation', 'token'),
-         function ($user, $password) {
-             $user->forceFill([
-                 'password' => Hash::make($password),
-                 'remember_token' => Str::random(60),
-             ])->save();
-         }
-     );
+    // Simpan password baru
+    public function resetPassword(Request $request)
+    {
+        $request->validate([
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:6',
+        ]);
 
-     return $status === Password::PASSWORD_RESET
-         ? redirect()->route('login')->with('status', __($status))
-         : back()->withErrors(['email' => [__($status)]]);
- }
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password),
+                    'remember_token' => Str::random(60),
+                ])->save();
+            }
+        );
+
+        return $status === Password::PASSWORD_RESET
+            ? redirect()->route('login')->with('status', __($status))
+            : back()->withErrors(['email' => [__($status)]]);
+    }
 }
