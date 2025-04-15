@@ -107,6 +107,8 @@
   position: absolute;
   left: 755px;
   top: 377px;
+  font-size: 26px;
+  color: #007BFF; 
   padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
 
 }
@@ -118,6 +120,8 @@
   position: absolute;
   left: 756px;
   top: 473.31px;
+  font-size: 26px;
+  color: #007BFF; 
   padding-left: 80px; /* jarak dari kiri supaya gak nabrak icon */
 
 }
