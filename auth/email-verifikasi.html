@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email Verification</title>
+  <link rel="stylesheet" href="email.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Verifikasi Email</h2>
+      <p>Kami telah mengirimkan link verifikasi ke email kamu. Silakan cek email dan klik link tersebut untuk melanjutkan.</p>
+      
+      <div class="email-info">
+        <span>Email kamu:</span>
+        <strong>nama@email.com</strong>
+      </div>
+      
+      <button onclick="resendEmail()">Kirim Ulang Email</button>
+    </div>
+  </div>
+
+  <script>
+    function resendEmail() {
+      alert("Email verifikasi telah dikirim ulang!");
+    }
+  </script>
+</body>
+</html>
