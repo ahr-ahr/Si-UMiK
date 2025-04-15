@@ -9,8 +9,28 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::all();
-        return view('users.index', compact('users'));
+        $user = auth()->user();
+        return view('users.index', compact('user'));
+    }
+
+    public function sdmI(Request $request)
+    {
+        $keyword = $request->input('search');
+
+        $users = User::query();
+
+        if ($keyword) {
+            $users->where(function ($query) use ($keyword) {
+                $query->where('fullname', 'like', "%{$keyword}%")
+                    ->orWhere('alamat', 'like', "%{$keyword}%")
+                    ->orWhere('bio', 'like', "%{$keyword}%")
+                    ->orWhere('no_telepon', 'like', "%{$keyword}%");
+            });
+        }
+
+        $users = $users->get();
+
+        return view('layanan.sdm.temukan-pekerja', compact('users', 'keyword'));
     }
 
     public function show($id)
@@ -23,7 +43,6 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        // Cegah user lain mengedit data orang lain (kecuali admin)
         if (auth()->user()->id !== $user->id && auth()->user()->role !== 'admin') {
             abort(403);
         }
@@ -35,12 +54,10 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        // Cegah user lain mengedit data orang lain (kecuali admin)
         if (auth()->user()->id !== $user->id && auth()->user()->role !== 'admin') {
             abort(403);
         }
 
-        // Validasi input
         $validated = $request->validate([
             'fullname' => 'required|string|max:100',
             'no_telepon' => 'required|string|max:20',

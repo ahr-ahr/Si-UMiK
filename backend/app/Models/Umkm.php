@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Umkm extends Model
 {
+    protected $table = 'umkm';
     protected $fillable = [
         'user_id',
         'nama_umkm',

@@ -21,6 +21,17 @@ Route::post('/forgot_password', [AuthController::class, 'sendResetLinkEmail'])->
 Route::get('/reset_password/{token}', [AuthController::class, 'showResetForm'])->name('password.reset');
 Route::post('/reset_password', [AuthController::class, 'resetPassword'])->name('password.update');
 
+
+Route::get('/beranda', function () {
+    return view('layanan.sdm.beranda');
+});
+
+Route::get('/temukan-pekerja', [UserController::class, 'sdmI'])->name('temukan.pekerja');
+
+Route::get('/temukan-lowongan', function () {
+    return view('layanan.sdm.temukan-lowongan');
+})->name('temukan.lowongan');
+
 Route::get('/redirect-by-role', function () {
     $user = Auth::user();
     return match ($user->role) {
