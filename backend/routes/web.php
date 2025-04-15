@@ -15,6 +15,12 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'showRegister']);
 Route::post('/register', [AuthController::class, 'register']);
 
+Route::get('/forgot_password', [AuthController::class, 'showForgotPasswordForm'])->name('password.request');
+Route::post('/forgot_password', [AuthController::class, 'sendResetLinkEmail'])->name('password.email');
+
+Route::get('/reset_password/{token}', [AuthController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset_password', [AuthController::class, 'resetPassword'])->name('password.update');
+
 Route::get('/redirect-by-role', function () {
     $user = Auth::user();
     return match ($user->role) {

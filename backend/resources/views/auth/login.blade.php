@@ -29,5 +29,6 @@
     </form>
 
     <p>Belum punya akun? <a href="{{ url('/register') }}">Daftar di sini</a></p>
+    <p>Lupa password akun? <a href="{{ route('password.request') }}">Reset password di sini</a></p>
 </body>
 </html>

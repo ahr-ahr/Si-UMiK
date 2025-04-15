@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Mail;
 use App\Models\User;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
+
 
 class AuthController extends Controller
 {
@@ -139,7 +142,57 @@ class AuthController extends Controller
             return back()->with('status', 'Link verifikasi telah dikirim ulang ke email Anda.');
         }
 
-        return back()->withErrors(['email' => 'Akun Anda sudah terverifikasi.']);
+        return back()->withErrors(['email' => 'Akun Anda sudah terverphifikasi.']);
     }
 
+
+ // Tampilkan form lupa password
+    public function showForgotPasswordForm(Request $request)
+    {
+        return view('auth.forgot_password'); // pastikan file ini ada
+    }
+
+ // Kirim email reset password
+ public function sendResetLinkEmail(Request $request)
+    {
+        $request->validate(['email' => 'required|email']);
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status === Password::RESET_LINK_SENT
+            ? back()->with('status', __($status))
+            : back()->withErrors(['email' => __($status)]);
+    }
+
+ // Tampilkan form reset password
+ public function showResetForm($token)
+    {
+        return view('auth.reset-password', ['token' => $token]);
+    }
+
+ // Simpan password baru
+ public function resetPassword(Request $request)
+ {
+     $request->validate([
+         'token' => 'required',
+         'email' => 'required|email',
+         'password' => 'required|confirmed|min:6',
+     ]);
+
+     $status = Password::reset(
+         $request->only('email', 'password', 'password_confirmation', 'token'),
+         function ($user, $password) {
+             $user->forceFill([
+                 'password' => Hash::make($password),
+                 'remember_token' => Str::random(60),
+             ])->save();
+         }
+     );
+
+     return $status === Password::PASSWORD_RESET
+         ? redirect()->route('login')->with('status', __($status))
+         : back()->withErrors(['email' => [__($status)]]);
+ }
 }
