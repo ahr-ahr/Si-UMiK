@@ -36,9 +36,7 @@
         </select><br><br>
 
 
-        <label>lulusan:</label><br>
-        <input type="input" name="lulusan_sekolah_terakhir" value="{{ old('lulusan_sekolah_terakhir') }}" required><br><br>
-
+        
 
         <label>Email:</label><br>
         <input type="email" name="email" value="{{ old('email') }}" required><br><br>
