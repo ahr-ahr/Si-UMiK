@@ -2,27 +2,33 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ChatController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UmkmController;
+use App\Http\Controllers\ChatController;
+use Illuminate\Support\Facades\Auth;
 
-Route::resource('users', UserController::class);
-
-Route::get('/', function () {
-    return view('login');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-Route::get('/register', function () {
-    return view('register');
-});
+
+Route::get('/register', [AuthController::class, 'showRegister']);
 Route::post('/register', [AuthController::class, 'register']);
 
-Route::middleware('auth')->group(function () {
-    Route::get('/chat/{receiver_id}', [ChatController::class, 'showChat'])->name('chat');
-    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-    Route::post('/send-message', [ChatController::class, 'sendMessage']);
-    Route::get('/messages/{user}', [ChatController::class, 'getMessages']);
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
+Route::get('/redirect-by-role', function () {
+    $user = Auth::user();
+    return match ($user->role) {
+        'admin' => redirect('/admin/dashboard'),
+        'umkm' => redirect('/umkm/dashboard'),
+        default => redirect('/user/dashboard'),
+    };
 });
+
+Route::get('/users', [UserController::class, 'index']);
+Route::get('/users/{id}', [UserController::class, 'show']);
+
+Route::get('/umkm', [UmkmController::class, 'index']);
+Route::get('/umkm/{id}', [UmkmController::class, 'show']);
+
+Route::get('/chat', [ChatController::class, 'index']);
+Route::get('/chat/{id}', [ChatController::class, 'show']);
