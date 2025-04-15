@@ -6,6 +6,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable
 {
@@ -18,9 +20,32 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'fullname',
+        'umur',
+        'tanggal_lahir',
+        'jenis_kelamin',
         'email',
+        'no_telepon',
+        'provinsi',
+        'kota',
+        'kecamatan',
+        'kelurahan',
+        'kode_pos',
+        'alamat',
         'password',
+        'role',
+        'foto_profil',
+        'status_akun',
+        'lulusan_sekolah_terakhir',
+        'jurusan',
+        'posisi_pekerjaan',
+        'bio',
+        'keahlian',
+        'email_verified_at',
+        'last_login',
+        'token_verifikasi',
+        'remember_token',
+        'created_at'
     ];
 
     /**
@@ -46,14 +71,18 @@ class User extends Authenticatable
         ];
     }
 
-    public function sentMessages()
+    public function umkm(): HasOne
     {
-        return $this->hasMany(Message::class, 'sender_id');
+        return $this->hasOne(Umkm::class);
     }
 
-    // Relasi ke pesan yang diterima oleh user
-    public function receivedMessages()
+    public function sentMessages(): HasMany
     {
-        return $this->hasMany(Message::class, 'receiver_id');
+        return $this->hasMany(Chat::class, 'sender_id');
+    }
+
+    public function receivedMessages(): HasMany
+    {
+        return $this->hasMany(Chat::class, 'receiver_id');
     }
 }
