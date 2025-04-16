@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./vars.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
       a,
@@ -63,8 +64,20 @@
       </a>
       <div class="gg-profile">
         <img class="group" src="./images/group0.svg" />
+      </div> 
+      <div class="search-bar">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari lokasi daerah..."
+            onkeyup="filterLocations()" />
+        </div>
       </div>
-      <div class="caraousel">
+      
+      <div class="caraousel" id="locationCarousel">
+
         <a href="#">
           <div class="rectangle-52"></div>
           <span class="tangerang-banten">
@@ -145,5 +158,26 @@
       <img class="ellipse-4" src="./images/ellipse-40.svg" />
       <img class="u" src="./images/u0.svg" />
     </div>
+    <script>
+      function filterLocations() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toLowerCase();
+        const carousel = document.getElementById("locationCarousel");
+        const links = carousel.getElementsByTagName("a");
+    
+        for (let i = 0; i < links.length; i++) {
+          const span = links[i].getElementsByTagName("span")[0];
+          if (span) {
+            const txtValue = span.textContent || span.innerText;
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+              links[i].style.display = "";
+            } else {
+              links[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+    
   </body>
 </html>
