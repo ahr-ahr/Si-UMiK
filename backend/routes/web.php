@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UmkmController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\LowonganKerjaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\URL;
@@ -53,8 +54,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // UMKM
     Route::get('/umkm/dashboard', [UmkmController::class, 'index']);
-    Route::get('/umkm/{id}', [UmkmController::class, 'show']);
     Route::get('/umkm/create', [UmkmController::class, 'create'])->name('umkm.create');
+    Route::get('/umkm/buat-lowongan', [LowonganKerjaController::class, 'create'])->name('umkm.lowongan.create');
+    Route::post('/umkm/buat-lowongan', [LowonganKerjaController::class, 'store'])->name('umkm.lowongan.store');
+    Route::get('/umkm/{id}', [UmkmController::class, 'show']);
 
     // Chat
     Route::get('/chat/dashboard', [ChatController::class, 'index']);

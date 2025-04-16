@@ -4,6 +4,13 @@
             <p>Anda belum melengkapi data UMKM.</p>
             <a href="{{ route('umkm.create') }}" class="btn btn-primary">Lengkapi Data UMKM</a>
         </div>
+
+        <div class="alert alert-warning">
+            <p>buat lowongan.</p>
+            <a href="{{ route('umkm.lowongan.create') }}" class="btn btn-primary">buat lowongan</a>
+        </div>
+
+
     @else
         <div class="card">
             <div class="card-body">
