@@ -54,6 +54,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // UMKM
     Route::get('/umkm/dashboard', [UmkmController::class, 'index']);
     Route::get('/umkm/{id}', [UmkmController::class, 'show']);
+    Route::get('/umkm/create', [UmkmController::class, 'create'])->name('umkm.create');
 
     // Chat
     Route::get('/chat/dashboard', [ChatController::class, 'index']);
