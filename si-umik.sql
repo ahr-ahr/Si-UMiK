@@ -69,6 +69,50 @@ CREATE TABLE chat (
     FOREIGN KEY (receiver_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
+CREATE TABLE lowongan_kerja (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    umkm_id INT NOT NULL COMMENT 'Relasi ke tabel UMKM',
+    judul VARCHAR(150) NOT NULL COMMENT 'Judul atau posisi lowongan',
+    deskripsi TEXT NOT NULL COMMENT 'Deskripsi pekerjaan',
+    kualifikasi TEXT DEFAULT NULL COMMENT 'Syarat atau kualifikasi pelamar',
+    gaji VARCHAR(100) DEFAULT NULL COMMENT 'Rentang gaji atau kompensasi',
+    lokasi_kerja VARCHAR(150) NOT NULL COMMENT 'Lokasi tempat kerja',
+    jenis_pekerjaan ENUM('fulltime', 'parttime') NOT NULL DEFAULT 'fulltime' COMMENT 'Jenis kerja',
+    tanggal_dibuka DATE DEFAULT CURRENT_DATE COMMENT 'Tanggal mulai lowongan',
+    tanggal_ditutup DATE DEFAULT NULL COMMENT 'Batas akhir pendaftaran',
+    status ENUM('aktif', 'ditutup') DEFAULT 'aktif' COMMENT 'Status lowongan',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu dibuat',
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Waktu update terakhir',
+
+    FOREIGN KEY (umkm_id) REFERENCES umkm(id) ON DELETE CASCADE
+);
+ 
+
+CREATE TABLE lamaran_kerja (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lowongan_id INT NOT NULL COMMENT 'Relasi ke lowongan yang dilamar',
+    pelamar_id INT NOT NULL COMMENT 'Relasi ke tabel users dengan role pencari_kerja',
+    surat_lamaran TEXT DEFAULT NULL COMMENT 'Isi atau file surat lamaran',
+    file_cv VARCHAR(255) DEFAULT NULL COMMENT 'Link ke file CV (jika berbeda dari profil)',
+    status ENUM('dikirim', 'diproses', 'diterima', 'ditolak') DEFAULT 'dikirim' COMMENT 'Status lamaran',
+    tanggal_lamaran DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu melamar',
+    catatan_hrd TEXT DEFAULT NULL COMMENT 'Catatan dari pihak UMKM/HRD',
+
+    FOREIGN KEY (lowongan_id) REFERENCES lowongan_kerja(id) ON DELETE CASCADE,
+    FOREIGN KEY (pelamar_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Indeks lamaran_kerja
+CREATE INDEX idx_lowongan_id_lamaran ON lamaran_kerja(lowongan_id);
+CREATE INDEX idx_pelamar_id_lamaran ON lamaran_kerja(pelamar_id);
+CREATE INDEX idx_status_lamaran ON lamaran_kerja(status);
+
+
+-- Indeks lowongan_kerja
+CREATE INDEX idx_umkm_id_lowongan ON lowongan_kerja(umkm_id);
+CREATE INDEX idx_status_lowongan ON lowongan_kerja(status);
+
+
 -- Indeks pada kolom sender_id dan receiver_id di tabel chat
 CREATE INDEX idx_sender_id ON chat(sender_id);
 CREATE INDEX idx_receiver_id ON chat(receiver_id);

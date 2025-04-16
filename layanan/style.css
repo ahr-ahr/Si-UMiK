@@ -2,6 +2,53 @@
 .homepage-21 * {
   box-sizing: border-box;
 }
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.homepage-21 {
+  width: 1440px;
+  height: 1080px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+*, a, button, input, select, h1, h2, h3, h4, h5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+a:hover { transform: scale(1.05); }
+a:active { transform: scale(0.95); }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gg-profile img,
+.group,
+.group2 {
+  width: 100%;
+  height: auto;
+}
 .homepage-21 {
   background: #edd6d6;
   height: 1014px;
@@ -72,16 +119,27 @@
   width: 221px;
   height: 67px;
 }
-.cara-membuat-produk {
-  color: rgba(171, 5, 8, 0.84);
+.peralatan {
+  color: #b62629;
   text-align: center;
   font-family: "Righteous-Regular", sans-serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
-  left: 50%;
-  translate: -50%;
-  top: 433px;
+  left: 182px;
+  top: 795px;
+  width: 221px;
+  height: 67px;
+}
+.cara-membuat-produk {
+  color: #b62629;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 602px;
+  top: 435px;
   width: 221px;
   height: 67px;
 }
@@ -168,18 +226,6 @@
   bottom: 4.17%;
   top: 4.17%;
   overflow: visible;
-}
-.peralatan {
-  color: rgba(171, 5, 8, 0.84);
-  text-align: center;
-  font-family: "Righteous-Regular", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  position: absolute;
-  left: 182px;
-  top: 824px;
-  width: 221px;
-  height: 67px;
 }
 .group-212 {
   height: auto;
@@ -298,9 +344,9 @@
   top: 260px;
   box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
 }
-.jasa-kelola-sosmed {
+.jasa-kelolaaa-sosmed {
   color: #ffffff;
-  text-align: center;
+  text-align: cent er;
   font-family: "Righteous-Regular", sans-serif;
   font-size: 32px;
   font-weight: 400;
