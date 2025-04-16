@@ -61,6 +61,7 @@ CREATE TABLE chat (
     receiver_id INT NOT NULL COMMENT 'ID penerima pesan (relasi ke tabel users)',
     message TEXT NOT NULL COMMENT 'Isi pesan chat',
     sent_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu pesan dikirim',
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
     status ENUM('belum dibaca', 'sudah dibaca') DEFAULT 'belum dibaca' COMMENT 'Status pesan (apakah sudah dibaca penerima atau belum)',
     file_link VARCHAR(255) DEFAULT NULL COMMENT 'Link ke file yang dilampirkan (jika ada)',
     file_type VARCHAR(50) DEFAULT NULL COMMENT 'Tipe file (misalnya, "image/jpeg", "application/pdf")',
