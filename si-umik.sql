@@ -77,7 +77,7 @@ CREATE TABLE lowongan_kerja (
     kualifikasi TEXT DEFAULT NULL COMMENT 'Syarat atau kualifikasi pelamar',
     gaji VARCHAR(100) DEFAULT NULL COMMENT 'Rentang gaji atau kompensasi',
     lokasi_kerja VARCHAR(150) NOT NULL COMMENT 'Lokasi tempat kerja',
-    jenis_pekerjaan ENUM('fulltime', 'parttime', 'magang', 'kontrak') NOT NULL DEFAULT 'fulltime' COMMENT 'Jenis kerja',
+    jenis_pekerjaan ENUM('fulltime', 'parttime') NOT NULL DEFAULT 'fulltime' COMMENT 'Jenis kerja',
     tanggal_dibuka DATE DEFAULT CURRENT_DATE COMMENT 'Tanggal mulai lowongan',
     tanggal_ditutup DATE DEFAULT NULL COMMENT 'Batas akhir pendaftaran',
     status ENUM('aktif', 'ditutup') DEFAULT 'aktif' COMMENT 'Status lowongan',

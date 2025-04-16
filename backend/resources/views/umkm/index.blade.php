@@ -17,7 +17,6 @@
             @endif
 
 <div class="alert alert-warning">
-                <p>buat lowongan.</p>
                 <a href="{{ route('umkm.lowongan.create') }}" class="btn btn-primary">Buat Lowongan</a>
             </div>
             <div class="card">

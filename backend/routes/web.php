@@ -52,7 +52,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 
 
-    // UMKM
+    // UMKM Routes
+    Route::get('/umkm/buat-lowongan', [LowonganKerjaController::class, 'create'])->name('umkm.lowongan.create');
+    Route::post('/umkm/buat-lowongan', [LowonganKerjaController::class, 'store'])->name('umkm.lowongan.store');
     Route::get('/umkm/dashboard', [UmkmController::class, 'index'])->name('umkm.index');
     Route::get('/umkm/create', [UmkmController::class, 'create'])->name('umkm.create');
     Route::post('/umkm/create', [UmkmController::class, 'store'])->name('umkm.store');
@@ -60,11 +62,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/umkm/{id}', [UmkmController::class, 'update'])->name('umkm.update');
     Route::get('/umkm/{id}', [UmkmController::class, 'show'])->name('umkm.show');
     Route::delete('/umkm/{id}', [UmkmController::class, 'destroy'])->name('umkm.destroy');
-    Route::get('/umkm/dashboard', [UmkmController::class, 'index']);
-    Route::get('/umkm/create', [UmkmController::class, 'create'])->name('umkm.create');
-    Route::get('/umkm/buat-lowongan', [LowonganKerjaController::class, 'create'])->name('umkm.lowongan.create');
-    Route::post('/umkm/buat-lowongan', [LowonganKerjaController::class, 'store'])->name('umkm.lowongan.store');
-    Route::get('/umkm/{id}', [UmkmController::class, 'show'])->name('umkm.show');
 
     // Chat
     Route::get('/chat/dashboard', [ChatController::class, 'index']);

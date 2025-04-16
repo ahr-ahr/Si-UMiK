@@ -1,52 +1,39 @@
-
-   
 <div class="container">
     <h2>Buat Lowongan Kerja</h2>
     <form action="{{ route('umkm.lowongan.store') }}" method="POST">
-        @csrf
+    @csrf
 
-        <div>
-            <label>Judul:</label>
-            <input type="text" name="judul" class="form-control" required>
-        </div>
+    <label>Judul:</label>
+    <input type="text" name="judul" value="{{ old('judul') }}" required>
 
-        <div>
-            <label>Deskripsi:</label>
-            <textarea name="deskripsi" class="form-control" required></textarea>
-        </div>
+    <label>Deskripsi:</label>
+    <textarea name="deskripsi" required>{{ old('deskripsi') }}</textarea>
 
-        <div>
-            <label>Kualifikasi:</label>
-            <textarea name="kualifikasi" class="form-control"></textarea>
-        </div>
+    <label>Kualifikasi:</label>
+    <textarea name="kualifikasi">{{ old('kualifikasi') }}</textarea>
 
-        <div>
-            <label>Gaji:</label>
-            <input type="text" name="gaji" class="form-control">
-        </div>
+    <label>Gaji:</label>
+    <input type="text" name="gaji" value="{{ old('gaji') }}">
 
-        <div>
-            <label>Lokasi Kerja:</label>
-            <input type="text" name="lokasi_kerja" class="form-control" required>
-        </div>
+    <label>Lokasi Kerja:</label>
+    <input type="text" name="lokasi_kerja" value="{{ old('lokasi_kerja') }}" required>
 
-        <div>
-            <label>Jenis Pekerjaan:</label>
-            <select name="jenis_pekerjaan" class="form-control" required>
-                <option value="fulltime">Fulltime</option>
-                <option value="parttime">Parttime</option>
-            </select>
-        </div>
+    <label>Jenis Pekerjaan:</label>
+    <select name="jenis_pekerjaan" required>
+        <option value="fulltime" {{ old('jenis_pekerjaan') == 'fulltime' ? 'selected' : '' }}>Fulltime</option>
+        <option value="parttime" {{ old('jenis_pekerjaan') == 'parttime' ? 'selected' : '' }}>Parttime</option>
+    </select>
 
-        <div>
-            <label>Tanggal Ditutup:</label>
-            <input type="date" name="tanggal_ditutup" class="form-control">
-        </div>
+    <label>Tanggal Ditutup:</label>
+    <input type="date" name="tanggal_ditutup" value="{{ old('tanggal_ditutup') }}">
 
-        <br>
+    <label>Status:</label>
+    <select name="status" class="form-control">
+        <option value="aktif" {{ old('status') == 'aktif' ? 'selected' : '' }}>Aktif</option>
+        <option value="ditutup" {{ old('status') == 'ditutup' ? 'selected' : '' }}>Ditutup</option>
+    </select>
 
-        <button type="submit" class="btn btn-primary">Buat Lowongan</button>
+    <button type="submit">Buat Lowongan</button>
+</form>
 
-
-    </form>
 </div>

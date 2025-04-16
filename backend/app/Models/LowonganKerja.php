@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;  // Pastikan namespace sesuai
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,13 +20,17 @@ class LowonganKerja extends Model
         'lokasi_kerja',
         'jenis_pekerjaan',
         'tanggal_ditutup',
+        'status'
     ];
 
     // Relasi ke UMKM
     public function umkm()
     {
-        return $this->belongsTo(UMKM::class, 'umkm_id');
+        return $this->belongsTo(Umkm::class, 'umkm_id');  // pastikan model Umkm sesuai dengan namespace
     }
+
+    // Untuk memastikan tanggal_ditutup diformat dengan benar
+    protected $casts = [
+        'tanggal_ditutup' => 'datetime',
+    ];
 }
-
-
