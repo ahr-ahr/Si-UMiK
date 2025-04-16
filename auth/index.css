@@ -73,7 +73,7 @@
 }
 
 .register-mdilock {
-  top: 616px;
+  top: 506px;
   left: 758.170654296875px;
   width: 52px;
   height: 35px;
@@ -181,27 +181,10 @@
 }
 
 .register-text13 {
-  top: 616.6685180664062px;
+  top: 508.6685180664062px;
   left: 725px;
   color: rgba(171, 4, 7, 0.8399999737739563);
   width: 272px;
-  height: auto;
-  position: absolute;
-  font-size: 24px;
-  font-style: Regular;
-  text-align: center;
-  font-family: Abel;
-  font-weight: 400;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-
-.register-text14 {
-  top: 515px;
-  left: 811px;
-  color: rgba(171, 4, 7, 0.8399999737739563);
-  width: 101px;
   height: auto;
   position: absolute;
   font-size: 24px;
@@ -752,17 +735,9 @@
   text-decoration: none;
 }
 
-.register-phphonefill {
-  top: 510px;
-  left: 766px;
-  width: 46px;
-  height: 37px;
-  position: absolute;
-}
-
 .register-button-container {
   position: absolute;
-  top: 800px;
+  top: 720px;
   left: 960px;
   text-align: center;
   margin-top: 20px;
@@ -851,7 +826,7 @@
 
 .input-box2{
   position: relative;
-  left: -58em;
+  left: -370px;
   top: 450px; ;
 }
 
@@ -883,8 +858,8 @@
 
 .password{
   position: relative;
-  left: -365px;
-  top: 666px; ;
+  left: 185px;
+  top: 555px; ;
 }
 
 .input-box4{

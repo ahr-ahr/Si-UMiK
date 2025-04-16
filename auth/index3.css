@@ -735,31 +735,6 @@
     position: absolute;
   }
   
-  .register-text23 {
-    top: 112.502685546875px;
-    left: 4.103515625px;
-    color: rgba(171, 4, 7, 0.8399999737739563);
-    width: 272px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Abel;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  
-  .register-phphonefill {
-    top: 510px;
-    left: 766px;
-    width: 46px;
-    height: 37px;
-    position: absolute;
-  }
-  
   .register-button-container {
     position: absolute;
     top: 800px;
@@ -806,79 +781,18 @@
     background-color: #0056b3;
   }
   
-  
-  .register-text24 {
-    top: 900px;
-    left: 922px;
-    color: rgba(253, 252, 247, 1);
-    width: 196px;
-    height: auto;
-    position: absolute;
-    font-size: 36px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Righteous;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  
-  .register-text25 {
-    top: 263px;
-    left: 872px;
-    color: rgba(171, 4, 7, 0.8399999737739563);
-    width: 272px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Abel;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  
-  .register-group21 {
-    top: 505.23101806640625px;
-    left: -137.62615966796875px;
-    width: 550.6534423828125px;
-    height: 684.2974853515625px;
+  .lokasi {
+    position: relative;
+    top: 350px;
+    left: 750px;
+    margin: 20px;
+    width: 100%;    
     display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
+    flex-direction: column;
   }
-  
-  .nama {
-    position: relative;
-    left: 740px;
-    top: 350px; ;
-  }
-  
-  .input-box{
-    margin-bottom: 10px;
-  }
-  
-  .input-box input{
-    width: 555px;
-    height: 50px;
-    border-radius: 20px;
-    padding-left: 15px;
-    border: none;
-    outline: none;
-    background-color: #fdf9f9;
-  }
-  
-  .input-box2{
-    position: relative;
-    left: -925px;
-    top: 450px; ;
-  }
-  
-  .input-box2 input{
+
+  .lokasi select {
+    margin-bottom: 25px;
     width: 555px;
     height: 50px;
     border-radius: 20px;
@@ -888,13 +802,7 @@
     background-color: #fdf9f9;
   }
 
-  .jenis-kelamin {
-    position: relative;
-    left: 185px;
-    top: 550px; ;
-  }
-
-  .jenis-kelamin select {
+  .lokasi input {
     width: 555px;
     height: 50px;
     border-radius: 20px;
@@ -903,24 +811,3 @@
     outline: none;
     background-color: #fdf9f9;
   }
-
-  .password{
-    position: relative;
-    left: -365px;
-    top: 666px; ;
-  }
-  
-  .input-box4{
-    margin-bottom: 20px;
-  }
-  
-  .input-box4 input{
-    width: 555px;
-    height: 50px;
-    border-radius: 20px;
-    padding-left: 15px;
-    border: none;
-    outline: none;
-    background-color: #fdf9f9;
-  }
-  
