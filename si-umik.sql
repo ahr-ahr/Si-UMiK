@@ -69,8 +69,6 @@ CREATE TABLE chat (
     FOREIGN KEY (receiver_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
-
-
 CREATE TABLE lowongan_kerja (
     id INT AUTO_INCREMENT PRIMARY KEY,
     umkm_id INT NOT NULL COMMENT 'Relasi ke tabel UMKM',
