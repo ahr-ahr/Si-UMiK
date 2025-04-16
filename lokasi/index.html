@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./vars.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
       a,
@@ -44,119 +45,139 @@
         class="desain-tanpa-judul-1-removebg-preview-1"
         src="./images/desain-tanpa-judul-1-removebg-preview-10.png"
       />
-      <div class="ellipse-13"></div>
-      <div class="ellipse-14"></div>
-      <img class="group-212" src="./images/group-211.svg" />
-      <a href="#">
-        <div class="rectangle-52"></div>
-        <span class="tangerang-banten">
-          Tangerang
-          <br />
-          Banten
-        </span>
+      <a href="">
+        <div class="ellipse-13"></div>
+        <img class="weui-arrow-filled2" src="./images/weui-arrow-filled1.svg" />
       </a>
+      <a href="">
+        <div class="ellipse-14"></div>
+        <img class="weui-arrow-filled3" src="./images/weui-arrow-filled2.svg" />
+      </a>
+      <img class="group-212" src="./images/group-211.svg" />
       <div class="lokasi-daerah">Lokasi Daerah</div>
-      <a href=""><div class="ellipse-12"></div>
-      <img class="weui-arrow-filled" src="./images/weui-arrow-filled0.svg" />
-      <img class="weui-arrow-filled2" src="./images/weui-arrow-filled1.svg" />
-      <img class="weui-arrow-filled3" src="./images/weui-arrow-filled2.svg" /></a>
+      <a href=""
+        ><div class="ellipse-12"></div>
+        <img
+          class="weui-arrow-filled"
+          src="./images/weui-arrow-filled0.svg"
+        />
+      </a>
       <div class="gg-profile">
         <img class="group" src="./images/group0.svg" />
-      </div>
-      <a href="">
-        <div class="rectangle-432"></div>
-        <span class="banda-aceh">Banda Aceh</span>
-      </a>
-      <a href="">
-        <div class="rectangle-44"></div>
-        <span class="langsa-aceh">
-          Langsa
-          <br />
-          Aceh
-        </span>
-      </a>
-      <a href="">
-        <div class="rectangle-45"></div>
-        <div class="lhokseumawe-aceh">
-          Lhokseumawe
-          <br />
-          Aceh
+      </div> 
+      <div class="search-bar">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari lokasi daerah..."
+            onkeyup="filterLocations()" />
         </div>
-      </a>
-      <a href="">
-        <div class="rectangle-46"></div>
-        <span class="subulussalam-aceh">
-          Subulussalam
-          <br />
-          Aceh
-        </span>
-      </a>
-      <a href="">
-              <div class="rectangle-43"></div>
-        <span class="sabang-aceh">
-          Sabang
-          <br />
-          Aceh
-        </span>
-      </a>
-      <a href="">
-        <div class="rectangle-47"></div>
-        <span class="denpasar-bali">
-          Denpasar
-          <br />
-          Bali
-        </span>
-      </a>
-      <a href="">
-        <div class="rectangle-48"></div>
-        <span class="pangkalpinang-bangka-belitung">
-          Pangkalpinang
-          <br />
-          Bangka belitung
-        </span>
-      </a>
-      <a href="">
-        <div class="rectangle-49"></div>
-        <span class="cilegon-banten">
-          Cilegon
-          <br />
-          Banten
-        </span>
-      </a>
-      <a href="">
-        <div class="rectangle-50"></div>
-        <span class="serang-banten">
-          Serang
-          <br />
-          Banten
-        </span>
-      </a>
-      <a href="">
-        <div class="rectangle-51"></div>
-        <span class="tangerang-selatan-banten">
-          Tangerang selatan
-          <br />
-          Banten
-        </span>
-      </a>
-      <a href="">
-        <div class="rectangle-53"></div>
-        <span class="bengkulu">Bengkulu</span>
-      </a>
-      <a href="">
-        <div class="rectangle-54"></div>
-        <span class="yogyakarta">Yogyakarta</span>
-      </a>
-      <a href="">
-        <div class="rectangle-55"></div>
-        <span class="gorontalo">Gorontalo</span>
-      </a>
-      <a href="">
-        <div class="rectangle-56"></div>
-        <span class="jakarta-barat">Jakarta Barat</span>
-      </a>
+      </div>
+      
+      <div class="caraousel" id="locationCarousel">
+
+        <a href="#">
+          <div class="rectangle-52"></div>
+          <span class="tangerang-banten">
+            Tangerang
+            <br />
+            Banten
+          </span>
+        </a>
+        <a href="">
+          <div class="rectangle-432"></div>
+          <span class="banda-aceh">Banda Aceh</span>
+        </a>
+        <a href="">
+          <div class="rectangle-44"></div>
+          <span class="langsa-aceh"> Langsa Aceh </span>
+        </a>
+        <a href="">
+          <div class="rectangle-45"></div>
+          <span class="lhokseumawe-aceh">
+            Lhokseumawe
+            <br />
+            Aceh
+          </span>
+        </a>
+        <a href="">
+          <div class="rectangle-46"></div>
+          <span class="subulussalam-aceh">
+            Subulussalam
+            <br />
+            Aceh
+          </span>
+        </a>
+        <a href="">
+          <div class="rectangle-47"></div>
+          <span class="denpasar-bali">
+            Denpasar
+            <br />
+            Bali
+          </span>
+        </a>
+        <a href="">
+          <div class="rectangle-48"></div>
+          <span class="pangkalpinang-bangka-belitung">
+            Pangkalpinang
+            <br />
+            Bangka belitung
+          </span>
+        </a>
+        <a href="">
+          <div class="rectangle-49"></div>
+          <span class="cilegon-banten">
+            Cilegon
+            <br />
+            Banten
+          </span>
+        </a>
+        <a href="">
+          <div class="rectangle-50"></div>
+          <span class="serang-banten">
+            Serang
+            <br />
+            Banten
+          </span>
+        </a>
+        <a href="">
+          <div class="rectangle-54"></div>
+          <span class="yogyakarta">Yogyakarta</span>
+        </a>
+        <a href="">
+          <div class="rectangle-55"></div>
+          <span class="gorontalo">Gorontalo</span>
+        </a>
+        <a href="">
+          <div class="rectangle-56"></div>
+          <span class="jakarta-barat">Jakarta Barat</span>
+        </a>
+      </div>
       <img class="ellipse-4" src="./images/ellipse-40.svg" />
       <img class="u" src="./images/u0.svg" />
     </div>
+    <script>
+      function filterLocations() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toLowerCase();
+        const carousel = document.getElementById("locationCarousel");
+        const links = carousel.getElementsByTagName("a");
+    
+        for (let i = 0; i < links.length; i++) {
+          const span = links[i].getElementsByTagName("span")[0];
+          if (span) {
+            const txtValue = span.textContent || span.innerText;
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+              links[i].style.display = "";
+            } else {
+              links[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+    
   </body>
 </html>
