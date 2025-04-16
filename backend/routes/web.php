@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UmkmController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\LowonganKerjaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\URL;
@@ -22,7 +23,7 @@ Route::get('/reset_password/{token}', [AuthController::class, 'showResetForm'])-
 Route::post('/reset_password', [AuthController::class, 'resetPassword'])->name('password.update');
 
 
-Route::get('/beranda', function () {
+Route::get('/layanan/sdm', function () {
     return view('layanan.sdm.beranda');
 });
 
@@ -52,6 +53,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     // UMKM
+<<<<<<< HEAD
     Route::get('/umkm/dashboard', [UmkmController::class, 'index'])->name('umkm.index');
     Route::get('/umkm/create', [UmkmController::class, 'create'])->name('umkm.create');
     Route::post('/umkm/create', [UmkmController::class, 'store'])->name('umkm.store');
@@ -59,6 +61,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/umkm/{id}', [UmkmController::class, 'update'])->name('umkm.update');
     Route::get('/umkm/{id}', [UmkmController::class, 'show'])->name('umkm.show');
     Route::delete('/umkm/{id}', [UmkmController::class, 'destroy'])->name('umkm.destroy');
+=======
+    Route::get('/umkm/dashboard', [UmkmController::class, 'index']);
+    Route::get('/umkm/create', [UmkmController::class, 'create'])->name('umkm.create');
+    Route::get('/umkm/buat-lowongan', [LowonganKerjaController::class, 'create'])->name('umkm.lowongan.create');
+    Route::post('/umkm/buat-lowongan', [LowonganKerjaController::class, 'store'])->name('umkm.lowongan.store');
+    Route::get('/umkm/{id}', [UmkmController::class, 'show']);
+>>>>>>> 16e0a6311b763c0ac2ce5b39d65f47a9909dce61
 
     // Chat
     Route::get('/chat/dashboard', [ChatController::class, 'index']);
