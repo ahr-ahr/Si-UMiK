@@ -67,6 +67,8 @@ class UmkmController extends Controller
         return redirect()->route('umkm.index')->with('success', 'Data UMKM berhasil disimpan.');
     }
 
+    
+
 }
 
 ?>
