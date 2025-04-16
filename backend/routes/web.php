@@ -62,6 +62,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/umkm/{id}', [UmkmController::class, 'update'])->name('umkm.update');
     Route::get('/umkm/{id}', [UmkmController::class, 'show'])->name('umkm.show');
     Route::delete('/umkm/{id}', [UmkmController::class, 'destroy'])->name('umkm.destroy');
+    Route::resource('lowongan', App\Http\Controllers\LowonganKerjaController::class);
 
     // Chat
     Route::get('/chat/dashboard', [ChatController::class, 'index']);
