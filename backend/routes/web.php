@@ -26,7 +26,7 @@ Route::get('/beranda', function () {
     return view('layanan.sdm.beranda');
 });
 
-Route::get('/temukan-pekerja', [UserController::class, 'index'])->name('temukan.pekerja');
+Route::get('/temukan-pekerja', [UserController::class, 'sdmI'])->name('temukan.pekerja');
 
 Route::get('/temukan-lowongan', function () {
     return view('layanan.sdm.temukan-lowongan');

@@ -23,11 +23,11 @@
         <label>Nama Lengkap:</label><br>
         <input type="text" name="fullname" value="{{ old('fullname') }}" required><br><br>
 
-        <label>Umur:</label><br>
-        <input type="number" name="umur" value="{{ old('umur') }}" required min="10" max="100"><br><br>
-
         <label>Tanggal Lahir:</label><br>
-        <input type="date" name="tanggal_lahir" value="{{ old('tanggal_lahir') }}" required><br><br>
+        <input type="date" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir') }}" required><br><br>
+
+        <label>Umur:</label><br>
+        <input type="number" name="umur" id="umur" value="{{ old('umur') }}" required min="10" max="100"><br><br>
 
         <label>Jenis Kelamin:</label><br>
         <select name="jenis_kelamin" required>
@@ -35,12 +35,6 @@
             <option value="P" {{ old('jenis_kelamin') == 'P' ? 'selected' : '' }}>Perempuan</option>
         </select><br><br>
 
-<<<<<<< HEAD
-
-        
-
-=======
->>>>>>> 02cf5264a9bc3599c85e162ddda34cd541b37eac
         <label>Email:</label><br>
         <input type="email" name="email" value="{{ old('email') }}" required><br><br>
 
@@ -97,5 +91,19 @@
     </form>
 
     <p>Sudah punya akun? <a href="{{ url('/login') }}">Login di sini</a></p>
+    <script>
+        document.getElementById('tanggal_lahir').addEventListener('change', function () {
+            const tanggalLahir = new Date(this.value);
+            const today = new Date();
+
+            let umur = today.getFullYear() - tanggalLahir.getFullYear();
+            const m = today.getMonth() - tanggalLahir.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < tanggalLahir.getDate())) {
+                umur--;
+            }
+
+            document.getElementById('umur').value = umur > 0 ? umur : '';
+        });
+    </script>
 </body>
 </html>

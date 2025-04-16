@@ -9,8 +9,28 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::all();
-        return view('users.index', compact('users'));
+        $user = auth()->user();
+        return view('users.index', compact('user'));
+    }
+
+    public function sdmI(Request $request)
+    {
+        $keyword = $request->input('search');
+
+        $users = User::query();
+
+        if ($keyword) {
+            $users->where(function ($query) use ($keyword) {
+                $query->where('fullname', 'like', "%{$keyword}%")
+                    ->orWhere('alamat', 'like', "%{$keyword}%")
+                    ->orWhere('bio', 'like', "%{$keyword}%")
+                    ->orWhere('no_telepon', 'like', "%{$keyword}%");
+            });
+        }
+
+        $users = $users->get();
+
+        return view('layanan.sdm.temukan-pekerja', compact('users', 'keyword'));
     }
 
     public function show($id)
