@@ -22,7 +22,7 @@ Route::get('/reset_password/{token}', [AuthController::class, 'showResetForm'])-
 Route::post('/reset_password', [AuthController::class, 'resetPassword'])->name('password.update');
 
 
-Route::get('/beranda', function () {
+Route::get('/layanan/sdm', function () {
     return view('layanan.sdm.beranda');
 });
 
