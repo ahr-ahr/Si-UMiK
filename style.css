@@ -492,32 +492,3 @@
   background-color: #005bb5;
 }
 
-/* --------------------------------------
-   Responsiveness
---------------------------------------- */
-@media (max-width: 768px) {
-  .tampilan-awal-web .overlap-3 {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    left: 0;
-  }
-
-  .tampilan-awal-web .group {
-    position: relative;
-    width: auto;
-    left: 0;
-    margin-bottom: 10px;
-  }
-
-  .tampilan-awal-web .rectangle-2 {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .tampilan-awal-web .gridicons-search {
-    left: 85%;
-    top: 26px;
-  }
-}
