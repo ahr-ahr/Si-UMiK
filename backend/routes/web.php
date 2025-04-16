@@ -52,9 +52,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     // UMKM
-    Route::get('/umkm/dashboard', [UmkmController::class, 'index']);
-    Route::get('/umkm/{id}', [UmkmController::class, 'show']);
+    Route::get('/umkm/dashboard', [UmkmController::class, 'index'])->name('umkm.index');
     Route::get('/umkm/create', [UmkmController::class, 'create'])->name('umkm.create');
+    Route::post('/umkm/create', [UmkmController::class, 'store'])->name('umkm.store');
+    Route::get('/umkm/{id}/edit', [UmkmController::class, 'edit'])->name('umkm.edit');
+    Route::put('/umkm/{id}', [UmkmController::class, 'update'])->name('umkm.update');
+    Route::get('/umkm/{id}', [UmkmController::class, 'show'])->name('umkm.show');
+    Route::delete('/umkm/{id}', [UmkmController::class, 'destroy'])->name('umkm.destroy');
 
     // Chat
     Route::get('/chat/dashboard', [ChatController::class, 'index']);
@@ -63,6 +67,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 });
+
 Route::get('/email/verify', [AuthController::class, 'showVerificationNotice'])->name('verification.notice');
 Route::post('/verification/send', [AuthController::class, 'sendVerificationLink'])->name('verification.send');
 Route::get('/email/verify/{id}/{hash}', function ($id, $hash) {

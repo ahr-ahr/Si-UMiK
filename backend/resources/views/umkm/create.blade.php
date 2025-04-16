@@ -1,5 +1,8 @@
-
-div class="container">
+<html>
+<head>
+</head>
+<body>
+<div class="container">
     <h1>Lengkapi Data UMKM</h1>
 
     <form action="{{ route('umkm.store') }}" method="POST" enctype="multipart/form-data">
@@ -103,3 +106,5 @@ div class="container">
         <button type="submit" class="btn btn-success">Simpan Data UMKM</button>
     </form>
 </div>
+</body>
+</html>
