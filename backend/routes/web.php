@@ -64,8 +64,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/umkm/{id}', [UmkmController::class, 'destroy'])->name('umkm.destroy');
 
     // Chat
-    Route::get('/chat/dashboard', [ChatController::class, 'index']);
-    Route::get('/chat/{id}', [ChatController::class, 'show']);
+    Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
+    Route::get('/chat/{id}', [ChatController::class, 'show'])->name('chat.show');
+    Route::post('/chat', [ChatController::class, 'store'])->name('chat.store');
 
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
