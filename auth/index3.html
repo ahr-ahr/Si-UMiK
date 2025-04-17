@@ -237,7 +237,7 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
-    <link href="./index.css" rel="stylesheet" />
+    <link href="index3.css" rel="stylesheet" />
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -260,62 +260,29 @@
             class="register-rectangle35"
           />
           <span class="register-text10">Register</span>
-          <div class="register-mdiemail"></div>
-          <img
-            src="public/external/mdilock8268-fqyg.svg"
-            alt="mdilock8268"
-            class="register-mdilock"
-          />
           <div class="register-group22">
             <img
-              src="public/external/mdiaccount8261-9zq.svg"
+              src="public/external/lokasi-removebg-preview.png"
               alt="mdiaccount8261"
               class="register-mdiaccount"
             />
           </div>
-          <div class="register-iconparkoutlineeyes">
-            <div class="register-group">
-              <img
-                src="public/external/vector38261-bfky.svg"
-                alt="Vector38261"
-                class="register-vector3"
-              />
-              <img
-                src="public/external/vector48261-7q4p.svg"
-                alt="Vector48261"
-                class="register-vector4"
-              />
-              <img
-                src="public/external/vector58261-ia5.svg"
-                alt="Vector58261"
-                class="register-vector5"
-              />
+          <span class="register-text11">Lokasi</span>
+          <div class="lokasi">
+            <select id="Provinsi">
+                <option value="">-- Pilih Provinsi --</option>
+              </select>
+              <select id="Kabupaten" name="Kabupaten" required>
+                <option value="">-- Pilih Kabupaten --</option>
+              </select>
+              <select id="Kecamatan" name="Kecamatan" required>
+                <option value="">-- Pilih Kecamatan --</option>
+              </select>
+              <select id="Kelurahan" name="Kelurahan" required>
+                <option value="">-- Pilih Kelurahan --</option>
+              </select>
+              <input type="number" id="KodePos" name="KodePos" placeholder="Kode Pos" required>
             </div>
-          </div>
-          <span class="register-text11">Identitas</span>
-          <span class="register-text12">Email</span>
-          <span class="register-text13">Password</span>
-          <img
-            src="public/external/vector68262-zlk.svg"
-            alt="Vector68262"
-            class="register-vector6"
-          />
-          <div class="nama">
-          <div class="input-box">
-            <input type="text" class="input" placeholder="Nama Lengkap"/>
-          </div>
-        </div>
-        <div class="password">
-        <div class="input-box4">
-          <input type="password" class="input" placeholder="Password"/>
-        </div>
-          <div class="input-box4">
-            <input type="password" class="input" placeholder="Confirmation Password"/>
-          </div>
-          </div>
-          <div class="input-box2">
-            <input type="email" class="input" placeholder="Email"/>
-          </div>
           <div class="register-group271">
             <img
               src="public/external/ellipse58263-yxtr-200h.png"
@@ -472,17 +439,17 @@
                 class="register-vector13"
               />
             </div>
-            <span class="register-text23">Identitas</span>
           </div>
           <div class="register-button-container">
-            <a href="index2.html">
             <button class="register-button" onclick="handleRegister()">Next</button>
-            </a>
           </div>
-          <span class="register-text25">Profil</span>
-          <div class="register-group21"></div>
-        </div>
+
+          <div class="back-button-container">
+            <a href="index2.html">
+            <button class="back-button" onclick="handleBack()">Back</button>
+            </a>
       </div>
     </div>
+    <script src="lokasi.js"></script>
   </body>
 </html>

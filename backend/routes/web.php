@@ -49,7 +49,7 @@ Route::get('/redirect-by-role', function () {
 Route::middleware(['auth', 'verified'])->group(function () {
 
     // User
-    Route::get('/users/dashboard', [UserController::class, 'index']);
+    Route::get('/users/dashboard', [UserController::class, 'index'])->name('users.index');
     Route::get('/users/{id}', [UserController::class, 'show']);
     Route::get('/users/{id}/edit', [UserController::class, 'edit']);
     Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
@@ -65,6 +65,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/umkm/{id}', [UmkmController::class, 'update'])->name('umkm.update');
     Route::get('/umkm/{id}', [UmkmController::class, 'show'])->name('umkm.show');
     Route::delete('/umkm/{id}', [UmkmController::class, 'destroy'])->name('umkm.destroy');
+    Route::resource('lowongan', App\Http\Controllers\LowonganKerjaController::class);
 
     // Chat
     Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
