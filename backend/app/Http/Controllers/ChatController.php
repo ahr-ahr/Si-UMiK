@@ -8,28 +8,57 @@ use Illuminate\Http\Request;
 
 class ChatController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $userId = auth()->id();
+        if (!$request->ajax() && !$request->expectsJson()) {
+            abort(403, 'Akses tidak diizinkan.');
+        }
 
-        $chats = Chat::with(['sender', 'receiver'])
-            ->where('sender_id', $userId)
-            ->orWhere('receiver_id', $userId)
-            ->orderBy('sent_at', 'desc')
+
+        $receiverId = $request->get('receiver_id');
+
+        $chats = Chat::where(function ($query) use ($receiverId) {
+            $query->where('sender_id', auth()->id())
+                ->where('receiver_id', $receiverId);
+        })
+            ->orWhere(function ($query) use ($receiverId) {
+                $query->where('sender_id', $receiverId)
+                    ->where('receiver_id', auth()->id());
+            })
+            ->orderBy('sent_at')
             ->get();
 
+        return response()->json(['chats' => $chats]);
+    }
+
+    // Menampilkan view chat dan mengirimkan daftar pengguna dan chat
+    public function show(Request $request)
+    {
+        $userId = auth()->id();  // ID pengguna yang sedang login
+
+        $receiverId = $request->get('receiver_id');
+
+        // Ambil semua pengguna selain yang sedang login
         $users = User::where('id', '!=', $userId)->get();
 
-        return view('chat.index', compact('chats', 'users'));
+        // Ambil riwayat chat antara pengguna yang sedang login dan setiap penerima
+        // Mengambil chat antara user yang sedang login dan receiver
+        $chats = Chat::with(['sender', 'receiver'])
+            ->where(function ($query) use ($receiverId) {
+                $query->where('sender_id', auth()->id())
+                    ->where('receiver_id', $receiverId);
+            })
+            ->orWhere(function ($query) use ($receiverId) {
+                $query->where('sender_id', $receiverId)
+                    ->where('receiver_id', auth()->id());
+            })
+            ->orderBy('sent_at')
+            ->get();
+
+        return view('chat.index', compact('chats', 'users'));  // Kirim $chats dan $users ke view
     }
 
-
-    public function show($id)
-    {
-        $chat = Chat::with(['sender', 'receiver'])->findOrFail($id);
-        return view('chat.show', compact('chat'));
-    }
-
+    // Menyimpan pesan chat
     public function store(Request $request)
     {
         $request->validate([
@@ -55,6 +84,4 @@ class ChatController extends Controller
             'chat' => $chat
         ]);
     }
-
-
 }

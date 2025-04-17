@@ -84,6 +84,7 @@
         <select name="role" required>
             <option value="pencari_kerja" {{ old('role') == 'pencari_kerja' ? 'selected' : '' }}>Pencari Kerja</option>
             <option value="umkm" {{ old('role') == 'umkm' ? 'selected' : '' }}>UMKM</option>
+            <option value="konsultan" {{ old('role') == 'konsultan' ? 'selected' : '' }}>Konsultan</option>
             <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
         </select><br><br>
 

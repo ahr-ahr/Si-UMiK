@@ -13,7 +13,7 @@ CREATE TABLE users (
     kode_pos VARCHAR(10) NOT NULL COMMENT 'Kode pos wilayah',
     alamat TEXT NOT NULL COMMENT 'Alamat lengkap pengguna',
     password VARCHAR(255) NOT NULL COMMENT 'Password (dihash)',
-    role ENUM('umkm', 'pencari_kerja', 'admin') NOT NULL DEFAULT 'pencari_kerja' COMMENT 'Peran pengguna dalam sistem',
+    role ENUM('umkm', 'pencari_kerja', 'admin', 'konsultan') NOT NULL DEFAULT 'pencari_kerja' COMMENT 'Peran pengguna dalam sistem',
     foto_profil VARCHAR(255) DEFAULT NULL COMMENT 'Link foto profil',
     status_akun ENUM('aktif', 'nonaktif', 'diblokir') DEFAULT 'nonaktif' COMMENT 'Status akun pengguna',
     lulusan_sekolah_terakhir VARCHAR(100) NOT NULL COMMENT 'Tingkat pendidikan terakhir',
@@ -51,6 +51,24 @@ CREATE TABLE umkm (
     status ENUM('aktif', 'nonaktif') DEFAULT 'aktif' COMMENT 'Status aktif usaha',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu input data UMKM',
     updated_at DATETIME DEFAULT NULL COMMENT 'Terakhir kali diperbarui',
+
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE konsultan (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL COMMENT 'Relasi ke tabel users dengan role konsultan',
+    bidang_keahlian VARCHAR(100) NOT NULL COMMENT 'Bidang keahlian utama konsultan',
+    pengalaman_tahun INT DEFAULT NULL COMMENT 'Jumlah tahun pengalaman',
+    jenis_konsultan ENUM('bisnis', 'keuangan', 'hukum', 'teknologi', 'lainnya') NOT NULL DEFAULT 'lainnya' COMMENT 'Jenis konsultan berdasarkan bidang',
+    sertifikasi TEXT DEFAULT NULL COMMENT 'Daftar sertifikasi jika ada',
+    portofolio TEXT DEFAULT NULL COMMENT 'Deskripsi atau link portofolio',
+    biaya_per_jam INT NOT NULL COMMENT 'Tarif jasa per jam (Rp)',
+    biaya_per_menit INT NOT NULL COMMENT 'Tarif jasa per menit (Rp)',
+    rating FLOAT DEFAULT NULL COMMENT 'Rating rata-rata dari pengguna',
+    jumlah_review INT DEFAULT 0 COMMENT 'Jumlah total review',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
@@ -102,6 +120,46 @@ CREATE TABLE lamaran_kerja (
     FOREIGN KEY (lowongan_id) REFERENCES lowongan_kerja(id) ON DELETE CASCADE,
     FOREIGN KEY (pelamar_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+CREATE TABLE konsultasi_pembayaran (
+    id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'ID unik transaksi konsultasi',
+    umkm_id INT NOT NULL COMMENT 'Relasi ke UMKM yang melakukan pemesanan jasa',
+    konsultan_id INT NOT NULL COMMENT 'Relasi ke pengguna dengan role konsultan',
+    jadwal_konsultasi DATETIME NOT NULL COMMENT 'Tanggal dan waktu konsultasi dijadwalkan',
+    durasi_jam INT DEFAULT 1 COMMENT 'Durasi konsultasi dalam jam',
+    biaya INT NOT NULL COMMENT 'Total biaya konsultasi (dalam rupiah)',
+    metode_pembayaran ENUM('midtrans_snap', 'manual') DEFAULT 'midtrans_snap' COMMENT 'Metode pembayaran',
+    snap_token VARCHAR(255) DEFAULT NULL COMMENT 'Token dari Midtrans Snap (jika menggunakan Snap)',
+    status_pembayaran ENUM('menunggu', 'berhasil', 'gagal', 'dibatalkan') DEFAULT 'menunggu' COMMENT 'Status pembayaran',
+    catatan TEXT DEFAULT NULL COMMENT 'Catatan tambahan jika ada',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Waktu pemesanan dibuat',
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Terakhir kali diperbarui',
+
+    FOREIGN KEY (umkm_id) REFERENCES umkm(id) ON DELETE CASCADE,
+    FOREIGN KEY (konsultan_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Indeks
+CREATE INDEX idx_umkm_konsultasi ON konsultasi_pembayaran(umkm_id);
+CREATE INDEX idx_konsultan_konsultasi ON konsultasi_pembayaran(konsultan_id);
+CREATE INDEX idx_status_pembayaran_konsultasi ON konsultasi_pembayaran(status_pembayaran);
+
+-- Index untuk relasi user
+CREATE INDEX idx_user_id_konsultan ON konsultan_detail(user_id);
+
+-- Index untuk pencarian berdasarkan bidang keahlian
+CREATE INDEX idx_bidang_keahlian ON konsultan_detail(bidang_keahlian);
+
+-- Index untuk pencarian berdasarkan pengalaman
+CREATE INDEX idx_pengalaman ON konsultan_detail(pengalaman_tahun);
+
+-- Index untuk pencarian berdasarkan tarif
+CREATE INDEX idx_biaya_per_jam ON konsultan_detail(biaya_per_jam);
+CREATE INDEX idx_biaya_per_menit ON konsultan_detail(biaya_per_menit);
+
+-- Index untuk pencarian berdasarkan rating
+CREATE INDEX idx_rating ON konsultan_detail(rating);
+
 
 -- Indeks lamaran_kerja
 CREATE INDEX idx_lowongan_id_lamaran ON lamaran_kerja(lowongan_id);
