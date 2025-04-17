@@ -1,0 +1,715 @@
+.homepage-55,
+.homepage-55 * {
+  box-sizing: border-box;
+}
+.homepage-55 {
+  background: rgba(171, 5, 8, 0.84);
+  height: 1024px;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.group-21 {
+  height: auto;
+  position: absolute;
+  left: -225px;
+  top: 702px;
+  overflow: visible;
+}
+.ellipse-12 {
+  background: #edd6d6;
+  border-radius: 50%;
+  width: 85px;
+  height: 81px;
+  position: absolute;
+  left: 85px;
+  top: 66px;
+}
+.weui-arrow-filled {
+  width: 44.66px;
+  height: 73.88px;
+  position: absolute;
+  left: 150px;
+  top: 142.88px;
+  transform: translate(-45px, -73.88px);
+  overflow: visible;
+}
+.group-23 {
+  height: auto;
+  position: absolute;
+  left: 1665.93px;
+  top: 234.4px;
+  transform: translate(-608.93px, -234.4px);
+  overflow: visible;
+}
+.gg-profile {
+  width: 69px;
+  height: 55px;
+  position: absolute;
+  left: 1152px;
+  top: 86px;
+  overflow: hidden;
+}
+.group {
+  width: 91.67%;
+  height: 91.67%;
+  position: absolute;
+  right: 4.17%;
+  left: 4.17%;
+  bottom: 4.17%;
+  top: 4.17%;
+  overflow: visible;
+}
+.group-38 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-73 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 105px;
+  top: 549px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.group-1 {
+  width: 221px;
+  height: 30.84px;
+  position: static;
+}
+.rectangle-2 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 134px;
+  top: 509.01px;
+}
+.lihat-profil {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 181px;
+  top: 512.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-nazwa-izzatunnisa-umur-18-posisi-pekerjaan-editing {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 592px);
+  top: 435.41px;
+  width: 219.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.es-pisang-ijo {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 786px;
+  top: 373px;
+  width: 203px;
+  height: 56px;
+}
+.group-232 {
+  height: auto;
+  position: absolute;
+  left: -312.44px;
+  top: 665px;
+  transform: translate(312.44px, 0px);
+  overflow: visible;
+}
+.es-doger {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 771px;
+  top: 772px;
+  width: 203px;
+  height: 56px;
+}
+.temukan-pekerja {
+  color: #edd6d6;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  position: absolute;
+  left: 179px;
+  top: 67px;
+  width: 479px;
+  height: 60px;
+}
+.download-15 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 153px;
+  top: 234px;
+  object-fit: cover;
+}
+.group-46 {
+  position: absolute;
+  inset: 0;
+}
+.nama-nazwa-izza-umur-18-posisi-pekerjaan-editing {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 567px);
+  top: 429.1px;
+  width: 188.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.group-47 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-732 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 419px;
+  top: 549px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-22 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 448px;
+  top: 509.01px;
+}
+.lihat-profil2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 495px;
+  top: 512.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-nazwa-izzatunnisa-umur-18-posisi-pekerjaan-editing2 {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 278px);
+  top: 435.41px;
+  width: 219.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.download-152 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 467px;
+  top: 234px;
+  object-fit: cover;
+}
+.group-48 {
+  position: absolute;
+  inset: 0;
+}
+.nama-ibnu-marzuki-umur-22-posisi-pekerjaan {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 253px);
+  top: 429.1px;
+  width: 219.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.download-3 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 467px;
+  top: 234px;
+  object-fit: cover;
+}
+.group-49 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-733 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 748px;
+  top: 549px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-23 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 777px;
+  top: 509.01px;
+}
+.lihat-profil3 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 824px;
+  top: 512.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-ni-made-puji-adsari-umur-17-posisi-pekerjaan-editing {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - -76px);
+  top: 429.1px;
+  width: 188.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+._647-f-5226-26-c-9-40-d-0-abb-1-8-a-0-c-6-c-4-a-76-b-0 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 803px;
+  top: 234px;
+  object-fit: cover;
+}
+.es-pisang-ijo2 {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 1088px;
+  top: 373px;
+  width: 203px;
+  height: 56px;
+}
+.group-50 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-734 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 1050px;
+  top: 549px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-24 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 1079px;
+  top: 509.01px;
+}
+.lihat-profil4 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 1126px;
+  top: 512.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-santi-pratama-umur-19-posisi-pekerjaan-editing {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - -378px);
+  top: 429.1px;
+  width: 188.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.div {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 1105px;
+  top: 234px;
+  object-fit: cover;
+}
+.group-51 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-735 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 105px;
+  top: 939px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-25 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 134px;
+  top: 899.01px;
+}
+.lihat-profil5 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 181px;
+  top: 902.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-nazwa-izzatunnisa-umur-18-posisi-pekerjaan-editing3 {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 592px);
+  top: 825.41px;
+  width: 219.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.es-pisang-ijo3 {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 786px;
+  top: 763px;
+  width: 203px;
+  height: 56px;
+}
+.download-153 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 153px;
+  top: 624px;
+  object-fit: cover;
+}
+.group-52 {
+  position: absolute;
+  inset: 0;
+}
+.nama-nazwa-kapoor-umur-18-posisi-pekerjaan-editing {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 567px);
+  top: 819.1px;
+  width: 188.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.download-16 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 153px;
+  top: 624px;
+  object-fit: cover;
+}
+.group-53 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-736 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 419px;
+  top: 939px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-26 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 448px;
+  top: 899.01px;
+}
+.lihat-profil6 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 495px;
+  top: 902.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-nazwa-izzatunnisa-umur-18-posisi-pekerjaan-editing4 {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 278px);
+  top: 825.41px;
+  width: 219.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.download-154 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 467px;
+  top: 624px;
+  object-fit: cover;
+}
+.group-54 {
+  position: absolute;
+  inset: 0;
+}
+.nama-ibnu-marzuki-umur-22-posisi-pekerjaan2 {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 253px);
+  top: 819.1px;
+  width: 219.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.download-4 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 467px;
+  top: 624px;
+  object-fit: cover;
+}
+.group-55 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-737 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 748px;
+  top: 939px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-27 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 777px;
+  top: 899.01px;
+}
+.lihat-profil7 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 824px;
+  top: 902.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-ni-made-puji-adsari-umur-36-posisi-pekerjaan-editing {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - -76px);
+  top: 819.1px;
+  width: 188.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.download-5 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 803px;
+  top: 624px;
+  object-fit: cover;
+}
+.es-pisang-ijo4 {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 1088px;
+  top: 763px;
+  width: 203px;
+  height: 56px;
+}
+.group-56 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-738 {
+  background: #edd6d6;
+  border-radius: 18px;
+  width: 280px;
+  height: 335px;
+  position: absolute;
+  left: 1050px;
+  top: 939px;
+  box-shadow: 0px 22px 40px 0px rgba(150, 90, 90, 1);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-28 {
+  background: #f5c218;
+  border-radius: 8px;
+  width: 221px;
+  height: 30.66px;
+  position: absolute;
+  left: 1079px;
+  top: 899.01px;
+}
+.lihat-profil8 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 1126px;
+  top: 902.2px;
+  width: 129px;
+  height: 27.65px;
+}
+.nama-santi-pratama-umur-30-posisi-pekerjaan-editing {
+  color: rgba(171, 5, 8, 0.84);
+  text-align: left;
+  font-family: "Righteous-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - -378px);
+  top: 819.1px;
+  width: 188.33px;
+  height: 59px;
+  transform-origin: 0 0;
+  transform: rotate(-0.347deg) scale(1, 1);
+}
+.download-17 {
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  left: 1105px;
+  top: 624px;
+  object-fit: cover;
+}
