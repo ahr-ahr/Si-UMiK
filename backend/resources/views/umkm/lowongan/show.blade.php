@@ -7,5 +7,5 @@
 <p><strong>Jenis Pekerjaan:</strong> {{ ucfirst($lowongan->jenis_pekerjaan) }}</p>
 <p><strong>Tanggal Ditutup:</strong> {{ $lowongan->tanggal_ditutup ?? 'Tidak ditentukan' }}</p>
 
-<a href="{{ route('lowongan.edit', $lowongan->id) }}">Edit</a> |
-<a href="{{ route('lowongan.index') }}">Kembali</a>
+<a href="{{ route('umkm.lowongan.edit', $lowongan->id) }}">Edit</a> |
+<a href="{{ route('umkm.lowongan.index') }}">Kembali</a>

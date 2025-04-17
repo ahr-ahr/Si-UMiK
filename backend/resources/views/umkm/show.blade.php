@@ -42,7 +42,49 @@
             </div>
         </div>
 
-        <a href="{{ route('umkm.index') }}" class="btn btn-secondary">Kembali</a>
+        <a href="{{ route('umkm.index') }}" class="btn btn-secondary mb-4">Kembali</a>
+
+        {{-- Daftar Lowongan dan Pelamar --}}
+        <h2>Daftar Lowongan & Pelamar</h2>
+        @if($umkm->lowonganKerja->isEmpty())
+            <div class="alert alert-info">
+                Belum ada lowongan yang dibuat.
+            </div>
+        @else
+            @foreach($umkm->lowonganKerja as $low)
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>{{ $low->judul }}</strong>
+                            <br><small>Ditutup: {{ $low->tanggal_ditutup ? \Carbon\Carbon::parse($low->tanggal_ditutup)->format('d M Y') : '-' }}</small>
+                        </div>
+                        <a href="{{ route('umkm.lowongan.show', $low->id) }}" class="btn btn-sm btn-info">
+                            Detail Lowongan
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        @if($low->pelamar->isEmpty())
+                            <p class="text-muted">Belum ada pelamar untuk lowongan ini.</p>
+                        @else
+                            <ul class="list-group">
+                                @foreach($low->pelamar as $p)
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>{{ $p->user->name }}</strong><br>
+                                            <small>{{ $p->user->email }}</small><br>
+                                            <small>Melamar pada: {{ $p->created_at->format('d M Y H:i') }}</small>
+                                        </div>
+                                        <a href="{{ route('pelamar.show', $p->id) }}" class="btn btn-sm btn-outline-primary">
+                                            Lihat Pelamar
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
+                </div>
+            @endforeach
+        @endif
     @else
         <div class="alert alert-warning">
             Data UMKM tidak ditemukan.
