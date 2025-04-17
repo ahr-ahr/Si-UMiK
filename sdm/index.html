@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+
+/* Tambahan: bikin gambar bisa diklik */
+.tombol-kembali, .tombol-profil {
+  cursor: pointer;
+  z-index: 999;
+  position: relative;
+
+}
+
+
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="homepage-54">
+    <img class="group-21" src="group-210.svg" />
+    <div class="sdm">SDM</div>
+    <div class="ellipse-12"> </div>
+<!-- Gambar tombol kembali -->
+<a href="../"><img class="weui-arrow-filled tombol-kembali" src="weui-arrow-filled0.svg" alt="Kembali" /></a>
+  </div>
+
+<!-- Gambar profil diberi class tombol-profil -->
+<div class="gg-profile">
+  <img class="group tombol-profil" src="group0.svg" alt="Profil" />
+</div>
+
+    </div>
+    <img class="group-22" src="group-220.svg" />
+    <div class="rectangle-43"></div>
+    <div class="rectangle-52"></div>
+    <button class="temukan-pekerja">Temukan Pekerja</button>
+    <button class="temukan-lowongan">Temukan Lowongan</button>
+  </div>
+  
+</body>
+
+<script>
+
+document.querySelector('.temukan-pekerja').addEventListener('click', function() {
+  window.location.href = 'halaman-pekerja.html';
+});
+
+document.querySelector('.temukan-lowongan').addEventListener('click', function() {
+  window.location.href = 'halaman-pekerja.html';
+});
+
+// Fungsi tombol kembali
+document.querySelector('.tombol-kembali').addEventListener('click', function() {
+  // Kembali ke halaman sebelumnya
+  window.history.back();
+});
+
+// Fungsi tombol profil
+document.querySelector('.tombol-profil').addEventListener('click', function() {
+  window.location.href = 'halaman-profil.html';
+});
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,508 @@
+<html lang="english">
+  <head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        -webkit-font-smoothing: antialiased;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+        color: inherit;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      details {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      [data-thq="accordion"] [data-thq="accordion-content"] {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        padding: 0;
+      }
+      [data-thq="accordion"]
+        details[data-thq="accordion-trigger"][open]
+        + [data-thq="accordion-content"] {
+        max-height: 1000vh;
+      }
+      details[data-thq="accordion-trigger"][open]
+        summary
+        [data-thq="accordion-icon"] {
+        transform: rotate(180deg);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Righteous:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Righteous:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      
+
+      <div class="register-container">
+        <div class="register-register">
+          <img
+            src="public/external/premium-vector-traditional-balinese-barong-mask-removebg-preview-10.png"
+            alt="peacockremovebgpreview18263"
+            class="register-peacockremovebgpreview1"
+          />
+          <img
+            src="public/external/rectangle368264-lit.svg"
+            alt="Rectangle368264"
+            class="register-rectangle36"
+          />
+          <img
+            src="public/external/rectangle358265-tk74.svg"
+            alt="Rectangle358265"
+            class="register-rectangle35"
+          />
+          <span class="register-text10">Forgot</span>
+          <div class="register-mdiemail"></div>
+          <img
+            src="public/external/mdilock8268-fqyg.svg"
+            alt="mdilock8268"
+            class="register-mdilock"
+          />
+          <div class="register-group22">
+            <img
+              src="public/external/mdiaccount8261-9zq.svg"
+              alt="mdiaccount8261"
+              class="register-mdiaccount"
+            />
+          </div>
+          <div class="register-iconparkoutlineeyes">
+            <div class="register-group">
+              <img
+                src="public/external/vector38261-bfky.svg"
+                alt="Vector38261"
+                class="register-vector3"
+              />
+              <img
+                src="public/external/vector48261-7q4p.svg"
+                alt="Vector48261"
+                class="register-vector4"
+              />
+              <img
+                src="public/external/vector58261-ia5.svg"
+                alt="Vector58261"
+                class="register-vector5"
+              />
+            </div>
+          </div>
+          <span class="register-text11">identitas</span>
+          <span class="register-text12">email</span>
+          <span class="register-text13">password</span>
+          <span class="register-text14">Telephon</span>
+          <img
+            src="public/external/vector68262-zlk.svg"
+            alt="Vector68262"
+            class="register-vector6"
+          />
+          <div class="nama">
+          <div class="input-box">
+            <input type="text" class="input" placeholder="Nama Depan"/>
+          </div>
+          <div class="input-box">
+            <input type="text" class="input" placeholder="Nama Belakang"/>
+          </div>
+        </div>
+        <div class="input-box3">
+          <input type="text" class="input" placeholder="No Telepon"/>
+        </div>
+        <div class="password">
+        <div class="input-box4">
+          <input type="password" class="input" placeholder="Password"/>
+        </div>
+          <div class="input-box4">
+            <input type="password" class="input" placeholder="Confirmation Password"/>
+          </div>
+          </div>
+          <div class="input-box2">
+            <input type="email" class="input" placeholder="Email"/>
+          </div>
+          <div class="register-group271">
+            <img
+              src="public/external/ellipse58263-yxtr-200h.png"
+              alt="Ellipse58263"
+              class="register-ellipse51"
+            />
+            <img
+              src="public/external/ellipse68263-lh8-200h.png"
+              alt="Ellipse68263"
+              class="register-ellipse61"
+            />
+            <img
+              src="public/external/ellipse78263-z9wq-200h.png"
+              alt="Ellipse78263"
+              class="register-ellipse71"
+            />
+            <img
+              src="public/external/ellipse88263-cny0r-200h.png"
+              alt="Ellipse88263"
+              class="register-ellipse81"
+            />
+            <img
+              src="public/external/ellipse98264-66ib-200h.png"
+              alt="Ellipse98264"
+              class="register-ellipse91"
+            />
+          </div>
+          <div class="register-group29">
+            <img
+              src="public/external/ellipse58264-lcbm-200h.png"
+              alt="Ellipse58264"
+              class="register-ellipse54"
+            />
+            <img
+              src="public/external/ellipse68264-hllh-200h.png"
+              alt="Ellipse68264"
+              class="register-ellipse64"
+            />
+            <img
+              src="public/external/ellipse78264-iwpi-200h.png"
+              alt="Ellipse78264"
+              class="register-ellipse74"
+            />
+            <img
+              src="public/external/ellipse88264-wktq-200h.png"
+              alt="Ellipse88264"
+              class="register-ellipse84"
+            />
+            <img
+              src="public/external/ellipse98264-x4y4s-200h.png"
+              alt="Ellipse98264"
+              class="register-ellipse94"
+            />
+          </div>
+          <img
+            src="public/external/ellipse108264-hrnx-200h.png"
+            alt="Ellipse108264"
+            class="register-ellipse10"
+          />
+          <img
+            src="public/external/weuiarrowfilled8264-ccur.svg"
+            alt="weuiarrowfilled8264"
+            class="register-weuiarrowfilled1"
+          />
+          <img
+            src="public/external/whats-app-image-2024-11-02-at-13-50-250.png"
+            alt="WhatsAppImage20241024at1122298265"
+            class="register-whats-app-image20241024at112229"
+          />
+          <img
+            src="public/external/rectangle438265-l5w6.svg"
+            alt="Rectangle438265"
+            class="register-rectangle43"
+          />
+          <img
+            src="public/external/rectangle448265-3wou.svg"
+            alt="Rectangle448265"
+            class="register-rectangle44"
+          />
+          <img
+            src="public/external/ellipse118265-guvh-200h.png"
+            alt="Ellipse118265"
+            class="register-ellipse11"
+          />
+          <img
+            src="public/external/weuiarrowfilled8265-1es2.svg"
+            alt="Weuiarrowfilled8265"
+            class="register-weuiarrowfilled2"
+          />
+          <span class="register-text20">Remember me</span>
+          <div class="register-text21">
+            <a href="forgot-password.html">Forgot password?></a>
+          </div>
+          <div class="remember-me-container">
+            <input type="checkbox" id="remember" name="remember" />
+            </div>
+          <div class="register-group28">
+            <img
+              src="public/external/ellipse528266-z8lq-200h.png"
+              alt="Ellipse528266"
+              class="register-ellipse52"
+            />
+            <img
+              src="public/external/ellipse628266-n1mu-200w.png"
+              alt="Ellipse628266"
+              class="register-ellipse62"
+            />
+            <img
+              src="public/external/ellipse728266-etd7-200h.png"
+              alt="Ellipse728266"
+              class="register-ellipse72"
+            />
+            <img
+              src="public/external/ellipse828266-jdbq-200h.png"
+              alt="Ellipse828266"
+              class="register-ellipse82"
+            />
+            <img
+              src="public/external/ellipse928266-l08q-200h.png"
+              alt="Ellipse928266"
+              class="register-ellipse92"
+            />
+            <div class="register-group272">
+              <img
+                src="public/external/ellipse538267-4pt-200w.png"
+                alt="Ellipse538267"
+                class="register-ellipse53"
+              />
+              <img
+                src="public/external/ellipse638267-dv5s-200w.png"
+                alt="Ellipse638267"
+                class="register-ellipse63"
+              />
+              <img
+                src="public/external/ellipse738267-q3gl-200h.png"
+                alt="Ellipse738267"
+                class="register-ellipse73"
+              />
+              <img
+                src="public/external/ellipse838267-ro66-200h.png"
+                alt="Ellipse838267"
+                class="register-ellipse83"
+              />
+              <img
+                src="public/external/ellipse938267-kse-200w.png"
+                alt="Ellipse938267"
+                class="register-ellipse93"
+              />
+            </div>
+          </div>
+          <div class="register-ggprofile">
+            <div class="register-group2">
+              <img
+                src="public/external/vector128267-fw39.svg"
+                alt="Vector128267"
+                class="register-vector12"
+              />
+              <img
+                src="public/external/vector138267-9h3.svg"
+                alt="Vector138267"
+                class="register-vector13"
+              />
+            </div>
+            <span class="register-text23">identitas</span>
+          </div>
+          <img
+            src="public/external/phphonefill8268-63ia.svg"
+            alt="phphonefill8268"
+            class="register-phphonefill"
+          />
+          <div class="register-button-container">
+            <a href="../index.html" class=" text-wrapper-10 link-nav">Masuk</a>
+          </div>
+          
+          <span class="register-text25">profil</span>
+          <div class="register-group21"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

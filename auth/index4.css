@@ -1,0 +1,803 @@
+.register-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .register-register {
+    width: 100%;
+    height: 1024px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(236, 214, 214, 1);
+  
+  }
+  
+  .register-peacockremovebgpreview1 {
+    top: 160px;
+    left: 880px;
+    width: 633px;
+    height: 804px;
+    position: absolute;
+  }
+  
+  .register-rectangle36 {
+    top: 0px;
+    left: 459px;
+    width: 201px;
+    height: 1024px;
+    position: absolute;
+  }
+  
+  .register-rectangle35 {
+    top: 0px;
+    left: 484px;
+    width: 176px;
+    height: 1024px;
+    position: absolute;
+  }
+  
+  .register-text10 {
+    top: 25px;
+    left: 671px;
+    color: rgba(171, 4, 7, 0.8399999737739563);
+    width: 665px;
+    height: auto;
+    position: absolute;
+    font-size: 75px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Righteous;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-mdiemail {
+    top: 533.5420532226562px;
+    left: 765.523681640625px;
+    width: 50px;
+    height: 36.89317321777344px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  
+  .register-mdilock {
+    top: 616px;
+    left: 758.170654296875px;
+    width: 52px;
+    height: 35px;
+    position: absolute;
+  }
+  
+  .register-group22 {
+    top: 304px;
+    left: 762.3427734375px;
+    width: 43.05112838745117px;
+    height: 32.96836853027344px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  
+  .register-mdiaccount {
+    top: 0px;
+    left: -5px;
+    width: 56px;
+    height: 43px;
+    position: absolute;
+  }
+  
+  .register-iconparkoutlineeyes {
+    top: 741.4468994140625px;
+    left: 1240.6533203125px;
+    width: 30px;
+    height: 19.6240291595459px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  
+  .register-group {
+    top: 2.861837387084961px;
+    left: 3.778423547744751px;
+    width: 22.670541763305664px;
+    height: 13.900354385375977px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  
+  .register-vector3 {
+    top: 2.4530036449432373px;
+    left: 0px;
+    width: 23px;
+    height: 11px;
+    position: absolute;
+  }
+  
+  .register-vector4 {
+    top: 5.72367525100708px;
+    left: 7.556847095489502px;
+    width: 8px;
+    height: 5px;
+    position: absolute;
+  }
+  
+  .register-vector5 {
+    top: 1.1532818255943766e-8px;
+    left: 4.574411392211914px;
+    width: 14px;
+    height: 3px;
+    position: absolute;
+  }
+  
+  .register-text11 {
+    top: 309.502685546875px;
+    left: 830.103515625px;
+    color: rgba(171, 4, 7, 0.8399999737739563);
+    width: 272px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-text12 {
+    top: 409px;
+    left: 828.481201171875px;
+    color: rgba(171, 4, 7, 0.8399999737739563);
+    width: 200px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-text13 {
+    top: 616.6685180664062px;
+    left: 825px;
+    color: rgba(171, 4, 7, 0.8399999737739563);
+    width: 272px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-text14 {
+    top: 515px;
+    left: 830px;
+    color: rgba(171, 4, 7, 0.8399999737739563);
+    width: 201px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-vector6 {
+    top: 416.32794189453125px;
+    left: 768px;
+    width: 35px;
+    height: 20px;
+    position: absolute;
+  }
+  
+  .register-rectangle37 {
+    top: 341px;
+    left: 740px;
+    width: 558px;
+    height: 49px;
+    position: absolute;
+    border-radius: 18px;
+  }
+  
+  .register-rectangle42 {
+    top: 408px;
+    left: 739px;
+    width: 558px;
+    height: 49px;
+    position: absolute;
+    border-radius: 18px;
+  }
+  
+  .register-rectangle45 {
+    top: 512.3279418945312px;
+    left: 741px;
+    width: 557px;
+    height: 49px;
+    position: absolute;
+    border-radius: 18px;
+  }
+  
+  .register-rectangle48 {
+    top: 614px;
+    left: 742px;
+    width: 557px;
+    height: 49px;
+    position: absolute;
+    border-radius: 18px;
+  }
+  
+  .register-text15 {
+    top: 624px;
+    left: 754px;
+    color: rgba(171, 4, 7, 0.5);
+    width: 114px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-rectangle46 {
+    top: 725.0252685546875px;
+    left: 741.953369140625px;
+    width: 557px;
+    height: 50px;
+    position: absolute;
+    border-radius: 18px;
+  }
+  
+  .register-weuieyesoffoutlined1 {
+    top: 740px;
+    left: 1252px;
+    width: 27px;
+    height: 24px;
+    position: absolute;
+  }
+  
+  .register-rectangle47 {
+    top: 785.0252685546875px;
+    left: 741.953369140625px;
+    width: 557px;
+    height: 50px;
+    position: absolute;
+    border-radius: 18px;
+  }
+  
+  .register-text16 {
+    top: 521.3279418945312px;
+    left: 747px;
+    color: rgba(171, 4, 7, 0.5);
+    width: 67px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-text17 {
+    top: 353px;
+    left: 716px;
+    color: rgba(171, 4, 7, 0.5);
+    width: 198px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-text18 {
+    top: 734.0252685546875px;
+    left: 752.953369140625px;
+    color: rgba(171, 4, 7, 0.5);
+    width: 112px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-group271 {
+    top: 900px;
+    left: 1292px;
+    width: 97px;
+    height: 84px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  
+  .register-ellipse51 {
+    top: 0px;
+    left: 0px;
+    width: 96px;
+    height: 78px;
+    position: absolute;
+  }
+  
+  .register-ellipse61 {
+    top: 17px;
+    left: 25.35236930847168px;
+    width: 47px;
+    height: 45px;
+    position: absolute;
+  }
+  
+  .register-ellipse71 {
+    top: 49px;
+    left: 4.409051895141602px;
+    width: 54px;
+    height: 35px;
+    position: absolute;
+  }
+  
+  .register-ellipse81 {
+    top: 11px;
+    left: 72.75px;
+    width: 24px;
+    height: 19px;
+    position: absolute;
+  }
+  
+  .register-ellipse91 {
+    top: 12px;
+    left: 17.63642120361328px;
+    width: 21px;
+    height: 18px;
+    position: absolute;
+  }
+  
+  .register-group29 {
+    top: 842px;
+    left: 1333px;
+    width: 43.795654296875px;
+    height: 34.35714340209961px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  
+  .register-ellipse54 {
+    top: 0px;
+    left: 0px;
+    width: 43px;
+    height: 32px;
+    position: absolute;
+  }
+  
+  .register-ellipse64 {
+    top: 6.953231334686279px;
+    left: 11.4465913772583px;
+    width: 21px;
+    height: 18px;
+    position: absolute;
+  }
+  
+  .register-ellipse74 {
+    top: 20.041667938232422px;
+    left: 1.9907115697860718px;
+    width: 24px;
+    height: 14px;
+    position: absolute;
+  }
+  
+  .register-ellipse84 {
+    top: 4.499149799346924px;
+    left: 32.84674072265625px;
+    width: 11px;
+    height: 8px;
+    position: absolute;
+  }
+  
+  .register-ellipse94 {
+    top: 4.908163547515869px;
+    left: 7.962846279144287px;
+    width: 9px;
+    height: 7px;
+    position: absolute;
+  }
+  
+  .register-ellipse10 {
+    top: 32px;
+    left: 82px;
+    width: 85px;
+    height: 81px;
+    position: absolute;
+  }
+  
+  .register-weuiarrowfilled1 {
+    top: 112.87644958496094px;
+    left: 146.000244140625px;
+    width: 45px;
+    height: 74px;
+    position: absolute;
+  }
+  
+  .register-weuieyesoffoutlined2 {
+    top: 798px;
+    left: 1252px;
+    width: 27px;
+    height: 24px;
+    position: absolute;
+  }
+  
+  .register-whats-app-image20241024at112229 {
+    top: -7px;
+    left: -3px;
+    width: 580px;
+    height: 1031px;
+    position: absolute;
+  }
+  
+  .register-rectangle43 {
+    top: 0px;
+    left: 459px;
+    width: 201px;
+    height: 1024px;
+    position: absolute;
+  }
+  
+  .register-rectangle44 {
+    top: 0px;
+    left: 484px;
+    width: 176px;
+    height: 1024px;
+    position: absolute;
+  }
+  
+  .register-ellipse11 {
+    top: 32px;
+    left: 82px;
+    width: 85px;
+    height: 81px;
+    position: absolute;
+  }
+  
+  .register-weuiarrowfilled2 {
+    top: 112.87646484375px;
+    left: 146.000244140625px;
+    width: 45px;
+    height: 74px;
+    position: absolute;
+  }
+  
+  .register-text19 {
+    top: 797.0252685546875px;
+    left: 752.953369140625px;
+    color: rgba(171, 4, 7, 0.5);
+    width: 241px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-text20 {
+    top: 851.0252685546875px;
+    left: 796.953369140625px;
+    color: rgb(170, 0, 0);
+    width: 125px;
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-text21 {
+    top: 853.0252685546875px;
+    left: 1141.953369140625px;
+    color: rgb(170, 0, 0);
+    width: 144px;
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-radixiconsbox {
+    top: 851.0252685546875px;
+    left: 766.953369140625px;
+    width: 32px;
+    height: 23px;
+    position: absolute;
+  }
+  
+  .register-text22 {
+    top: 420px;
+    left: 726px;
+    color: rgba(171, 4, 7, 0.5);
+    width: 198px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Abel;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  .register-group28 {
+    top: 41px;
+    left: 599px;
+    width: 121px;
+    height: 78.90814208984375px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  
+  .register-ellipse52 {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 68px;
+    position: absolute;
+  }
+  
+  .register-ellipse62 {
+    top: 14.773813247680664px;
+    left: 19.079545974731445px;
+    width: 36px;
+    height: 39px;
+    position: absolute;
+  }
+  
+  .register-ellipse72 {
+    top: 42.583309173583984px;
+    left: 3.3181819915771484px;
+    width: 41px;
+    height: 30px;
+    position: absolute;
+  }
+  
+  .register-ellipse82 {
+    top: 9.559494018554688px;
+    left: 54.75px;
+    width: 18px;
+    height: 17px;
+    position: absolute;
+  }
+  
+  .register-ellipse92 {
+    top: 10.428560256958008px;
+    left: 13.272727966308594px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+  }
+  
+  .register-group272 {
+    top: 37px;
+    left: 84px;
+    width: 37px;
+    height: 41.90814208984375px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  
+  .register-ellipse53 {
+    top: 0px;
+    left: 0px;
+    width: 37px;
+    height: 39px;
+    position: absolute;
+  }
+  
+  .register-ellipse63 {
+    top: 8.481410026550293px;
+    left: 9.670454978942871px;
+    width: 18px;
+    height: 22px;
+    position: absolute;
+  }
+  
+  .register-ellipse73 {
+    top: 24.4464168548584px;
+    left: 1.6818181276321411px;
+    width: 21px;
+    height: 17px;
+    position: absolute;
+  }
+  
+  .register-ellipse83 {
+    top: 5.48797082901001px;
+    left: 27.75px;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+  }
+  
+  .register-ellipse93 {
+    top: 5.98687744140625px;
+    left: 6.7272725105285645px;
+    width: 8px;
+    height: 9px;
+    position: absolute;
+  }
+  
+  .register-ggprofile {
+    top: 154px;
+    left: 952px;
+    width: 113px;
+    height: 114px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  
+  .register-group2 {
+    top: 4.75px;
+    left: 4.7083330154418945px;
+    width: 103.58332824707031px;
+    height: 104.49999237060547px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  
+  .register-vector12 {
+    top: 19px;
+    left: 32.95833206176758px;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+  }
+  
+  .register-vector13 {
+    top: 0px;
+    left: 0px;
+    width: 104px;
+    height: 104px;
+    position: absolute;
+  }
+  
+  .register-button-container {
+    position: absolute;
+    top: 800px;
+    left: 1100px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .register-button {
+    padding: 25px 50px;
+    background-color: rgba(171, 4, 7, 0.8399999737739563);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-button-container {
+    position: absolute;
+    top: 800px;
+    left: 800px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    padding: 25px 60px;
+    background-color: rgba(171, 4, 7, 0.8399999737739563);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .lokasi {
+    position: relative;
+    top: 350px;
+    left: 750px;
+    margin: 20px;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lokasi select {
+    margin-bottom: 25px;
+    width: 555px;
+    height: 50px;
+    border-radius: 20px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    background-color: #fdf9f9;
+  }
