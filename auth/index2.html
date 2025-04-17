@@ -237,10 +237,10 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
-    <link href="./index.css" rel="stylesheet" />
+    <link href="index2.css" rel="stylesheet" />
   </head>
   <body>
-    <link rel="stylesheet" href="./forgetpass.css" />
+    <link rel="stylesheet" href="./style.css" />
     <div>
       <div class="register-container">
         <div class="register-register">
@@ -262,13 +262,13 @@
           <span class="register-text10">Register</span>
           <div class="register-mdiemail"></div>
           <img
-            src="public/external/mdilock8268-fqyg.svg"
+            src="public/external/phphonefill8268-63ia.svg"
             alt="mdilock8268"
             class="register-mdilock"
           />
           <div class="register-group22">
             <img
-              src="public/external/mdiaccount8261-9zq.svg"
+              src="public/external/umur-removebg-preview.png"
               alt="mdiaccount8261"
               class="register-mdiaccount"
             />
@@ -292,29 +292,34 @@
               />
             </div>
           </div>
-          <span class="register-text11">Identitas</span>
-          <span class="register-text12">Email</span>
-          <span class="register-text13">Password</span>
+          <span class="register-text11">Umur</span>
+          <span class="register-text12">Tanggal Lahir</span>
+          <span class="register-text13">Telepon</span>
+          <span class="register-text14">Jenis Kelamin</span>
           <img
-            src="public/external/vector68262-zlk.svg"
+            src="public/external/tanggal_lahir-removebg-preview.png"
             alt="Vector68262"
             class="register-vector6"
           />
           <div class="nama">
           <div class="input-box">
-            <input type="text" class="input" placeholder="Nama Lengkap"/>
+            <input type="number" id="umur" name="umur" min="1" max="120" placeholder="Masukkan umur">
           </div>
+        </div>
+        <div class="jenis-kelamin">
+          <select id="jenis_kelamin" name="jenis_kelamin">
+            <option value="">-- Pilih Jenis Kelamin --</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
         </div>
         <div class="password">
         <div class="input-box4">
-          <input type="password" class="input" placeholder="Password"/>
+          <input type="tel" id="no_hp" name="no_hp" placeholder="081234567890" pattern="[0-9]{10,15}" required>
         </div>
-          <div class="input-box4">
-            <input type="password" class="input" placeholder="Confirmation Password"/>
-          </div>
           </div>
           <div class="input-box2">
-            <input type="email" class="input" placeholder="Email"/>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" placeholder="dd/mm/yyyy"/>
           </div>
           <div class="register-group271">
             <img
@@ -472,13 +477,24 @@
                 class="register-vector13"
               />
             </div>
-            <span class="register-text23">Identitas</span>
           </div>
+          <img
+            src="public/external/jenis_kelamin-removebg-preview.png"
+            alt="phphonefill8268"
+            class="register-phphonefill"
+          />
           <div class="register-button-container">
-            <a href="index2.html">
+            <a href="index3.html">
             <button class="register-button" onclick="handleRegister()">Next</button>
             </a>
           </div>
+
+          <div class="back-button-container">
+            <a href="index.html">
+            <button class="back-button" onclick="handleBack()">Back</button>
+            </a>
+          </div>
+          
           <span class="register-text25">Profil</span>
           <div class="register-group21"></div>
         </div>

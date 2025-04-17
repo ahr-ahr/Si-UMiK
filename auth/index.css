@@ -16,6 +16,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-color: rgba(236, 214, 214, 1);
+
 }
 
 .register-peacockremovebgpreview1 {
@@ -72,7 +73,7 @@
 }
 
 .register-mdilock {
-  top: 680px;
+  top: 506px;
   left: 758.170654296875px;
   width: 52px;
   height: 35px;
@@ -163,7 +164,7 @@
 }
 
 .register-text12 {
-  top: 478px;
+  top: 409px;
   left: 808.481201171875px;
   color: rgba(171, 4, 7, 0.8399999737739563);
   width: 67px;
@@ -180,7 +181,7 @@
 }
 
 .register-text13 {
-  top: 683.6685180664062px;
+  top: 508.6685180664062px;
   left: 725px;
   color: rgba(171, 4, 7, 0.8399999737739563);
   width: 272px;
@@ -196,25 +197,8 @@
   text-decoration: none;
 }
 
-.register-text14 {
-  top: 576px;
-  left: 811px;
-  color: rgba(171, 4, 7, 0.8399999737739563);
-  width: 101px;
-  height: auto;
-  position: absolute;
-  font-size: 24px;
-  font-style: Regular;
-  text-align: center;
-  font-family: Abel;
-  font-weight: 400;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-
 .register-vector6 {
-  top: 483.32794189453125px;
+  top: 416.32794189453125px;
   left: 768px;
   width: 35px;
   height: 20px;
@@ -751,40 +735,16 @@
   text-decoration: none;
 }
 
-.register-phphonefill {
-  top: 577px;
-  left: 766px;
-  width: 46px;
-  height: 37px;
-  position: absolute;
-}
-
-.register-group1 {
-  position: absolute;
-  top: 900px;
-  left: 841px;
-}
-
-.register-group1 button{
-  width: 358.8052978515625px;
-  height: 51.35403823852539px;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(171, 4, 7, 0.8399999737739563);
-  z-index: 10;
-}
-
 .register-button-container {
   position: absolute;
-  top: 900px;
-  left: 920px;
+  top: 720px;
+  left: 960px;
   text-align: center;
   margin-top: 20px;
 }
 
 .register-button {
-  padding: 25px 70px;
+  padding: 25px 50px;
   background-color: rgba(171, 4, 7, 0.8399999737739563);
   border-radius: 8px;
   border: none;
@@ -866,8 +826,8 @@
 
 .input-box2{
   position: relative;
-  left: -58em;
-  top: 510px; ;
+  left: -370px;
+  top: 450px; ;
 }
 
 .input-box2 input{
@@ -883,7 +843,7 @@
 .input-box3{
   position: relative;
   left: 185px;
-  top: 620px; ;
+  top: 555px; ;
 }
 
 .input-box3 input{
@@ -898,8 +858,8 @@
 
 .password{
   position: relative;
-  left: -365px;
-  top: 720px; ;
+  left: 185px;
+  top: 555px; ;
 }
 
 .input-box4{
@@ -914,20 +874,4 @@
   border: none;
   outline: none;
   background-color: #fdf9f9;
-}
-
-.remember-me-container {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 15px 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  top: 843.0252685546875px;
-  left: 782.953369140625px;
-}
-.remember-me-container input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
 }

@@ -53,6 +53,8 @@ class AuthController extends Controller
                 return redirect()->intended('/admin/dashboard');
             } elseif ($user->role === 'umkm') {
                 return redirect()->intended('/umkm/dashboard');
+            } elseif ($user->role === 'konsultan') {
+                return redirect()->intended('konsultan/dashboard');
             } else {
                 return redirect()->intended('/users/dashboard');
             }
@@ -81,7 +83,7 @@ class AuthController extends Controller
             'kode_pos' => 'required|string|max:10',
             'alamat' => 'required|string',
             'password' => 'required|string|min:6|confirmed',
-            'role' => 'required|in:admin,umkm,pencari_kerja',
+            'role' => 'required|in:admin,umkm,pencari_kerja,konsultan',
             'lulusan_sekolah_terakhir' => 'required|string|max:100',
             'jurusan' => 'nullable|string|max:100',
             'posisi_pekerjaan' => 'nullable|string|max:100',

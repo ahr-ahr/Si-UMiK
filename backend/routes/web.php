@@ -6,6 +6,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UmkmController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\LowonganKerjaController;
+use App\Http\Controllers\KonsultasiPembayaranController;
+use App\Http\Controllers\KonsultanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\URL;
@@ -40,6 +42,7 @@ Route::get('/redirect-by-role', function () {
     return match ($user->role) {
         'admin' => redirect('/admin/dashboard'),
         'umkm' => redirect('/umkm/dashboard'),
+        'konsultan' => redirect('/konsultan/dashboard'),
         default => redirect('/users/dashboard'),
     };
 })->middleware('auth');
@@ -76,8 +79,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
     
     // Chat
     Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
-    Route::get('/chat/{id}', [ChatController::class, 'show'])->name('chat.show');
+    Route::get('/chats', [ChatController::class, 'show'])->name('chat.show');
     Route::post('/chat', [ChatController::class, 'store'])->name('chat.store');
+
+    // Konsultan
+    Route::resource('konsultan', KonsultanController::class)->only(['create', 'store', 'edit', 'update', 'destroy']);
+    Route::get('/konsultan/dashboard', [KonsultanController::class, 'index'])->name('konsultan.index');
+    Route::get('/konsultan', [KonsultanController::class, 'show'])->name('konsultan.show');
+
+    // Konsultasi Pembayaran
+    Route::get('/konsultasi', [KonsultasiPembayaranController::class, 'index'])->name('konsultasi.index');
+    Route::post('/konsultasi/order', [KonsultasiPembayaranController::class, 'order'])->name('konsultasi.order');
+    Route::post('/konsultasi/callback', [KonsultasiPembayaranController::class, 'callback'])->name('konsultasi.callback');
 
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
@@ -96,6 +109,7 @@ Route::get('/email/verify/{id}/{hash}', function ($id, $hash) {
         return match ($user->role) {
             'admin' => redirect('/admin/dashboard'),
             'umkm' => redirect('/umkm/dashboard'),
+            'konsultan' => redirect('/konsultan/dashboard'),
             default => redirect('/users/dashboard'),
         };
     }

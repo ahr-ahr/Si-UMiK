@@ -1,6 +1,6 @@
 <html lang="english">
   <head>
-    <title>Register</title>
+    <title>FORGOT Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -47,6 +47,7 @@
         font-size: 100%;
         line-height: 1.15;
         margin: 0;
+        z-index: 999;
       }
       button,
       select {
@@ -75,6 +76,8 @@
       a {
         color: inherit;
         text-decoration: inherit;
+        z-index: 999;
+        position: relative;
       }
       input {
         padding: 2px 4px;
@@ -237,272 +240,83 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
-    <link href="./index.css" rel="stylesheet" />
+    <link href="./forgetpass.css" rel="stylesheet" />
   </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      
 
-      <div class="register-container">
-        <div class="register-register">
-          <img
-            src="public/external/premium-vector-traditional-balinese-barong-mask-removebg-preview-10.png"
-            alt="peacockremovebgpreview18263"
-            class="register-peacockremovebgpreview1"
-          />
-          <img
-            src="public/external/rectangle368264-lit.svg"
-            alt="Rectangle368264"
-            class="register-rectangle36"
-          />
-          <img
-            src="public/external/rectangle358265-tk74.svg"
-            alt="Rectangle358265"
-            class="register-rectangle35"
-          />
-          <span class="register-text10">Forgot</span>
-          <div class="register-mdiemail"></div>
-          <img
-            src="public/external/mdilock8268-fqyg.svg"
-            alt="mdilock8268"
-            class="register-mdilock"
-          />
-          <div class="register-group22">
-            <img
-              src="public/external/mdiaccount8261-9zq.svg"
-              alt="mdiaccount8261"
-              class="register-mdiaccount"
-            />
-          </div>
-          <div class="register-iconparkoutlineeyes">
-            <div class="register-group">
-              <img
-                src="public/external/vector38261-bfky.svg"
-                alt="Vector38261"
-                class="register-vector3"
-              />
-              <img
-                src="public/external/vector48261-7q4p.svg"
-                alt="Vector48261"
-                class="register-vector4"
-              />
-              <img
-                src="public/external/vector58261-ia5.svg"
-                alt="Vector58261"
-                class="register-vector5"
-              />
-            </div>
-          </div>
-          <span class="register-text11">identitas</span>
-          <span class="register-text12">email</span>
-          <span class="register-text13">password</span>
-          <span class="register-text14">Telephon</span>
-          <img
-            src="public/external/vector68262-zlk.svg"
-            alt="Vector68262"
-            class="register-vector6"
-          />
-          <div class="nama">
+  <body>
+    <div class="register-container">
+      <div class="register-register">
+        <!-- Logo Barong -->
+        <img src="public/external/premium-vector-traditional-balinese-barong-mask-removebg-preview-10.png" alt="Barong" class="register-peacockremovebgpreview1" />
+  
+        <!-- Decorative Background -->
+        <img src="public/external/rectangle368264-lit.svg" alt="Background 36" class="register-rectangle36" />
+        <img src="public/external/rectangle358265-tk74.svg" alt="Background 35" class="register-rectangle35" />
+  
+        <!-- Text Labels -->
+        <span class="register-text10">Forgot Password</span>
+        <span class="register-text11">Email</span>
+  
+        <!-- Icons -->
+        <div class="register-mdiemail"></div>
+        <div class="register-group22">
+          <img src="public/external/vector68262-zlk.svg" alt="Email Icon" class="register-mdiaccount" />
+        </div>
+        
+        <!-- Input Nama -->
+        <div class="nama">
           <div class="input-box">
-            <input type="text" class="input" placeholder="Nama Depan"/>
-          </div>
-          <div class="input-box">
-            <input type="text" class="input" placeholder="Nama Belakang"/>
+            <input type="text" class="input" placeholder="Nama Depan" />
           </div>
         </div>
-        <div class="input-box3">
-          <input type="text" class="input" placeholder="No Telepon"/>
+        <div class="create-new-password">Kirim password</div>
+        <!-- Ellipses Groups -->
+        <div class="register-group271">
+          <img src="public/external/ellipse58263-yxtr-200h.png" alt="Ellipse 1" class="register-ellipse51" />
+          <img src="public/external/ellipse68263-lh8-200h.png" alt="Ellipse 2" class="register-ellipse61" />
+          <img src="public/external/ellipse78263-z9wq-200h.png" alt="Ellipse 3" class="register-ellipse71" />
+          <img src="public/external/ellipse88263-cny0r-200h.png" alt="Ellipse 4" class="register-ellipse81" />
+          <img src="public/external/ellipse98264-66ib-200h.png" alt="Ellipse 5" class="register-ellipse91" />
         </div>
-        <div class="password">
-        <div class="input-box4">
-          <input type="password" class="input" placeholder="Password"/>
+  
+        <div class="register-group29">
+          <img src="public/external/ellipse58264-lcbm-200h.png" alt="Ellipse 6" class="register-ellipse54" />
+          <img src="public/external/ellipse68264-hllh-200h.png" alt="Ellipse 7" class="register-ellipse64" />
+          <img src="public/external/ellipse78264-iwpi-200h.png" alt="Ellipse 8" class="register-ellipse74" />
+          <img src="public/external/ellipse88264-wktq-200h.png" alt="Ellipse 9" class="register-ellipse84" />
+          <img src="public/external/ellipse98264-x4y4s-200h.png" alt="Ellipse 10" class="register-ellipse94" />
         </div>
-          <div class="input-box4">
-            <input type="password" class="input" placeholder="Confirmation Password"/>
+        
+        <!-- Misc Images -->
+        <img src="public/external/ellipse108264-hrnx-200h.png" alt="Ellipse 11" class="register-ellipse10" />
+        <img src="public/external/weuiarrowfilled8264-ccur.svg" alt="Arrow Filled 1" class="register-weuiarrowfilled1" />
+        <img src="public/external/whats-app-image-2024-11-02-at-13-50-250.png" alt="WhatsApp Image" class="register-whats-app-image20241024at112229" />
+        <img src="public/external/rectangle438265-l5w6.svg" alt="Rectangle 43" class="register-rectangle43" />
+        <img src="public/external/rectangle448265-3wou.svg" alt="Rectangle 44" class="register-rectangle44" />
+        <img src="public/external/ellipse118265-guvh-200h.png" alt="Ellipse 12" class="register-ellipse11" />
+        <img src="public/external/weuiarrowfilled8265-1es2.svg" alt="Arrow Filled 2" class="register-weuiarrowfilled2" />
+  
+        <!-- Remember Me -->
+        <div class="register-text21">
+          <a href="./reset-password.html">Reset password?</a>
+        </div>
+        <div class="rectangle-41"></div>
+
+        <!-- Ellipse Group 28 -->
+        <div class="rectangle-2"></div>
+        <div class="register-group28">
+          <img src="public/external/ellipse528266-z8lq-200h.png" alt="Ellipse A" class="register-ellipse52" />
+          <img src="public/external/ellipse628266-n1mu-200w.png" alt="Ellipse B" class="register-ellipse62" />
+          <img src="public/external/ellipse728266-etd7-200h.png" alt="Ellipse C" class="register-ellipse72" />
+          <img src="public/external/ellipse828266-jdbq-200h.png" alt="Ellipse D" class="register-ellipse82" />
+          <img src="public/external/ellipse928266-l08q-200h.png" alt="Ellipse E" class="register-ellipse92" />
+          <div class="register-group272">
+            <img src="public/external/ellipse538267-4pt-200w.png" alt="Ellipse F" class="register-ellipse53" />
+            <img src="public/external/ellipse638267-dv5s-200w.png" alt="Ellipse G" class="register-ellipse63" />
           </div>
-          </div>
-          <div class="input-box2">
-            <input type="email" class="input" placeholder="Email"/>
-          </div>
-          <div class="register-group271">
-            <img
-              src="public/external/ellipse58263-yxtr-200h.png"
-              alt="Ellipse58263"
-              class="register-ellipse51"
-            />
-            <img
-              src="public/external/ellipse68263-lh8-200h.png"
-              alt="Ellipse68263"
-              class="register-ellipse61"
-            />
-            <img
-              src="public/external/ellipse78263-z9wq-200h.png"
-              alt="Ellipse78263"
-              class="register-ellipse71"
-            />
-            <img
-              src="public/external/ellipse88263-cny0r-200h.png"
-              alt="Ellipse88263"
-              class="register-ellipse81"
-            />
-            <img
-              src="public/external/ellipse98264-66ib-200h.png"
-              alt="Ellipse98264"
-              class="register-ellipse91"
-            />
-          </div>
-          <div class="register-group29">
-            <img
-              src="public/external/ellipse58264-lcbm-200h.png"
-              alt="Ellipse58264"
-              class="register-ellipse54"
-            />
-            <img
-              src="public/external/ellipse68264-hllh-200h.png"
-              alt="Ellipse68264"
-              class="register-ellipse64"
-            />
-            <img
-              src="public/external/ellipse78264-iwpi-200h.png"
-              alt="Ellipse78264"
-              class="register-ellipse74"
-            />
-            <img
-              src="public/external/ellipse88264-wktq-200h.png"
-              alt="Ellipse88264"
-              class="register-ellipse84"
-            />
-            <img
-              src="public/external/ellipse98264-x4y4s-200h.png"
-              alt="Ellipse98264"
-              class="register-ellipse94"
-            />
-          </div>
-          <img
-            src="public/external/ellipse108264-hrnx-200h.png"
-            alt="Ellipse108264"
-            class="register-ellipse10"
-          />
-          <img
-            src="public/external/weuiarrowfilled8264-ccur.svg"
-            alt="weuiarrowfilled8264"
-            class="register-weuiarrowfilled1"
-          />
-          <img
-            src="public/external/whats-app-image-2024-11-02-at-13-50-250.png"
-            alt="WhatsAppImage20241024at1122298265"
-            class="register-whats-app-image20241024at112229"
-          />
-          <img
-            src="public/external/rectangle438265-l5w6.svg"
-            alt="Rectangle438265"
-            class="register-rectangle43"
-          />
-          <img
-            src="public/external/rectangle448265-3wou.svg"
-            alt="Rectangle448265"
-            class="register-rectangle44"
-          />
-          <img
-            src="public/external/ellipse118265-guvh-200h.png"
-            alt="Ellipse118265"
-            class="register-ellipse11"
-          />
-          <img
-            src="public/external/weuiarrowfilled8265-1es2.svg"
-            alt="Weuiarrowfilled8265"
-            class="register-weuiarrowfilled2"
-          />
-          <span class="register-text20">Remember me</span>
-          <div class="register-text21">
-            <a href="forgot-password.html">Forgot password?></a>
-          </div>
-          <div class="remember-me-container">
-            <input type="checkbox" id="remember" name="remember" />
-            </div>
-          <div class="register-group28">
-            <img
-              src="public/external/ellipse528266-z8lq-200h.png"
-              alt="Ellipse528266"
-              class="register-ellipse52"
-            />
-            <img
-              src="public/external/ellipse628266-n1mu-200w.png"
-              alt="Ellipse628266"
-              class="register-ellipse62"
-            />
-            <img
-              src="public/external/ellipse728266-etd7-200h.png"
-              alt="Ellipse728266"
-              class="register-ellipse72"
-            />
-            <img
-              src="public/external/ellipse828266-jdbq-200h.png"
-              alt="Ellipse828266"
-              class="register-ellipse82"
-            />
-            <img
-              src="public/external/ellipse928266-l08q-200h.png"
-              alt="Ellipse928266"
-              class="register-ellipse92"
-            />
-            <div class="register-group272">
-              <img
-                src="public/external/ellipse538267-4pt-200w.png"
-                alt="Ellipse538267"
-                class="register-ellipse53"
-              />
-              <img
-                src="public/external/ellipse638267-dv5s-200w.png"
-                alt="Ellipse638267"
-                class="register-ellipse63"
-              />
-              <img
-                src="public/external/ellipse738267-q3gl-200h.png"
-                alt="Ellipse738267"
-                class="register-ellipse73"
-              />
-              <img
-                src="public/external/ellipse838267-ro66-200h.png"
-                alt="Ellipse838267"
-                class="register-ellipse83"
-              />
-              <img
-                src="public/external/ellipse938267-kse-200w.png"
-                alt="Ellipse938267"
-                class="register-ellipse93"
-              />
-            </div>
-          </div>
-          <div class="register-ggprofile">
-            <div class="register-group2">
-              <img
-                src="public/external/vector128267-fw39.svg"
-                alt="Vector128267"
-                class="register-vector12"
-              />
-              <img
-                src="public/external/vector138267-9h3.svg"
-                alt="Vector138267"
-                class="register-vector13"
-              />
-            </div>
-            <span class="register-text23">identitas</span>
-          </div>
-          <img
-            src="public/external/phphonefill8268-63ia.svg"
-            alt="phphonefill8268"
-            class="register-phphonefill"
-          />
-          <div class="register-button-container">
-            <a href="../index.html" class=" text-wrapper-10 link-nav">Masuk</a>
-          </div>
-          
-          <span class="register-text25">profil</span>
-          <div class="register-group21"></div>
         </div>
       </div>
     </div>
   </body>
-</html>
+  </html>
+  
