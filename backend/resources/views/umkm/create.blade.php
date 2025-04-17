@@ -10,7 +10,7 @@
 
         <!-- Nama UMKM -->
         <div class="mb-3">
-            <label for="nama_umkm" class="form-label">Nama UMKM</label>
+            <label for="nama_umkm" class="form-label">Nama UMKM</label> 
             <input type="text" name="nama_umkm" id="nama_umkm" class="form-control" required>
         </div>
 

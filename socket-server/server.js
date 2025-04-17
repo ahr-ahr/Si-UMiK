@@ -16,11 +16,9 @@ const io = socketIo(server, {
 let onlineUsers = {}; // Menyimpan status pengguna yang online
 
 io.on("connection", (socket) => {
-  console.log("A user connected with socket id:", socket.id); // Debugging untuk memverifikasi koneksi
-
   // Event user_connected: Menyimpan fullname pengguna yang terhubung
   socket.on("user_connected", (fullname) => {
-    console.log(`${fullname} is now online with socket id: ${socket.id}`); // Debugging status koneksi
+    console.log(`${fullname} connected. Socket ID: ${socket.id}`); // Status pengguna terhubung
     onlineUsers[socket.id] = fullname;
 
     // Kirim update status online kepada semua client
@@ -37,7 +35,7 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     const fullname = onlineUsers[socket.id];
     if (fullname) {
-      console.log(`${fullname} is now offline with socket id: ${socket.id}`); // Debugging status koneksi
+      console.log(`${fullname} disconnected. Socket ID: ${socket.id}`); // Status pengguna terputus
       io.emit("user_status", { fullname, status: "offline" }); // Kirim status offline
       delete onlineUsers[socket.id]; // Hapus dari daftar pengguna online
     }

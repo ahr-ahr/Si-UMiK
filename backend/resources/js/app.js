@@ -1,4 +1,5 @@
 import "./bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import io from "socket.io-client";
 
 // Membuat koneksi ke server Socket.IO
