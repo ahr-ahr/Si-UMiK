@@ -18,6 +18,7 @@
 
 <div class="alert alert-warning">
                 <a href="{{ route('umkm.lowongan.create') }}" class="btn btn-primary">Buat Lowongan</a>
+                
             </div>
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
@@ -60,8 +61,8 @@
                         </div>
                     @endif
 
-                    <a href="{{ route('umkm.show', $umkm->id) }}" class="btn btn-info">Lihat Detail</a>
-                    <a href="{{ route('umkm.edit', $umkm->id) }}" class="btn btn-warning">Edit Data</a>
+                    <a href="{{ route('umkm.lowongan.show', $umkm->id) }}" class="btn btn-info">Lihat Detail</a>
+                    <a href="{{ route('umkm.lowongan.edit', $umkm->id) }}" class="btn btn-warning">Edit Data</a>
 
                     <form action="{{ route('umkm.destroy', $umkm->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data UMKM ini?');">
                         @csrf
@@ -70,6 +71,7 @@
                     </form>
                 </div>
             </div>
+            <a href="{{ route('umkm.lowongan.index') }}" class="btn btn-secondary">Lihat Lowongan</a> 
         @endif
     @else
         <div class="alert alert-danger">

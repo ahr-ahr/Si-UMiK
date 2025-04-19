@@ -53,3 +53,47 @@ body {
     background-color: #1d4ed8;
   }
   
+  .tak-berjudul-3-20241022091250-1 {
+    width: 439.46px;
+    height: 465.7px;
+    position: absolute;
+    left: 845px;
+    top: 20.23px;
+    transform-origin: 0 0;
+    transform: rotate(-38.777deg) scale(1, 1);
+    object-fit: cover;
+  }
+  .tak-berjudul-3-20241022091250-3 {
+    width: 439.46px;
+    height: 465.7px;
+    position: absolute;
+    left: 529.26px;
+    top: 41px;
+    transform-origin: 0 0;
+    transform: rotate(45deg) scale(-1, 1);
+    object-fit: cover;
+  }
+  .tak-berjudul-3-20241022091250-2 {
+    border-radius: 85px;
+    width: 498.04px;
+    height: 467.49px;
+    position: absolute;
+    left: -50px;
+    top: 253px;
+    transform-origin: 0 0;
+    transform: rotate(-2.049deg) scale(1, 1);
+    object-fit: cover;
+  }
+  .tak-berjudul-3-20241022091250-4 {
+    border-radius: 85px;
+    width: 498.04px;
+    height: 467.49px;
+    position: absolute;
+    left: 1410px;
+    top: 253px;
+    transform-origin: 0 0;
+    transform: rotate(-2.049deg) scale(-1, 1);
+    object-fit: cover;
+  }
+  
+  

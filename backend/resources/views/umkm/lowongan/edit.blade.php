@@ -1,6 +1,6 @@
 <h2>Edit Lowongan</h2>
 
-<form action="{{ route('lowongan.update', $lowongan->id) }}" method="POST">
+<form action="{{ route('umkm.lowongan.update', $lowongan->id) }}" method="POST">
     @csrf
     @method('PUT')
 

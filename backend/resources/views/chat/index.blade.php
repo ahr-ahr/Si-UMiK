@@ -12,68 +12,107 @@
         #chat-list {
             max-height: 400px;
             overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .chat-message {
+            display: flex;
+            margin-bottom: 10px;
+            flex-direction: column;
+        }
+
+        .sender {
+            align-items: flex-end;
+        }
+
+        .received {
+            align-items: flex-start;
+        }
+
+        .message-bubble {
+            max-width: 75%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            word-wrap: break-word;
+            margin-bottom: 5px;
+        }
+
+        .message-bubble.sent {
+            background-color: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .message-bubble.received {
+            background-color: #e1e1e1;
+            align-self: flex-start;
+        }
+
+        .chat-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            color: red;
+        }
+
+        @media (max-width: 767px) {
+            #chat-list {
+                max-height: 300px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container mt-4">
-        <h2>Chat</h2>
+    <h2>Chat</h2>
 
-        <!-- Form Kirim Pesan -->
-        <form id="chat-form" class="mb-4">
-            @csrf
-            <div class="form-group mb-2">
-                <label for="receiver_id">Kepada:</label>
-                <select id="receiver_id" name="receiver_id" class="form-control" required>
-                    <option value="">-- Pilih Penerima --</option>
-                    @foreach($users as $user)
-                        <option value="{{ $user->id }}" class="user-status" data-fullname="{{ $user->fullname }}">
-                            {{ $user->fullname }} ({{ $user->role }}) - <span class="status">Offline</span>
-                        </option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="form-group mb-2">
-                <label for="message">Pesan:</label>
-                <textarea id="message" name="message" class="form-control" rows="3" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Kirim</button>
-        </form>
-
-        <hr>
-
-        <!-- Filter Berdasarkan Role -->
-        <h4>Filter Chat</h4>
+    <!-- Form Kirim Pesan -->
+    <form id="chat-form" class="mb-4">
+        @csrf
         <div class="form-group mb-2">
-            <label for="role_filter">Pilih Role:</label>
-            <select id="role_filter" class="form-control">
-                <option value="">-- Pilih Role --</option>
-                <option value="admin">Admin</option>
-                <option value="user">User</option>
+            <label for="receiver_id">Kepada:</label>
+            <select id="receiver_id" name="receiver_id" class="form-control" required>
+                <option value="">-- Pilih Penerima --</option>
+                @foreach($users as $user)
+                    <option value="{{ $user->id }}" class="user-status" data-fullname="{{ $user->fullname }}">
+                        {{ $user->fullname }} ({{ $user->role }}) - <span class="status">Offline</span>
+                    </option>
+                @endforeach
             </select>
         </div>
 
-        <!-- Daftar Chat -->
-        <h4>Riwayat Chat</h4>
-        <div id="chat-list">
-            @forelse ($chats as $chat)
-                @if (empty(request('role_filter')) || $chat->sender->role === request('role_filter'))
-                    <div class="card mb-2">
-                        <div class="card-body">
-                            <p><strong>Dari:</strong> {{ $chat->sender->fullname }} ({{ $chat->sender->role }})</p>
-                            <p><strong>Ke:</strong> {{ $chat->receiver->fullname }}</p>
-                            <p>{{ $chat->message }}</p>
-                            <small class="text-muted">Dikirim: {{ $chat->sent_at }}</small>
-                        </div>
-                    </div>
-                @endif
-            @empty
-                <p>Belum ada pesan.</p>
-            @endforelse
+        <div class="form-group mb-2">
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" class="form-control" rows="3" required></textarea>
         </div>
+
+        <button type="submit" class="btn btn-primary">Kirim</button>
+    </form>
+
+    <hr>
+
+    <h4>Riwayat Chat</h4>
+    <div id="chat-list">
+        @if($chats && $chats->isNotEmpty())
+            @foreach($chats as $chat)
+                <div class="chat-message {{ $chat->sender_id === auth()->id() ? 'sender' : 'received' }}">
+                    <div class="message-bubble {{ $chat->sender_id === auth()->id() ? 'sent' : 'received' }}">
+                        <p><strong>Dari:</strong> {{ $chat->sender->fullname }} ({{ $chat->sender->role }})</p>
+                        <p><strong>Ke:</strong> {{ $chat->receiver->fullname }}</p>
+                        <p>{{ $chat->message }}</p>
+                        <small class="text-muted">Dikirim: {{ $chat->sent_at }}</small>
+                    </div>
+                </div>
+            @endforeach
+        @else
+            <p>Belum ada pesan.</p>
+        @endif
     </div>
+</div>
 
     <script>
         const socket = io('http://localhost:3000');
@@ -93,101 +132,102 @@
             }
         });
 
-document.getElementById('chat-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+        document.getElementById('chat-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    const receiverSelect = document.getElementById('receiver_id');
-    const receiver_id = receiverSelect.value;
-    const message = document.getElementById('message').value;
-    const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            const receiverSelect = document.getElementById('receiver_id');
+            const receiver_id = receiverSelect.value;
+            const message = document.getElementById('message').value;
+            const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-    // Periksa apakah penerima dipilih (jangan biarkan "-- Pilih Penerima --")
-    if (receiver_id === "" || receiverSelect.selectedIndex === 0) {
-        alert("Pilih penerima yang valid.");
-        return;
-    }
+            // Periksa apakah penerima dipilih (jangan biarkan "-- Pilih Penerima --")
+            if (receiver_id === "" || receiverSelect.selectedIndex === 0) {
+                alert("Pilih penerima yang valid.");
+                return;
+            }
 
-    // Mendapatkan nama penerima (fullname) dari pilihan dropdown
-    const selectedOption = receiverSelect.options[receiverSelect.selectedIndex].text;
-    const receiverFullname = selectedOption.split(' (')[0]; // Ambil hanya fullname
+            // Mendapatkan nama penerima (fullname) dari pilihan dropdown
+            const selectedOption = receiverSelect.options[receiverSelect.selectedIndex].text;
+            const receiverFullname = selectedOption.split(' (')[0]; // Ambil hanya fullname
 
-    // Membangun objek receiver hanya dengan fullname
-    const receiver = {
-        fullname: receiverFullname
-    };
+            // Membangun objek receiver hanya dengan fullname
+            const receiver = {
+                fullname: receiverFullname
+            };
 
-    axios.post('{{ route('chat.store') }}', {
-        receiver_id: receiver_id,
-        message: message
-    }, {
-        headers: {
-            'X-CSRF-TOKEN': token
-        }
-    })
-    .then(function (response) {
-        document.getElementById('chat-form').reset();
+            axios.post('{{ route('chat.store') }}', {
+                receiver_id: receiver_id,
+                message: message
+            }, {
+                headers: {
+                    'X-CSRF-TOKEN': token
+                }
+            })
+            .then(function (response) {
+                document.getElementById('chat-form').reset();
 
-        const sender = {
-            fullname: "{{ auth()->user()->fullname }}"
-        };
+                const sender = {
+                    fullname: "{{ auth()->user()->fullname }}"
+                };
 
-        const chat = response.data.chat;
-        chat.sender = sender;
-        chat.receiver = receiver;
+                const chat = response.data.chat;
+                chat.sender = sender;
+                chat.receiver = receiver;
 
-        // Kirim pesan ke server menggunakan socket
-        socket.emit('send_message', chat);
-    })
-    .catch(function (error) {
-        console.error('Error sending message:', error);
-    });
-});
-
-
-        // Terima pesan dari socket.io dan tampilkan di UI
-        socket.on('message_received', (event) => {
-            const chatList = document.getElementById('chat-list');
-            const chatItem = document.createElement('div');
-            chatItem.classList.add('card', 'mb-2');
-            chatItem.innerHTML = `
-                <div class="card-body">
-                    <p><strong>Dari:</strong> ${event.sender.fullname} (${event.sender.role})</p>
-                    <p><strong>Ke:</strong> ${event.receiver.fullname} (${event.receiver.role})</p>
-                    <p>${event.message}</p>
-                    <small class="text-muted">Dikirim: ${event.sent_at}</small>
-                </div>
-            `;
-            chatList.appendChild(chatItem);
-
-            // Scroll otomatis ke bawah
-            chatList.scrollTop = chatList.scrollHeight;
-
-            // Notifikasi suara dan visual saat pesan diterima
-            const audio = new Audio('{{asset ('assets/jawa.wav')}}');
-            audio.play();
-
-            const notification = new Notification("Pesan Baru", {
-                body: `${event.sender.fullname} mengirimkan pesan.`,
-                icon: "{{asset ('assets/img/logo.png')}}"
+                // Kirim pesan ke server menggunakan socket
+                socket.emit('send_message', chat);
+            })
+            .catch(function (error) {
+                console.error('Error sending message:', error);
             });
         });
 
-        // Meminta izin untuk notifikasi
-        if (Notification.permission === "granted") {
-        const notification = new Notification("Pesan Baru", {
-            body: `${event.sender.fullname} mengirimkan pesan.`,
-            icon: "{{ asset('assets/img/logo.png') }}"
+        // Meng-update chat history setelah memilih penerima
+document.getElementById('receiver_id').addEventListener('change', function () {
+    const receiverId = this.value;
+    const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+    if (receiverId) {
+        axios.get('{{ route('chat.index') }}', {
+            params: { receiver_id: receiverId },
+            headers: { 'X-CSRF-TOKEN': token }
+        })
+        .then(response => {
+    console.log("Response from chat history:", response);  // Untuk debugging
+
+    const chatList = document.getElementById('chat-list');
+    chatList.innerHTML = ''; // Kosongkan chat list sebelum menampilkan yang baru
+
+    const chats = response.data.chats; // Ambil data chat dari response
+
+    if (chats && chats.length > 0) {
+        chats.forEach(chat => {
+            const chatItem = document.createElement('div');
+            chatItem.classList.add('chat-message', chat.sender_id === {{ auth()->user()->id }} ? 'sender' : 'received');
+            chatItem.innerHTML = `
+                <div class="message-bubble ${chat.sender_id === {{ auth()->user()->id }} ? 'sent' : 'received'}">
+                    <p><strong>Dari:</strong> ${chat.sender_id === {{ auth()->user()->id }} ? 'Anda' : 'Pengguna Lain'}</p>
+                    <p><strong>Pesan:</strong> ${chat.message}</p>
+                    <small class="text-muted">Dikirim: ${chat.sent_at}</small>
+                </div>
+            `;
+            chatList.appendChild(chatItem);
         });
-        console.log("Notifikasi dikirim"); // Verifikasi notifikasi dikirim
     } else {
-        console.log("Notifikasi tidak diizinkan"); // Verifikasi status izin notifikasi
+        chatList.innerHTML = '<p>Belum ada pesan.</p>';
     }
 
-        // Event listener untuk filter role
-        document.getElementById('role_filter').addEventListener('change', function() {
-            const role = this.value;
-            window.location.href = `{{ route('chat.index') }}?role_filter=${role}`;
+    // Scroll otomatis ke bawah setelah update
+    chatList.scrollTop = chatList.scrollHeight;
+})
+
+        .catch(error => {
+            console.error('Error fetching chat history:', error);
         });
+    } else {
+        document.getElementById('chat-list').innerHTML = '<p>Belum ada pesan.</p>';
+    }
+});
     </script>
 </body>
 </html>

@@ -9,20 +9,23 @@ use Illuminate\Support\Facades\Auth;
 
 class LowonganKerjaController extends Controller
 {
-    // Tampilkan semua lowongan dari UMKM login
+    // Tampilkan semua lowongan dari UMKM login beserta pelamar
     public function index()
-    {
-        $user = Auth::user();
+{
+    $user = Auth::user();
 
-        if ($user->role !== 'umkm') {
-            abort(403, 'Anda tidak memiliki akses ke halaman ini.');
-        }
-
-        $umkm = Umkm::where('user_id', $user->id)->firstOrFail();
-        $lowongan = LowonganKerja::where('umkm_id', $umkm->id)->latest()->get();
-
-        return view('umkm.lowongan.index', compact('lowongan'));
+    if ($user->role !== 'umkm') {
+        abort(403, 'Anda tidak memiliki akses ke halaman ini.');
     }
+
+    $umkm = Umkm::where('user_id', $user->id)->firstOrFail();
+    $lowongan = LowonganKerja::where('umkm_id', $umkm->id) // Hanya ambil lowongan milik UMKM
+        ->latest()
+        ->get(); // Tidak lagi dengan pelamar
+
+    return view('umkm.lowongan.index', compact('umkm', 'lowongan'));
+}
+
 
     // Form buat lowongan baru
     public function create()
@@ -62,15 +65,32 @@ class LowonganKerjaController extends Controller
             'tanggal_ditutup' => $request->tanggal_ditutup,
         ]);
 
-        return redirect()->route('lowongan.index')->with('success', 'Lowongan berhasil diposting.');
+        return redirect()
+            ->route('umkm.lowongan.index')
+            ->with('success', 'Lowongan berhasil diposting.');
     }
 
-    // Detail satu lowongan
+    // Detail satu lowongan beserta pelamar
     public function show($id)
     {
-        $lowongan = LowonganKerja::findOrFail($id);
+        $lowongan = LowonganKerja::with('umkm')->findOrFail($id);
         return view('umkm.lowongan.show', compact('lowongan'));
     }
+
+    public function semua()
+{
+    $user = Auth::user();
+
+    $umkm = Umkm::where('user_id', $user->id)->firstOrFail();
+
+    $lowongan = LowonganKerja::with('umkm')
+        ->where('umkm_id', $umkm->id)
+        ->latest()
+        ->get();
+
+    return view('umkm.lowongan.semua', compact('lowongan'));
+}
+
 
     // Form edit lowongan
     public function edit($id)
@@ -93,7 +113,9 @@ class LowonganKerjaController extends Controller
         $lowongan = LowonganKerja::findOrFail($id);
         $lowongan->update($request->all());
 
-        return redirect()->route('lowongan.index')->with('success', 'Lowongan berhasil diperbarui.');
+        return redirect()
+            ->route('umkm.lowongan.index')
+            ->with('success', 'Lowongan berhasil diperbarui.');
     }
 
     // Hapus lowongan
@@ -102,6 +124,8 @@ class LowonganKerjaController extends Controller
         $lowongan = LowonganKerja::findOrFail($id);
         $lowongan->delete();
 
-        return redirect()->route('lowongan.index')->with('success', 'Lowongan berhasil dihapus.');
+        return redirect()
+            ->route('umkm.lowongan.index')
+            ->with('success', 'Lowongan berhasil dihapus.');
     }
 }
