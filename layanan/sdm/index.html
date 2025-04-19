@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="./vars.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <style>
       a,
       button,
@@ -24,7 +32,6 @@
         border: none;
         text-decoration: none;
         background: none;
-
         -webkit-font-smoothing: antialiased;
       }
 
@@ -35,123 +42,164 @@
         margin: 0;
         padding: 0;
       }
-    </style>
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+      .slider {
+        width: 100%;
+        margin: 0 auto;
+      }
 
+      .slider .rectangle-733{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .slider .rectangle-733 img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: #333;
+      }
+
+    </style>
+
+    <title>Document</title>
   </head>
   <body>
     <div class="homepage-55">
       <img class="group-21" src="images/group-210.svg" />
+
       <a href="">
         <div class="ellipse-12"></div>
         <img class="weui-arrow-filled" src="images/weui-arrow-filled0.svg" />
       </a>
+
       <img class="group-23" src="images/group-230.svg" />
+
       <div class="gg-profile">
         <img class="group" src="images/group0.svg" />
       </div>
+
       <!-- geser kiri -->
-      <div class="ellipse-13"></div>
+      <div class="ellipse-13">
       <img class="weui-arrow-filled1" src="images/weui-arrow-filled0.svg" />
-      <!-- selesai -->
-      <!-- geser kanan -->
-      <div class="ellipse-14"></div>
-      <img class="weui-arrow-filled2" src="images/weui-arrow-filled2.svg" />
+      </div>
       <!-- selesai -->
 
-      <!-- Search Bar  -->
+      <!-- geser kanan -->
+      <div class="ellipse-14">
+      <img class="weui-arrow-filled2" src="images/weui-arrow-filled2.svg" />
+      </div>
+      <!-- selesai -->
+
+      <!-- Search Bar -->
       <div class="search-bar">
         <div class="search-wrapper">
           <i class="fas fa-search"></i>
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari pekerja...">
+          <input type="text" id="searchInput" placeholder="Cari pekerja..." />
         </div>
       </div>
-      
 
-        <!-- selesai -->
-        <img class="group-232" src="images/group-231.svg" />
-        <div class="carousel" id="locationCarousel">
-        <span class="temukan-pekerja">Temukan Pekerja</span>
-        <div class="pekerja-list">
-       <!-- pkerja1 -->
-        <div class="pekerja-item">
-       <div class="rectangle-73"></div>
-       <img class="download-15" src="images/download-151.png" />
-       <div class="group-1">
-        <a href="">
-         <div class="rectangle-2"></div>
-         <div class="lihat-profil">Lihat Profil</div>
+      <img class="group-232" src="images/group-231.svg" />
+      <span class="temukan-pekerja">Temukan Pekerja</span>
+
+      <div class="pekerja-list">
+        <div class="search" id="searchWorker">
+          
+          <!-- pekerja 1 -->
+          <div class="slider">
+            <div class="pekerja-item">
+              <div class="rectangle-73"></div>
+              <img class="download-15" src="images/download-151.png" />
+              <div class="group-1">
+                <a href="">
+                  <div class="rectangle-2"></div>
+                  <div class="lihat-profil">Lihat Profil</div>
+                </a>
+              </div>
+              <span class="nama-nazwa-izzatunnisa-umur-18-posisi-pekerjaan-editing2">
+                Nama: Nazwa Izzatunnisa’<br />
+                Umur: 18<br />
+                Posisi Pekerjaan: Editing
+              </span>
+            </div>
+          
+
+          <!-- pekerja 2 -->
+          
+            <div class="pekerja-item">
+              <div class="rectangle-732"></div>
+              <img class="download-3" src="images/paulgtg.jpg" />
+              <div class="group-1">
+                <a href="">
+                  <div class="rectangle-22"></div>
+                  <div class="lihat-profil2">Lihat Profil</div>
+                </a>
+              </div>
+              <span class="nama-ibnu-marzuki-umur-22-posisi-pekerjaan">
+                Nama: Brian Toretto<br />
+                Umur: 17<br />
+                Posisi Pekerjaan: Gamer Ganteng Idaman
+              </span>
+            </div>
+          
+
+          <!-- pekerja 3 -->
+          
+            <div class="pekerja-item">
+              <div class="rectangle-733"></div>
+              <img
+                class="_647-f-5226-26-c-9-40-d-0-abb-1-8-a-0-c-6-c-4-a-76-b-0"
+                src="images/_647-f-5226-26-c-9-40-d-0-abb-1-8-a-0-c-6-c-4-a-76-b-00.png"
+              />
+              <div class="group-1">
+                <a href="">
+                  <div class="rectangle-23"></div>
+                  <div class="lihat-profil3">Lihat Profil</div>
+                </a>
+              </div>
+              <span class="nama-ni-made-puji-adsari-umur-17-posisi-pekerjaan-editing">
+                Nama: Ni Made Puji Adsari<br />
+                Umur: 17<br />
+                Posisi Pekerjaan: Editing
+              </span>
+            </div>
+          </div>
+          
+
         </div>
-      </a>
-       <span class="nama-nazwa-izzatunnisa-umur-18-posisi-pekerjaan-editing2">
-         Nama: Nazwa Izzatunnisa’
-         <br />
-         Umur: 18
-         <br />
-         Posisi Pekerjaan: Editing
-        </span>
       </div>
-        <!--  -->
-        <!-- pkejra2 -->
-        <div class="pekerja-item">
-        <div class="rectangle-732"></div>
-        <img class="download-3" src="images/paulgtg.jpg" />
-        <div class="group-1">
-        <a href="">
-        <div class="rectangle-22"></div>
-        <div class="lihat-profil2">Lihat Profil</div>
-        </a>
-      </div>
-      <span class="nama-ibnu-marzuki-umur-22-posisi-pekerjaan">
-        Nama: Brian Toretto
-        <br />
-        Umur: 17
-        <br />
-        Posisi Pekerjaan: Gamer Ganteng Idaman
-      </span>
-      </div>
-      <!-- don -->
-       <!-- pkrja3 -->
-        <div class="pekerja-item">
-       <div class="rectangle-733"></div>
-       <img
-       class="_647-f-5226-26-c-9-40-d-0-abb-1-8-a-0-c-6-c-4-a-76-b-0"
-       src="images/_647-f-5226-26-c-9-40-d-0-abb-1-8-a-0-c-6-c-4-a-76-b-00.png"
-       />
-       <div class="group-1">
-        <a href="">
-         <div class="rectangle-23"></div>
-         <div class="lihat-profil3">Lihat Profil</div>
-         
-       </div>
-       <span class="nama-ni-made-puji-adsari-umur-17-posisi-pekerjaan-editing">
-         Nama: Ni Made Puji Adsari
-         <br />
-         Umur: 17
-         <br />
-         Posisi Pekerjaan: Editing
-        </span>
-      </div>
-      <!--  -->
     </div>
-      </div>
-      <script>
-        const searchInput = document.getElementById('searchInput');
-        const pekerjaItems = document.querySelectorAll('.pekerja-item');
-      
-        searchInput.addEventListener('input', () => {
-          const keyword = searchInput.value.toLowerCase();
-      
-          pekerjaItems.forEach(item => {
-            const text = item.innerText.toLowerCase();
-            item.style.display = text.includes(keyword) ? 'block' : 'none';
-          });
+
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          autoplay: true,
+          autoplaySpeed: 2500,
+          dots: true,
+          arrows: true,
         });
-      </script>
-      
+      });
+
+      const searchInput = document.getElementById('searchInput');
+      const pekerjaItems = document.querySelectorAll('.pekerja-item');
+
+      searchInput.addEventListener('input', () => {
+        const keyword = searchInput.value.toLowerCase();
+
+        pekerjaItems.forEach(item => {
+          const text = item.innerText.toLowerCase();
+          item.style.display = text.includes(keyword) ? 'block' : 'none';
+        });
+      });
+    </script>
   </body>
 </html>
