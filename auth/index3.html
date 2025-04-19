@@ -268,6 +268,7 @@
             />
           </div>
           <span class="register-text11">Lokasi</span>
+          <form>
           <div class="lokasi">
             <select id="Provinsi">
                 <option value="">-- Pilih Provinsi --</option>
@@ -281,8 +282,10 @@
               <select id="Kelurahan" name="Kelurahan" required>
                 <option value="">-- Pilih Kelurahan --</option>
               </select>
-              <input type="number" id="KodePos" name="KodePos" placeholder="Kode Pos" required>
+              <input type="number" id="kodepos" name="kodepos" placeholder="Masukkan kode pos" min="0" oninput="this.value = this.value.slice(0,5)">
+              <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat" required>
             </div>
+          </form>
           <div class="register-group271">
             <img
               src="public/external/ellipse58263-yxtr-200h.png"
@@ -441,7 +444,9 @@
             </div>
           </div>
           <div class="register-button-container">
+            <a href="index4.html">
             <button class="register-button" onclick="handleRegister()">Next</button>
+            </a>
           </div>
 
           <div class="back-button-container">

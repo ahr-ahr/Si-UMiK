@@ -803,6 +803,7 @@
   }
 
   .lokasi input {
+    margin-bottom: 25px;
     width: 555px;
     height: 50px;
     border-radius: 20px;
@@ -811,3 +812,4 @@
     outline: none;
     background-color: #fdf9f9;
   }
+  

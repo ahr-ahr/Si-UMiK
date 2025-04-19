@@ -826,8 +826,8 @@
 
 .input-box2{
   position: relative;
-  left: -370px;
-  top: 450px; ;
+  left: 740px;
+  top: 250px; ;
 }
 
 .input-box2 input{
@@ -840,26 +840,10 @@
   background-color: #fdf9f9;
 }
 
-.input-box3{
-  position: relative;
-  left: 185px;
-  top: 555px; ;
-}
-
-.input-box3 input{
-  width: 555px;
-  height: 50px;
-  border-radius: 20px;
-  padding-left: 15px;
-  border: none;
-  outline: none;
-  background-color: #fdf9f9;
-}
-
 .password{
   position: relative;
-  left: 185px;
-  top: 555px; ;
+  left: 740px;
+  top: 500px; ;
 }
 
 .input-box4{

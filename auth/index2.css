@@ -874,8 +874,8 @@
   
   .input-box2{
     position: relative;
-    left: -925px;
-    top: 450px; ;
+    left: 740px;
+    top: 270px; ;
   }
   
   .input-box2 input{
@@ -890,8 +890,8 @@
 
   .jenis-kelamin {
     position: relative;
-    left: 185px;
-    top: 550px; ;
+    left: 740px;
+    top: 490px; ;
   }
 
   .jenis-kelamin select {
@@ -906,8 +906,8 @@
 
   .password{
     position: relative;
-    left: -365px;
-    top: 666px; ;
+    left: 740px;
+    top: 550px; ;
   }
   
   .input-box4{
